@@ -6,7 +6,7 @@ use Miaoxing\Config\ConfigTrait;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Services\Service\Asset;
 use Miaoxing\Services\Service\Str;
-use Miaoxing\Plugin\Service\View;
+use Miaoxing\Services\Service\View;
 use Wei\Block;
 
 /**
