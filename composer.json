@@ -1,0 +1,15 @@
+{
+  "name": "miaoxing/services",
+  "authors": [
+    {
+      "name": "twinh",
+      "email": "twinhuang@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Services\\": "src"
+    }
+  },
+  "require": {}
+}
