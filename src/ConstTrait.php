@@ -2,6 +2,11 @@
 
 namespace Miaoxing\Services;
 
+use Wei\Request;
+
+/**
+ * @property Request $request
+ */
 trait ConstTrait
 {
     /**
@@ -39,15 +44,16 @@ trait ConstTrait
         $consts = $class->getConstants();
 
         // 2. Use exiting constant configs
-        $property = lcfirst(str_replace('_', '', ucwords($prefix, '_'))) . 'Table';
+        $property = lcfirst(str_replace('_', '', ucwords($prefix, '_'))) . 'Names';
         if (isset($this->$property)) {
-            $data = $this->$property;
+            $names = $this->$property;
         } else {
-            $data = [];
+            $names = [];
         }
 
         // 3. Generate id and name
         $prefix .= '_';
+        $data = [];
         $length = strlen($prefix);
         foreach ($consts as $name => $id) {
             if (stripos($name, $prefix) !== 0) {
@@ -57,7 +63,10 @@ trait ConstTrait
                 continue;
             }
             $data[$id]['id'] = $id;
-            $data[$id]['name'] = strtolower(strtr(substr($name, $length), ['_' => '-']));
+            $data[$id]['key'] = strtolower(strtr(substr($name, $length), ['_' => '-']));
+            if (isset($names[$id])) {
+                $data[$id]['name'] = $names[$id];
+            }
         }
 
         self::$consts[$prefix] = $data;
@@ -65,73 +74,72 @@ trait ConstTrait
         return $data;
     }
 
-    /**
-     * Returns the constant value by specified id and key
-     *
-     * @param string $prefix
-     * @param int $id
-     * @param string $key
-     * @return mixed
-     */
-    public function getConstValue($prefix, $id, $key)
-    {
-        $consts = $this->getConsts($prefix);
-
-        return isset($consts[$id][$key]) ? $consts[$id][$key] : null;
-    }
-
-    /**
-     * Returns the constant name by id
-     *
-     * @param string $prefix
-     * @param int $id
-     * @return mixed
-     */
     public function getConstName($prefix, $id)
     {
-        return $this->getConstValue($prefix, $id, 'name');
+        return $this->getConsts($prefix)[$id]['name'];
+    }
+
+    public function getConstsWithAll($prefix)
+    {
+        $consts = $this->getConsts($prefix);
+        array_unshift($consts, [
+            'id' => '',
+            'key' => 'all',
+            'name' => '全部',
+        ]);
+        return $consts;
     }
 
     /**
-     * Returns the constant label by id
+     * 将请求的key(字母)转换为id(数字)
+     *
+     * 用法
+     * $curStatus = wei()->xxx->getConstId('status', $req['status']);
      *
      * @param string $prefix
-     * @param int $id
+     * @param string $reqKey
      * @return string
      */
-    public function getConstLabel($prefix, $id)
+    public function getConstId($prefix, $reqKey)
     {
-        return $this->getConstValue($prefix, $id, 'label');
-    }
-
-    /**
-     * Returns the constant id by name
-     *
-     * @param string $prefix
-     * @param string $name
-     * @return int
-     */
-    public function getConstIdByName($prefix, $name)
-    {
-        $nameToIds = $this->getConstNameToIds($prefix);
-
-        return isset($nameToIds[$name]) ? $nameToIds[$name] : null;
-    }
-
-    /**
-     * Returns the name to id map
-     *
-     * @param string $prefix
-     * @return array
-     */
-    protected function getConstNameToIds($prefix)
-    {
-        if (!isset(self::$constNameToIds[$prefix])) {
-            foreach ($this->getConsts($prefix) as $const) {
-                self::$constNameToIds[$prefix][$const['name']] = $const['id'];
-            }
+        $keyToIds = $this->getConstKeyToIds($prefix);
+        if (isset($keyToIds[$reqKey])) {
+            return $keyToIds[$reqKey];
         }
 
-        return self::$constNameToIds[$prefix];
+        return '';
+    }
+
+    /**
+     * 获取key和id关联数组
+     *
+     * @param $prefix
+     * @return array
+     */
+    public function getConstKeyToIds($prefix)
+    {
+        return array_column($this->getConsts($prefix), 'id', 'key');
+    }
+
+    /**
+     * 将请求的key(字母)转换为key并用于查询
+     *
+     * @param string $prefix
+     * @param string $reqKey
+     * @return $this
+     */
+    public function whereConstKey($prefix, $reqKey = null)
+    {
+        if (func_num_args() === 1) {
+            $reqKey = $this->request->get($prefix);
+        }
+
+        $id = $this->getConstId($prefix, $reqKey);
+        if ($id !== '') {
+            list($column) = $this->parseReqColumn($prefix);
+            $this->andWhere([$column => $id]);
+        }
+
+        return $this;
     }
 }

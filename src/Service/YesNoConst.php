@@ -16,17 +16,13 @@ class YesNoConst extends BaseService
 
     const YES_NO_NO = 0;
 
-    protected $yesNoTable = [
-        self::YES_NO_YES => [
-            'label' => '是',
-        ],
-        self::YES_NO_NO => [
-            'label' => '否',
-        ],
+    protected $yesNoNames = [
+        self::YES_NO_YES => '是',
+        self::YES_NO_NO => '否',
     ];
 
     public function getLabel($id)
     {
-        return $this->getConstLabel('yes_no', $id);
+        return $this->getConstName('yes_no', $id);
     }
 }
