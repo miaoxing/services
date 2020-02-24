@@ -148,7 +148,7 @@ class Migration extends BaseService
         }
 
         ob_start();
-        require  'plugins/plugin/resources/stubs/migration.php';
+        require '../Migration/stubs/migration.php';
         $content = ob_get_clean();
 
         $file = $path . '/' . $class . '.php';
