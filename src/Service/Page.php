@@ -62,6 +62,11 @@ class Page extends BaseService
     protected $cssFiles = [];
 
     /**
+     * @var array
+     */
+    protected $jsVars = [];
+
+    /**
      * @param string $title
      * @return $this
      */
@@ -167,6 +172,12 @@ class Page extends BaseService
         return $this;
     }
 
+    public function addJsVar($name, $value)
+    {
+        $this->jsVars[$name] = $value;
+        return $this;
+    }
+
     public function addCss($href)
     {
         $this->cssFiles[] = $href;
@@ -202,6 +213,7 @@ class Page extends BaseService
 
     public function renderFooter()
     {
+        $this->event->trigger('beforeScript');
         echo $this->renderJs();
         $this->event->trigger('script');
         echo $this->block->get('js');
@@ -220,6 +232,15 @@ class Page extends BaseService
     public function renderJs()
     {
         $html = '';
+
+        if ($this->jsVars) {
+            $html .= "<script>\n";
+            foreach ($this->jsVars as $name => $value) {
+                $html .= '  var ' . $name . ' = ' . json_encode($value) . ";\n";
+            }
+            $html .= "</script>\n";
+        }
+
         foreach ($this->jsFiles as $file) {
             $html .= '<script src="' . $file . '"></script>' . "\n";
         }
