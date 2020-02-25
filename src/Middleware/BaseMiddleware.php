@@ -2,6 +2,8 @@
 
 namespace Miaoxing\Services\Middleware;
 
+use Wei\RetTrait;
+
 /**
  * @property \Miaoxing\Plugin\Service\App $app
  * @property \Wei\Request $request
@@ -9,6 +11,8 @@ namespace Miaoxing\Services\Middleware;
  */
 abstract class BaseMiddleware extends \Wei\Base
 {
+    use RetTrait;
+
     /**
      * Execute the middleware
      *
