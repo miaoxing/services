@@ -1,0 +1,20 @@
+{
+  "name": "miaoxing/services",
+  "type": "miaoxing-plugin",
+  "description": "",
+  "authors": [
+    {
+      "name": "twinh",
+      "email": "twinhuang@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Services\\": "src"
+    }
+  },
+  "require": {},
+  "suggest": {
+    "miaoxing/queue": "Required to use Laravel queue"
+  }
+}
