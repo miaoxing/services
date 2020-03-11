@@ -41,7 +41,7 @@ class ConsoleKernel extends Kernel
             'plugins/*/src',
         ];
 
-        $classes = wei()->plugin->generateClassMap($paths, '/Command/*.php', 'Command');
+        $classes = wei()->classMap->generate($paths, '/Command/*.php', 'Command');
 
         foreach ($classes as $name => $command) {
             if (is_subclass_of($command, Command::class) &&

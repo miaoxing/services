@@ -2,11 +2,11 @@
 
 namespace MiaoxingDoc\Services {
 
-    use Miaoxing\Services\Service\Laravel;
-
     /**
      * @property    \Miaoxing\Services\Service\Asset $asset
      * @method      mixed asset($file, $version = true)
+     *
+     * @property    \Miaoxing\Services\Service\ClassMap $classMap
      *
      * @property    \Miaoxing\Services\Service\Cli $cli CLI
      *
@@ -26,6 +26,8 @@ namespace MiaoxingDoc\Services {
      *
      * @property    \Miaoxing\Services\Service\IsRecordExists $isRecordExists
      * @method      bool isRecordExists($input = null, $table = null, $field = 'id') Check if the input is existing table record
+     *
+     * @property    \Miaoxing\Services\Service\Laravel $laravel
      *
      * @property    \Miaoxing\Services\Service\Logger $logger
      * @method      bool logger($level, $message, $context = []) Logs with an arbitrary level
@@ -50,9 +52,14 @@ namespace MiaoxingDoc\Services {
      *
      * @property    \Miaoxing\Services\Service\Share $share
      *
+     * @property    \Miaoxing\Services\Service\StaticTrait $staticTrait
+     *
      * @property    \Miaoxing\Services\Service\Status $status 状态
      *
      * @property    \Miaoxing\Services\Service\Str $str 字符串操作服务
+     *
+     * @property    \Miaoxing\Services\Service\Tester $tester 测试
+     * @method      \Miaoxing\Services\Service\Tester tester($controller = null, $action = null)
      *
      * @property    \Miaoxing\Services\Service\Time $time 时间日期
      * @method      string time()
@@ -67,8 +74,6 @@ namespace MiaoxingDoc\Services {
      * @method      string view($name = null, $data = []) Render a PHP template
      *
      * @property    \Miaoxing\Services\Service\YesNoConst $yesNoConst 是否常量服务
-     *
-     * @property    Laravel $laravel
      */
     class AutoComplete
     {
@@ -86,6 +91,9 @@ namespace {
 
     /** @var Miaoxing\Services\Service\Asset $asset */
     $asset = wei()->asset;
+
+    /** @var Miaoxing\Services\Service\ClassMap $classMap */
+    $classMap = wei()->classMap;
 
     /** @var Miaoxing\Services\Service\Cli $cli */
     $cli = wei()->cli;
@@ -110,6 +118,9 @@ namespace {
 
     /** @var Miaoxing\Services\Service\IsRecordExists $isRecordExists */
     $isRecordExists = wei()->isRecordExists;
+
+    /** @var Miaoxing\Services\Service\Laravel $laravel */
+    $laravel = wei()->laravel;
 
     /** @var Miaoxing\Services\Service\Logger $logger */
     $logger = wei()->logger;
@@ -141,11 +152,17 @@ namespace {
     /** @var Miaoxing\Services\Service\Share $share */
     $share = wei()->share;
 
+    /** @var Miaoxing\Services\Service\StaticTrait $staticTrait */
+    $staticTrait = wei()->staticTrait;
+
     /** @var Miaoxing\Services\Service\Status $status */
     $status = wei()->status;
 
     /** @var Miaoxing\Services\Service\Str $str */
     $str = wei()->str;
+
+    /** @var Miaoxing\Services\Service\Tester $tester */
+    $tester = wei()->tester;
 
     /** @var Miaoxing\Services\Service\Time $time */
     $time = wei()->time;

@@ -44,7 +44,7 @@ class MakeDocCommand extends Command
     public function handle()
     {
         $dir = $this->argument('dir');
-        $services = wei()->plugin->generateClassMap([$dir . '/src'], '/Service/*.php', 'Service');
+        $services = wei()->classMap->generate([$dir . '/src'], '/Service/*.php', 'Service');
 
         $file = new PhpFile();
         $printer = new PsrPrinter;
