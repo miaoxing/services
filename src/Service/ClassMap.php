@@ -3,6 +3,7 @@
 namespace Miaoxing\Services\Service;
 
 use Exception;
+use ReflectionClass;
 use Wei\Base;
 
 class ClassMap extends Base
@@ -39,8 +40,15 @@ class ClassMap extends Base
                 if (!$class) {
                     continue;
                 }
+                if ((new ReflectionClass($class))->isAbstract()) {
+                    continue;
+                }
 
-                $name = $this->getShortName($class, $types[$i], $ignoreType);
+                if ($type) {
+                    $name = $this->getShortName($class, $types[$i], $ignoreType);
+                } else {
+                    $name = $class;
+                }
 
                 $this->addDuplicates($map, $name, $class);
                 $map[$name] = $class;

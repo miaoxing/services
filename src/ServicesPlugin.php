@@ -4,7 +4,7 @@ namespace Miaoxing\Services;
 
 use Miaoxing\Plugin\BasePlugin;
 
-class Plugin extends BasePlugin
+class ServicesPlugin extends BasePlugin
 {
     protected $name = '通用服务';
 
