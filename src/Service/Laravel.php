@@ -12,7 +12,9 @@ use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\RedisManager;
 use Miaoxing\Plugin\BaseService;
 use Illuminate\Support\Facades\Facade;
+use Miaoxing\Services\Laravel\ArtisanServiceProvider;
 use Miaoxing\Services\Laravel\ConsoleKernel;
+use Miaoxing\Services\Laravel\ConsoleSupportServiceProvider;
 use Miaoxing\Services\Laravel\HttpKernel;
 use Miaoxing\Queue\Service\Queue;
 use Wei\Db;
@@ -99,6 +101,8 @@ class Laravel extends BaseService
     protected function bootstrapConsole()
     {
         $app = $this->getApp();
+
+        $app->register(ConsoleSupportServiceProvider::class);
 
         /** @var ConsoleKernel $kernel */
         $kernel = $app->make(\Illuminate\Contracts\Console\Kernel::class);
