@@ -10,7 +10,7 @@ use Wei\Db;
  * @property \Wei\Schema $schema
  * @property Db $db
  */
-class BaseMigration extends Base
+abstract class BaseMigration extends Base
 {
     /**
      * Run the migration.

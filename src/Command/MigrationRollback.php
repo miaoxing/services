@@ -6,7 +6,7 @@ use Miaoxing\Plugin\Command\BaseCommand;
 use Miaoxing\Services\Service\Migration;
 use Symfony\Component\Console\Input\InputArgument;
 
-class MigRollback extends BaseCommand
+class MigrationRollback extends BaseCommand
 {
     protected function configure()
     {

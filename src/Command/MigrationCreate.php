@@ -7,7 +7,7 @@ use Miaoxing\Services\Service\Migration;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class MigCreate extends BaseCommand
+class MigrationCreate extends BaseCommand
 {
     protected function configure()
     {

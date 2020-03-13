@@ -5,11 +5,12 @@ namespace Miaoxing\Services\Command;
 use Miaoxing\Plugin\Command\BaseCommand;
 use Miaoxing\Services\Service\Migration;
 
-class Mig extends BaseCommand
+class MigrationRun extends BaseCommand
 {
     protected function configure()
     {
-        $this->setDescription('Run the migrations');
+        $this->setDescription('Run the migrations')
+            ->setAliases(['migrate']);
     }
 
     /**
