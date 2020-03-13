@@ -2,38 +2,21 @@
 
 namespace Miaoxing\Services\Command;
 
-use Illuminate\Console\Command;
+use Miaoxing\Plugin\Command\BaseCommand;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Method;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\PsrPrinter;
 use ReflectionClass;
 use ReflectionMethod;
+use Symfony\Component\Console\Input\InputArgument;
 
-class MakeDocCommand extends Command
+class MakeDoc extends BaseCommand
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'make:doc {dir}';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Generate doc for specified plugin';
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    protected function configure()
     {
-        parent::__construct();
+        $this->setDescription('Generate doc for specified plugin')
+            ->addArgument('dir', InputArgument::REQUIRED, 'The dir of the plugin');
     }
 
     /**

@@ -2,9 +2,10 @@
 
 namespace Miaoxing\Services\Command;
 
+use Miaoxing\Plugin\Command\BaseCommand;
 use Miaoxing\Services\Service\Migration;
 
-class MigStatusCommand extends BaseCommand
+class MigStatus extends BaseCommand
 {
     /**
      * The console command signature.
