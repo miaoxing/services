@@ -31,6 +31,16 @@ class Migration extends BaseService
     /**
      * @var string
      */
+    protected $defaultPath = 'src/Migration';
+
+    /**
+     * @var string
+     */
+    protected $defaultNamespace = 'App\Migration';
+
+    /**
+     * @var string
+     */
     protected $table = 'migrations';
 
     /**
@@ -152,16 +162,8 @@ class Migration extends BaseService
     protected function create($options)
     {
         $class = 'V' . date('YmdHis') . $options['name'];
-
-        if ($options['plugin']) {
-            $plugin = $this->plugin->getOneById($options['plugin']);
-            $path = $plugin->getBasePath() . '/src/Migration';
-            $reflection = new ReflectionClass($plugin);
-            $namespace = $reflection->getNamespaceName() . '\\Migration';
-        } else {
-            $path = $options['path'];
-            $namespace = $options['namespace'];
-        }
+        $path = $options['path'] ?? $this->defaultPath;
+        $namespace = $options['namespace'] ?? $this->defaultNamespace;
 
         if (!$path) {
             $this->writeln('<error>Path should not be empty</error>');
