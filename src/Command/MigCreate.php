@@ -25,6 +25,6 @@ class MigCreate extends BaseCommand
      */
     public function handle()
     {
-        Migration::setOutput($this->output)->create($this->getArguments() + $this->input->getOptions());
+        Migration::setOutput($this->output)->create($this->getArguments() + $this->getOptions());
     }
 }
