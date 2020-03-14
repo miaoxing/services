@@ -37,6 +37,7 @@ if (0) {
         public static function getApp();
     }
 }
+
 interface Migration
 {
     /**
