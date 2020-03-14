@@ -45,7 +45,7 @@ interface Migration
      * @return $this
      * @api
      */
-    public function setOutput(Symfony\Component\Console\Output\OutputInterface $output);
+    public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output);
 
     /**
      * @api
@@ -77,7 +77,7 @@ if (0) {
          * @return $this
          * @api
          */
-        public static function setOutput(Symfony\Component\Console\Output\OutputInterface $output);
+        public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output);
     
         /**
          * @api
