@@ -2,6 +2,41 @@
 
 namespace Miaoxing\Services\Service;
 
+interface Laravel
+{
+    /**
+     * Bootstrap Laravel application
+     *
+     * @return $this
+     * @api
+     */
+    public function bootstrap();
+
+    /**
+     * @return Application
+     * @api
+     */
+    public function getApp();
+}
+
+if (0) {
+    interface Laravel
+    {
+        /**
+         * Bootstrap Laravel application
+         *
+         * @return $this
+         * @api
+         */
+        public static function bootstrap();
+    
+        /**
+         * @return Application
+         * @api
+         */
+        public static function getApp();
+    }
+}
 interface Migration
 {
     /**

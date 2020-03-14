@@ -1,12 +1,8 @@
 <?php
 
-namespace WeiDoc {
-
-    /**
-     * @property \Wei\Event $event
-     */
-    class EventMixin
-    {
-
-    }
+/**
+ * @property \Wei\Event $event
+ */
+class EventMixin
+{
 }
