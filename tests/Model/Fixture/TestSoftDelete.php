@@ -3,7 +3,7 @@
 namespace MiaoxingTest\Services\Model\Fixture;
 
 use Miaoxing\Plugin\BaseModelV2;
-use Miaoxing\Services\Model\SoftDeleteTrait;
+use Miaoxing\Plugin\Model\SoftDeleteTrait;
 
 /**
  * @property string id

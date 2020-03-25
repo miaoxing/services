@@ -3,7 +3,7 @@
 namespace MiaoxingTest\Services\Model\Fixture;
 
 use Miaoxing\Plugin\BaseModelV2;
-use Miaoxing\Services\Model\DefaultScopeTrait;
+use Miaoxing\Plugin\Model\DefaultScopeTrait;
 
 class TestDefaultScope extends BaseModelV2
 {
