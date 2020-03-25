@@ -92,6 +92,8 @@ trait CastTrait
                 return (bool) $value;
 
             case 'array':
+                return is_array($value) ? $value : (array) $this->cacheJsonDecode($value, true);
+
             case 'json':
                 // Ignore default array value
                 return is_array($value) ? $value : $this->cacheJsonDecode($value, true);
