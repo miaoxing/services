@@ -46,7 +46,7 @@ trait StaticTrait
      */
     public static function newInstance($options = [])
     {
-        return wei()->newInstance(static::getServiceName(), $options);
+        return new static($options);
     }
 
     /**
@@ -56,6 +56,6 @@ trait StaticTrait
      */
     protected static function getServiceName()
     {
-        return lcfirst(class_basename(get_class()));
+        return lcfirst(class_basename(get_called_class()));
     }
 }
