@@ -40,7 +40,7 @@ class DbMixin {
 
 /**
  * @property    Miaoxing\Services\Service\Http $http
- * @method      \Miaoxing\Services\Service\Http http($url = null, $options = []) Create a new HTTP object and execute
+ * @method      Miaoxing\Services\Service\Http http($url = null, $options = []) Create a new HTTP object and execute
  */
 class HttpMixin {
 }
@@ -141,7 +141,7 @@ class StrMixin {
 
 /**
  * @property    Miaoxing\Services\Service\Tester $tester 测试
- * @method      \Miaoxing\Services\Service\Tester tester($controller = null, $action = null)
+ * @method      Miaoxing\Services\Service\Tester tester($controller = null, $action = null)
  */
 class TesterMixin {
 }
@@ -162,7 +162,7 @@ class UrlMixin {
 
 /**
  * @property    Miaoxing\Services\Service\V $v A chaining validator
- * @method      \Miaoxing\Services\Service\V v($options = []) Create a new validator
+ * @method      Miaoxing\Services\Service\V v($options = []) Create a new validator
  */
 class VMixin {
 }
