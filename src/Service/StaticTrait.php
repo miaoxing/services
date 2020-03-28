@@ -30,7 +30,12 @@ trait StaticTrait
      */
     public static function __callStatic(string $method, array $args)
     {
-        return wei()->get(static::getServiceName())->$method(...$args);
+        if (isset(static::$createNewInstance) && static::$createNewInstance) {
+            $instance = static::newInstance();
+        } else {
+            $instance = wei()->get(static::getServiceName());
+        }
+        return $instance->$method(...$args);
     }
 
     /**
