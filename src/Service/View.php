@@ -16,7 +16,6 @@ class View extends \Wei\View
         'url',
         'asset',
         'event',
-        'curUser',
     ];
 
     /**
