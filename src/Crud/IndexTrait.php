@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Crud;
 
-use Miaoxing\Plugin\BaseModelV2;
+use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
 use Miaoxing\Services\Service\Request;
 
@@ -28,12 +28,12 @@ trait IndexTrait
                 $models->sort();
             }
 
-            $models->findAll();
+            $models->all();
             $this->afterIndexFind($req, $models);
 
             // 2. 组装返回数据
             $data = [];
-            /** @var BaseModelV2 $model */
+            /** @var Model $model */
             foreach ($models as $model) {
                 $data[] = array_merge($model->toArray(), $this->buildIndexData($model));
             }
@@ -52,32 +52,32 @@ trait IndexTrait
 
     /**
      * @param Request $req
-     * @param BaseModelV2|BaseModelV2[] $models
+     * @param Model|Model[] $models
      */
-    protected function beforeIndexFind(Request $req, BaseModelV2 $models)
+    protected function beforeIndexFind(Request $req, Model $models)
     {
         // do nothing.
     }
 
     /**
      * @param Request $req
-     * @param BaseModelV2|BaseModelV2[] $models
+     * @param Model|Model[] $models
      */
-    protected function afterIndexFind(Request $req, BaseModelV2 $models)
+    protected function afterIndexFind(Request $req, Model $models)
     {
         // do nothing.
     }
 
     /**
-     * @param BaseModelV2 $model
+     * @param Model $model
      * @return array
      */
-    protected function buildIndexData(BaseModelV2 $model)
+    protected function buildIndexData(Model $model)
     {
         return [];
     }
 
-    protected function buildIndexRet($ret, Request $req, BaseModelV2 $models)
+    protected function buildIndexRet($ret, Request $req, Model $models)
     {
         return $ret;
     }

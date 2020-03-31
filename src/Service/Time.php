@@ -9,22 +9,24 @@ use Miaoxing\Plugin\BaseService;
  */
 class Time extends BaseService
 {
+    use StaticTrait;
+
     protected $now;
 
     /**
      * @return string
+     * @api
      */
-    public function __invoke()
+    protected function now()
     {
         return date('Y-m-d H:i:s', $this->getNow());
     }
 
-    public function now()
-    {
-        return $this->__invoke();
-    }
-
-    public function today()
+    /**
+     * @return string
+     * @api
+     */
+    protected function today()
     {
         return date('Y-m-d', $this->getNow());
     }

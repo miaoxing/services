@@ -148,7 +148,6 @@ class TesterMixin {
 
 /**
  * @property    Miaoxing\Services\Service\Time $time 时间日期
- * @method      string time()
  */
 class TimeMixin {
 }

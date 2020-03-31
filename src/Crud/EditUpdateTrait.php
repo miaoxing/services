@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Crud;
 
-use Miaoxing\Plugin\BaseModelV2;
+use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
 use Miaoxing\Services\Service\Request;
 
@@ -15,7 +15,7 @@ trait EditUpdateTrait
     {
         $model = $this->convention->getModelName($this);
 
-        $$model = $this->convention->createModel($this)->findId($req['id']);
+        $$model = $this->convention->createModel($this)->findOrInit($req['id']);
 
         if ($req->json()) {
             return $$model->toRet();
@@ -27,7 +27,7 @@ trait EditUpdateTrait
 
     public function updateAction($req)
     {
-        $model = $this->convention->createModel($this)->findId($req['id'])->fromArray($req);
+        $model = $this->convention->createModel($this)->findOrFail($req['id'])->fromArray($req);
 
         $ret = $this->beforeSave($req, $model);
         if ($ret['code'] !== 1) {
@@ -39,7 +39,7 @@ trait EditUpdateTrait
         return $this->suc();
     }
 
-    protected function beforeSave(Request $req, BaseModelV2 $model)
+    protected function beforeSave(Request $req, Model $model)
     {
         return $this->suc();
     }

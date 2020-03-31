@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Service;
 
-interface Laravel
+class Laravel
 {
     /**
      * Bootstrap Laravel application
@@ -10,17 +10,21 @@ interface Laravel
      * @return $this
      * @api
      */
-    public function bootstrap();
+    public function bootstrap()
+    {
+    }
 
     /**
      * @return Application
      * @api
      */
-    public function getApp();
+    public function getApp()
+    {
+    }
 }
 
 if (0) {
-    interface Laravel
+    class Laravel
     {
         /**
          * Bootstrap Laravel application
@@ -28,29 +32,37 @@ if (0) {
          * @return $this
          * @api
          */
-        public static function bootstrap();
+        public static function bootstrap()
+        {
+        }
     
         /**
          * @return Application
          * @api
          */
-        public static function getApp();
+        public static function getApp()
+        {
+        }
     }
 }
 
-interface Migration
+class Migration
 {
     /**
      * @param OutputInterface $output
      * @return $this
      * @api
      */
-    public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output);
+    public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
+    {
+    }
 
     /**
      * @api
      */
-    public function migrate();
+    public function migrate()
+    {
+    }
 
     /**
      * Rollback the last migration or to the specified target migration ID
@@ -58,7 +70,9 @@ interface Migration
      * @param array $options
      * @api
      */
-    public function rollback($options = []);
+    public function rollback($options = [])
+    {
+    }
 
     /**
      * @param array $options
@@ -66,23 +80,29 @@ interface Migration
      * @throws \Exception
      * @api
      */
-    public function create($options);
+    public function create($options)
+    {
+    }
 }
 
 if (0) {
-    interface Migration
+    class Migration
     {
         /**
          * @param OutputInterface $output
          * @return $this
          * @api
          */
-        public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output);
+        public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
+        {
+        }
     
         /**
          * @api
          */
-        public static function migrate();
+        public static function migrate()
+        {
+        }
     
         /**
          * Rollback the last migration or to the specified target migration ID
@@ -90,7 +110,9 @@ if (0) {
          * @param array $options
          * @api
          */
-        public static function rollback($options = []);
+        public static function rollback($options = [])
+        {
+        }
     
         /**
          * @param array $options
@@ -98,6 +120,48 @@ if (0) {
          * @throws \Exception
          * @api
          */
-        public static function create($options);
+        public static function create($options)
+        {
+        }
+    }
+}
+
+class Time
+{
+    /**
+     * @return string
+     * @api
+     */
+    public function now()
+    {
+    }
+
+    /**
+     * @return string
+     * @api
+     */
+    public function today()
+    {
+    }
+}
+
+if (0) {
+    class Time
+    {
+        /**
+         * @return string
+         * @api
+         */
+        public static function now()
+        {
+        }
+    
+        /**
+         * @return string
+         * @api
+         */
+        public static function today()
+        {
+        }
     }
 }
