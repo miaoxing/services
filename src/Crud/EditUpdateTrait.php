@@ -20,7 +20,6 @@ trait EditUpdateTrait
         if ($req->json()) {
             return $$model->toRet();
         } else {
-            $this->js[$model] = $$model;
             return get_defined_vars();
         }
     }
