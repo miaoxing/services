@@ -2,6 +2,8 @@
 
 namespace Miaoxing\Services\Service;
 
+use Miaoxing\Plugin\Service\User;
+
 /**
  * 测试
  */
@@ -418,7 +420,7 @@ class Tester extends \Miaoxing\Plugin\BaseService
 
     public function req($data = [])
     {
-        if (!isset($this->session['user'])) {
+        if (!User::isLogin()) {
             $this->login();
         }
 
