@@ -181,7 +181,7 @@ class ClassMap extends Base
                 // 只考虑一个主类的情况
                 $parent = get_parent_class($class);
                 if ($parent && isset($this->duplicates[$name][$parent])) {
-                    $map[$name] = $parent;
+                    $map[$name] = $class;
                     unset($this->duplicates[$name]);
                     break;
                 }
