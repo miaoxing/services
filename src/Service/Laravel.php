@@ -25,8 +25,6 @@ use Wei\Db;
  */
 class Laravel extends BaseService
 {
-    use StaticTrait;
-
     /**
      * @var Application
      */

@@ -18,7 +18,6 @@ use Wei\Schema;
 class Migration extends BaseService
 {
     use RetTrait;
-    use StaticTrait;
 
     /**
      * @var array

@@ -9,8 +9,6 @@ use Miaoxing\Plugin\BaseService;
  */
 class Time extends BaseService
 {
-    use StaticTrait;
-
     protected $now;
 
     /**
