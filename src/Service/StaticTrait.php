@@ -93,7 +93,7 @@ trait StaticTrait
     }
 
     /**
-     * Receive the class base name of current class
+     * Receive the base name of current class
      *
      * @return string
      */
