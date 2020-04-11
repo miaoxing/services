@@ -93,12 +93,13 @@ trait StaticTrait
     }
 
     /**
-     * Receive the service name of current class
+     * Receive the class base name of current class
      *
      * @return string
      */
     protected static function getServiceName()
     {
-        return lcfirst(class_basename(get_called_class()));
+        $parts = explode('\\', static::class);
+        return lcfirst(end($parts));
     }
 }
