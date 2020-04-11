@@ -5,7 +5,7 @@ namespace Miaoxing\Services\Service;
 use Miaoxing\Services\ConfigTrait;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Services\Service\Asset;
-use Miaoxing\Services\Service\Str;
+use Miaoxing\Plugin\Service\Str;
 use Miaoxing\Services\Service\View;
 use Wei\Block;
 

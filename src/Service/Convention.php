@@ -5,7 +5,7 @@ namespace Miaoxing\Services\Service;
 use Miaoxing\Plugin\BaseModelV2;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\Service\Model;
-use Miaoxing\Services\Service\Str;
+use Miaoxing\Plugin\Service\Str;
 
 /**
  * @property Str $str

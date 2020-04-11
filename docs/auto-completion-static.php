@@ -2,65 +2,78 @@
 
 namespace Miaoxing\Services\Service;
 
-class Laravel
+class Asset extends \Wei\Asset
+{
+}
+
+class ClassMap extends \Wei\Base
+{
+}
+
+class Coll extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Convention extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class CsvExporter extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Db extends \Wei\Db
+{
+}
+
+class Http extends \Wei\Http
+{
+}
+
+class IsRecordExists extends \Wei\Validator\RecordExists
+{
+}
+
+class Laravel extends \Miaoxing\Plugin\BaseService
 {
     /**
      * Bootstrap Laravel application
      *
      * @return $this
-     * @api
+     * @see Laravel::bootstrap
      */
-    public function bootstrap()
+    public static function bootstrap()
     {
     }
 
     /**
      * @return Application
-     * @api
+     * @see Laravel::getApp
      */
-    public function getApp()
+    public static function getApp()
     {
     }
 }
 
-if (0) {
-    class Laravel
-    {
-        /**
-         * Bootstrap Laravel application
-         *
-         * @return $this
-         * @api
-         */
-        public static function bootstrap()
-        {
-        }
-    
-        /**
-         * @return Application
-         * @api
-         */
-        public static function getApp()
-        {
-        }
-    }
+class Logger extends \Wei\Logger
+{
 }
 
-class Migration
+class Migration extends \Miaoxing\Plugin\BaseService
 {
     /**
      * @param OutputInterface $output
      * @return $this
-     * @api
+     * @see Migration::setOutput
      */
-    public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
+    public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
     {
     }
 
     /**
-     * @api
+     * @see Migration::migrate
      */
-    public function migrate()
+    public static function migrate()
     {
     }
 
@@ -68,9 +81,9 @@ class Migration
      * Rollback the last migration or to the specified target migration ID
      *
      * @param array $options
-     * @api
+     * @see Migration::rollback
      */
-    public function rollback($options = [])
+    public static function rollback($options = [])
     {
     }
 
@@ -78,90 +91,76 @@ class Migration
      * @param array $options
      * @throws \ReflectionException
      * @throws \Exception
-     * @api
+     * @see Migration::create
      */
-    public function create($options)
+    public static function create($options)
     {
     }
 }
 
-if (0) {
-    class Migration
-    {
-        /**
-         * @param OutputInterface $output
-         * @return $this
-         * @api
-         */
-        public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
-        {
-        }
-    
-        /**
-         * @api
-         */
-        public static function migrate()
-        {
-        }
-    
-        /**
-         * Rollback the last migration or to the specified target migration ID
-         *
-         * @param array $options
-         * @api
-         */
-        public static function rollback($options = [])
-        {
-        }
-    
-        /**
-         * @param array $options
-         * @throws \ReflectionException
-         * @throws \Exception
-         * @api
-         */
-        public static function create($options)
-        {
-        }
-    }
+class Page extends \Miaoxing\Plugin\BaseService
+{
 }
 
-class Time
+class Random extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Request extends \Wei\Request
+{
+}
+
+class Ret extends \Wei\Ret
+{
+}
+
+class SexConst extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Share extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Status extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Tester extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class Time extends \Miaoxing\Plugin\BaseService
 {
     /**
      * @return string
-     * @api
+     * @see Time::now
      */
-    public function now()
+    public static function now()
     {
     }
 
     /**
      * @return string
-     * @api
+     * @see Time::today
      */
-    public function today()
+    public static function today()
     {
     }
 }
 
-if (0) {
-    class Time
-    {
-        /**
-         * @return string
-         * @api
-         */
-        public static function now()
-        {
-        }
-    
-        /**
-         * @return string
-         * @api
-         */
-        public static function today()
-        {
-        }
-    }
+class Url extends \Wei\Url
+{
+}
+
+class V extends \Miaoxing\Plugin\BaseService
+{
+}
+
+class View extends \Wei\View
+{
+}
+
+class YesNoConst extends \Miaoxing\Plugin\BaseService
+{
 }

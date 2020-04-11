@@ -134,12 +134,6 @@ class StatusMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Str $str 字符串操作服务
- */
-class StrMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\Tester $tester 测试
  * @method      Miaoxing\Services\Service\Tester tester($controller = null, $action = null)
  */
@@ -201,7 +195,6 @@ class YesNoConstMixin {
  * @mixin ShareMixin
  * @mixin StaticTraitMixin
  * @mixin StatusMixin
- * @mixin StrMixin
  * @mixin TesterMixin
  * @mixin TimeMixin
  * @mixin UrlMixin
@@ -282,9 +275,6 @@ $staticTrait = wei()->staticTrait;
 
 /** @var Miaoxing\Services\Service\Status $status */
 $status = wei()->status;
-
-/** @var Miaoxing\Services\Service\Str $str */
-$str = wei()->str;
 
 /** @var Miaoxing\Services\Service\Tester $tester */
 $tester = wei()->tester;
