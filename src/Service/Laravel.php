@@ -39,7 +39,7 @@ class Laravel extends BaseService
      * Bootstrap Laravel application
      *
      * @return $this
-     * @api
+     * @svc
      */
     protected function bootstrap()
     {
@@ -60,7 +60,7 @@ class Laravel extends BaseService
 
     /**
      * @return Application
-     * @api
+     * @svc
      */
     protected function getApp()
     {

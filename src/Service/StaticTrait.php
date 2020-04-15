@@ -35,7 +35,7 @@ trait StaticTrait
             return $exists = false;
         }
 
-        return $exists = strpos($ref->getDocComment(), "* @api\n") !== false;
+        return $exists = strpos($ref->getDocComment(), "* @svc\n") !== false;
     }
 
     /**

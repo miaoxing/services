@@ -59,7 +59,7 @@ class Migration extends BaseService
     /**
      * @param OutputInterface $output
      * @return $this
-     * @api
+     * @svc
      */
     protected function setOutput(OutputInterface $output)
     {
@@ -68,7 +68,7 @@ class Migration extends BaseService
     }
 
     /**
-     * @api
+     * @svc
      */
     protected function migrate()
     {
@@ -114,7 +114,7 @@ class Migration extends BaseService
      * Rollback the last migration or to the specified target migration ID
      *
      * @param array $options
-     * @api
+     * @svc
      */
     protected function rollback($options = [])
     {
@@ -156,7 +156,7 @@ class Migration extends BaseService
      * @param array $options
      * @throws \ReflectionException
      * @throws \Exception
-     * @api
+     * @svc
      */
     protected function create($options)
     {

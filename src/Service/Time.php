@@ -13,7 +13,7 @@ class Time extends BaseService
 
     /**
      * @return string
-     * @api
+     * @svc
      */
     protected function now()
     {
@@ -22,7 +22,7 @@ class Time extends BaseService
 
     /**
      * @return string
-     * @api
+     * @svc
      */
     protected function today()
     {
