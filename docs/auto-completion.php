@@ -148,7 +148,7 @@ class TimeMixin {
 
 /**
  * @property    Miaoxing\Services\Service\Url $url
- * @method      string url($url = '', $argsOrParams = [], $params = []) Generate the URL by specified URL and parameters
+ * @method      string url($url = '', $argsOrParams = [], $params = []) Invoke the "to" method
  */
 class UrlMixin {
 }

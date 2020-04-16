@@ -205,8 +205,9 @@ class V extends BaseService
      * @param string $name
      * @param string|null $label
      * @return $this
+     * @svc
      */
-    public function key($name, $label = null)
+    protected function key($name, $label = null)
     {
         $this->lastKey = $name;
 

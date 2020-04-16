@@ -155,6 +155,17 @@ class Url extends \Wei\Url
 
 class V extends \Miaoxing\Plugin\BaseService
 {
+    /**
+     * Add a new field
+     *
+     * @param string $name
+     * @param string|null $label
+     * @return $this
+     * @see V::key
+     */
+    public function key($name, $label = null)
+    {
+    }
 }
 
 class View extends \Wei\View
