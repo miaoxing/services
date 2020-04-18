@@ -97,7 +97,7 @@ class RequestMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Ret $ret
+ * @property    Miaoxing\Services\Service\Ret2 $ret
  * @method      mixed ret($message, $code = 1, $type = 'success')
  */
 class RetMixin {
@@ -258,7 +258,7 @@ $random = wei()->random;
 /** @var Miaoxing\Services\Service\Request $request */
 $request = wei()->request;
 
-/** @var Miaoxing\Services\Service\Ret $ret */
+/** @var Miaoxing\Services\Service\Ret2 $ret */
 $ret = wei()->ret;
 
 /** @var Miaoxing\Services\Service\ServiceTrait $serviceTrait */
