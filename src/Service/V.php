@@ -285,7 +285,7 @@ class V extends BaseService
      * Validate the data and return the ret array
      *
      * @param mixed $data
-     * @return array
+     * @return \Miaoxing\Plugin\Service\Ret
      */
     public function check($data = null)
     {
@@ -379,6 +379,10 @@ class V extends BaseService
      */
     public function __call($name, $args)
     {
+        // TODO wei 提供接口判断是否可以调用为服务方法
+        if (method_exists($this, $name)) {
+            return $this->$name(...$args);
+        }
         return $this->addRule($name, $args);
     }
 }

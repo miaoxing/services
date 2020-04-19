@@ -110,10 +110,6 @@ class Request extends \Wei\Request
 {
 }
 
-class Ret extends \Wei\Ret
-{
-}
-
 class SexConst extends \Miaoxing\Plugin\BaseService
 {
 }
