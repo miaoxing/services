@@ -371,6 +371,41 @@ class V extends BaseService
     }
 
     /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @svc
+     */
+    protected function when($value, $callback, callable $default = null)
+    {
+        if ($value) {
+            $callback($this, $value);
+        } elseif ($default) {
+            $default($this, $value);
+        }
+        return $this;
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @svc
+     */
+    protected function unless($value, callable $callback, callable $default = null)
+    {
+        if (!$value) {
+            $callback($this, $value);
+        } elseif ($default) {
+            $default($this, $value);
+        }
+        return $this;
+    }
+
+
+    /**
      * Add rule for current field
      *
      * @param string $name

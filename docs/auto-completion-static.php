@@ -162,6 +162,28 @@ class V extends \Miaoxing\Plugin\BaseService
     public static function key($name, $label = null)
     {
     }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see V::when
+     */
+    public static function when($value, $callback, callable $default = null)
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see V::unless
+     */
+    public static function unless($value, callable $callback, callable $default = null)
+    {
+    }
 }
 
 class View extends \Wei\View
