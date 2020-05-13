@@ -5,13 +5,18 @@ namespace Miaoxing\Services\Service;
 use Miaoxing\Raven\Service\Raven;
 
 /**
- * @property \Wei\Session $session
+ * @mixin \SessionMixin
  * @property Logger $errorLogger
  * @property Raven $raven
  * @todo 引入新的 sentry
  */
 class Logger extends \Wei\Logger
 {
+    /**
+     * @var string
+     */
+    protected $dir = 'data/logs';
+
     /**
      * 引到error.logger服务的最低级别
      *
@@ -40,6 +45,22 @@ class Logger extends \Wei\Logger
     ];
 
     /**
+     * @inheritDoc
+     */
+    public function __construct(array $options = array())
+    {
+        parent::__construct($options);
+
+        // 创建默认的错误日志配置
+        if (!$this->wei->getConfig('error.logger')) {
+            $this->wei->setConfig('error.logger', [
+                'dir' => 'data/logs',
+                'fileFormat' => '\e\r\r\o\r-Ymd.\l\o\g',
+            ]);
+        }
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @param bool $fromErrorLogger 是否来自error.logger对象
@@ -47,9 +68,7 @@ class Logger extends \Wei\Logger
     public function log($level, $message, $context = [], $fromErrorLogger = false)
     {
         // 将较高级别的日志,引到error.logger服务
-        if ($fromErrorLogger
-            || (isset($this->levels[$level]) && $this->levels[$level] < $this->levels[$this->proxyLevel])
-        ) {
+        if ($fromErrorLogger || ($this->levels[$level] ?? 0) < $this->levels[$this->proxyLevel]) {
             return parent::log($level, $message, $context);
         } else {
             return $this->errorLogger->log($level, $message, $context, true);
@@ -61,8 +80,13 @@ class Logger extends \Wei\Logger
      */
     protected function writeLog($level, $message, $context)
     {
-        parent::writeLog($level, $message, $context);
+        $result = parent::writeLog($level, $message, $context);
+        $this->sendToRaven($level, $message, $context);
+        return $result;
+    }
 
+    protected function sendToRaven($level, $message, $context)
+    {
         // 1. 检查有raven服务才上报日志
         if (!isset($this->raven) && !$this->wei->has('raven')) {
             return;
