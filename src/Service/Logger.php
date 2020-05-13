@@ -54,8 +54,8 @@ class Logger extends \Wei\Logger
         // 创建默认的错误日志配置
         if (!$this->wei->getConfig('error.logger')) {
             $this->wei->setConfig('error.logger', [
-                'dir' => 'data/logs',
-                'fileFormat' => '\e\r\r\o\r-Ymd.\l\o\g',
+                'dir' => $this->dir,
+                'fileFormat' => '\e\r\r\o\r' . $this->fileFormat,
             ]);
         }
     }
