@@ -8,4 +8,5 @@ trait RestTrait
     use NewCreateTrait;
     use EditUpdateTrait;
     use DestroyTrait;
+    use ShowTrait;
 }
