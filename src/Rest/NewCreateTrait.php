@@ -2,15 +2,17 @@
 
 namespace Miaoxing\Services\Rest;
 
+use Miaoxing\Services\Service\Request;
+
 trait NewCreateTrait
 {
-    public function newAction()
+    public function newAction(Request $req)
     {
-        return $this->editAction();
+        return $this->editAction($req);
     }
 
-    public function createAction()
+    public function createAction(Request $req)
     {
-        return $this->updateAction();
+        return $this->updateAction($req);
     }
 }
