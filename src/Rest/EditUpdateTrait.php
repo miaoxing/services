@@ -19,7 +19,10 @@ trait EditUpdateTrait
 
     public function updateAction(Request $req)
     {
-        $model = $this->convention->createModel($this)->findOrFail($req['id'])->fromArray($req);
+        $ret = $this->beforeUpdateFind($req);
+        $this->tie($ret);
+
+        $model = $this->convention->createModel($this)->findOrInit($req['id'])->fromArray($req);
 
         $ret = $this->beforeSave($req, $model);
         $this->tie($ret);
@@ -27,6 +30,11 @@ trait EditUpdateTrait
         $model->save();
 
         return $model->toRet();
+    }
+
+    protected function beforeUpdateFind(Request $req)
+    {
+        return suc();
     }
 
     protected function beforeSave(Request $req, Model $model)
