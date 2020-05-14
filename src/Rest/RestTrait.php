@@ -7,4 +7,5 @@ use Miaoxing\Services\Crud\IndexTrait;
 trait RestTrait
 {
     use IndexTrait;
+    use NewCreateTrait;
 }
