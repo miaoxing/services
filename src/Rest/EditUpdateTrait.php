@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\Services\Crud;
+namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Request;
