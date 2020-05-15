@@ -14,11 +14,7 @@ trait IndexTrait
     public function indexAction(Request $req)
     {
         // 1. 构建查询
-        if (method_exists($this, 'createModel')) {
-            $models = $this->createModel();
-        } else {
-            $models = $this->convention->createModel($this);
-        }
+        $models = $this->convention->createModel($this);
         $models->setRequest($req)
             ->paginate();
 

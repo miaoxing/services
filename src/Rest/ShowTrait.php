@@ -12,11 +12,7 @@ trait ShowTrait
 {
     public function showAction(Request $req)
     {
-        if (method_exists($this, 'createModel')) {
-            $model = $this->createModel();
-        } else {
-            $model = $this->convention->createModel($this);
-        }
+        $model = $this->convention->createModel($this);
 
         $this->beforeShowFind($req, $model);
         $model = $model->findOrFail($req['id']);

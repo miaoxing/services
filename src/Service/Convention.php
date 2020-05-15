@@ -31,6 +31,10 @@ class Convention extends BaseService
      */
     public function createModel($object)
     {
+        if (method_exists($object, 'createModel')) {
+            return $object->createModel();
+        }
+
         return $this->{$this->getModelName($object) . 'Model'}();
     }
 
