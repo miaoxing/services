@@ -12,7 +12,10 @@ trait EditUpdateTrait
 {
     public function editAction(Request $req)
     {
-        $model = $this->convention->createModel($this)->findOrInit($req['id']);
+        $model = $this->convention->createModel($this);
+        if ($this->app->getAction() === 'edit') {
+            $model->findOrFail($req['id']);
+        }
 
         return $model->toRet();
     }
@@ -22,8 +25,12 @@ trait EditUpdateTrait
         $ret = $this->beforeUpdateFind($req);
         $this->tie($ret);
 
-        $model = $this->convention->createModel($this)->findOrInit($req['id'])->fromArray($req);
+        $model = $this->convention->createModel($this);
+        if ($this->app->getAction() === 'edit') {
+            $model->findOrFail($req['id']);
+        }
 
+        $model->fromArray($req);
         $ret = $this->beforeSave($req, $model);
         $this->tie($ret);
 
