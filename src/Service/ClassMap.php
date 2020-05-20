@@ -72,14 +72,14 @@ class ClassMap extends Base
     protected function guessClassName($file, $ignoreProject = false)
     {
         // 假设为根目录
-        if ($file[0] === '.') {
+        if ('.' === $file[0]) {
             $file = '\\' . ltrim($file, './');
         }
 
         list($dir, $className) = explode('src/', $file);
 
         // TODO V2 处理V2的插件形式
-        if ($dir == '\\') {
+        if ('\\' == $dir) {
             $dir = '';
         }
 
@@ -89,7 +89,7 @@ class ClassMap extends Base
         }
 
         $json = json_decode(file_get_contents($composerJson), true);
-        if ($ignoreProject && isset($json['type']) && $json['type'] == 'project') {
+        if ($ignoreProject && isset($json['type']) && 'project' == $json['type']) {
             return false;
         }
 
@@ -120,14 +120,14 @@ class ClassMap extends Base
 
         // 将名称转换为小写
         $pos = strrpos($name, '\\');
-        $pos = $pos === false ? 0 : $pos + 1;
+        $pos = false === $pos ? 0 : $pos + 1;
         $name[$pos] = lcfirst($name[$pos]);
         $name = lcfirst($name);
 
         // 忽略结尾的类型
         if ($ignoreType) {
             $pos = strrpos($name, $type);
-            if ($pos !== false) {
+            if (false !== $pos) {
                 $name = substr($name, 0, $pos);
             }
         }

@@ -56,7 +56,7 @@ trait ConstTrait
         $data = [];
         $length = strlen($prefix);
         foreach ($consts as $name => $id) {
-            if (stripos($name, $prefix) !== 0) {
+            if (0 !== stripos($name, $prefix)) {
                 continue;
             }
             if (in_array($name, $this->constExcludes)) {
@@ -130,12 +130,12 @@ trait ConstTrait
      */
     public function whereConstKey($prefix, $reqKey = null)
     {
-        if (func_num_args() === 1) {
+        if (1 === func_num_args()) {
             $reqKey = $this->request->get($prefix);
         }
 
         $id = $this->getConstId($prefix, $reqKey);
-        if ($id !== '') {
+        if ('' !== $id) {
             list($column) = $this->parseReqColumn($prefix);
             $this->andWhere([$column => $id]);
         }

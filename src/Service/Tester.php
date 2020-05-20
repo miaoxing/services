@@ -261,7 +261,7 @@ class Tester extends \Miaoxing\Plugin\BaseService
      */
     public function response()
     {
-        if ($this->response === null) {
+        if (null === $this->response) {
             $this->exec();
         }
 
@@ -280,8 +280,8 @@ class Tester extends \Miaoxing\Plugin\BaseService
         switch ($this->dataType) {
             case 'json':
             case 'jsonObject':
-                $data = json_decode($data, $this->dataType === 'json');
-                if (null === $data && json_last_error() != JSON_ERROR_NONE) {
+                $data = json_decode($data, 'json' === $this->dataType);
+                if (null === $data && JSON_ERROR_NONE != json_last_error()) {
                     $exception = new \ErrorException('JSON parsing error', json_last_error());
                 }
                 break;

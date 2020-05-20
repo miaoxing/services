@@ -29,7 +29,7 @@ trait EditUpdateTrait
         $model = $this->convention->createModel($this)->findOrFail($req['id'])->fromArray($req);
 
         $ret = $this->beforeSave($req, $model);
-        if ($ret['code'] !== 1) {
+        if (1 !== $ret['code']) {
             return $ret;
         }
 

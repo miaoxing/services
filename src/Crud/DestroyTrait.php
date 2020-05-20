@@ -19,7 +19,7 @@ trait DestroyTrait
         $model = $this->convention->createModel($this)->findOneById($req['id']);
 
         $ret = $this->beforeDestroy($req, $model);
-        if ($ret['code'] !== 1) {
+        if (1 !== $ret['code']) {
             return $ret;
         }
 

@@ -52,11 +52,11 @@ class Status extends \Miaoxing\Plugin\BaseService
     public function req($reqStatus, array $configs, $defaultId = false)
     {
         $key = array_search($reqStatus, $this->coll->column($configs, 'name', 'id'));
-        if ($key === false) {
+        if (false === $key) {
             $key = $defaultId;
         }
 
-        if ($key === false) {
+        if (false === $key) {
             $config = current($configs);
         } else {
             $config = $configs[$key];

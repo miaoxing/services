@@ -26,7 +26,7 @@ class CsvExporter extends BaseService
         $handle = fopen('php://output', 'w');
         foreach ($data as $row) {
             foreach ($row as &$value) {
-                if ($value !== null && !is_numeric($value)) {
+                if (null !== $value && !is_numeric($value)) {
                     $value = iconv('UTF-8', 'GBK', $value);
                 }
             }

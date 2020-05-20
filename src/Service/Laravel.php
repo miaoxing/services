@@ -48,7 +48,7 @@ class Laravel extends BaseService
         }
         $this->bootstrapped = true;
 
-        if (php_sapi_name() === 'cli') {
+        if ('cli' === php_sapi_name()) {
             $this->bootstrapConsole();
         } else {
             $this->bootstrapHttp();

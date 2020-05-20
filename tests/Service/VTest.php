@@ -49,14 +49,14 @@ class VTest extends BaseTestCase
     {
         $ret = wei()->v()
             ->key('name')->callback(function ($name) {
-                return $name !== 'twin';
+                return 'twin' !== $name;
             })
             ->check(['name' => 'twin']);
         $this->assertRetErr($ret, -1, '该项不合法');
 
         $ret = wei()->v()
             ->key('name')->callback(function ($name) {
-                return $name !== 'twin';
+                return 'twin' !== $name;
             })
             ->check(['name' => 'hi']);
         $this->assertRetSuc($ret);

@@ -52,7 +52,7 @@ class Asset extends \Wei\Asset
     {
         parent::__construct($options);
 
-        if ($this->enableRev == null) {
+        if (null == $this->enableRev) {
             if (!$this->wei->isDebug()) {
                 $this->enableRev = true;
             }
@@ -117,7 +117,7 @@ class Asset extends \Wei\Asset
      */
     public function getRevMap()
     {
-        if ($this->revMap === null) {
+        if (null === $this->revMap) {
             if ($this->revFile && is_file($this->revFile)) {
                 $this->revMap = (array) json_decode(file_get_contents($this->revFile));
             } else {
