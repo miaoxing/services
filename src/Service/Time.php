@@ -9,7 +9,10 @@ use Miaoxing\Plugin\BaseService;
  */
 class Time extends BaseService
 {
-    protected $now;
+    /**
+     * @var int
+     */
+    protected $timestamp;
 
     /**
      * @return string
@@ -17,7 +20,7 @@ class Time extends BaseService
      */
     protected function now()
     {
-        return date('Y-m-d H:i:s', $this->getNow());
+        return date('Y-m-d H:i:s', $this->timestamp());
     }
 
     /**
@@ -26,11 +29,14 @@ class Time extends BaseService
      */
     protected function today()
     {
-        return date('Y-m-d', $this->getNow());
+        return date('Y-m-d', $this->timestamp());
     }
 
-    protected function getNow()
+    /**
+     * @return int
+     */
+    protected function timestamp()
     {
-        return $this->now ?: time();
+        return $this->timestamp ?: time();
     }
 }
