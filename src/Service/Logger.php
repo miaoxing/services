@@ -15,7 +15,7 @@ class Logger extends \Wei\Logger
     /**
      * @var string
      */
-    protected $dir = 'data/logs';
+    protected $dir = 'storage/logs';
 
     /**
      * 引到error.logger服务的最低级别
