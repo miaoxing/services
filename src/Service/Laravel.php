@@ -114,15 +114,39 @@ class Laravel extends BaseService
         // Database
         /** @var Repository $config */
         $config = $app['config'];
-        $config->set('database', [
-            'default' => 'mysql',
-            'connections' => [
-                'mysql' => [],
+
+        $config->set([
+            'logging' => [
+                'default' => 'daily',
+                'channels' => [
+                    'daily' => [
+                        'driver' => 'daily',
+                        'path' => storage_path('logs/laravel.log'),
+                        'level' => 'debug',
+                        'days' => 14,
+                    ],
+                ],
             ],
-            'redis' => [
-                'default' => [],
+            'cache' => [
+                'default' => 'file',
+                'stores' => [
+                    'file' => [
+                        'driver' => 'file',
+                        'path' => storage_path('framework/cache/data'),
+                    ],
+                ],
+            ],
+            'database' => [
+                'default' => 'mysql',
+                'connections' => [
+                    'mysql' => [],
+                ],
+                'redis' => [
+                    'default' => [],
+                ],
             ],
         ]);
+
         $app->extend(DatabaseManager::class, function (DatabaseManager $manager) {
             $manager->extend('mysql', function () {
                 return new MySqlConnection($this->db->getPdo(), $this->db->getDbname(), $this->db->getTablePrefix());
@@ -131,8 +155,7 @@ class Laravel extends BaseService
         });
         $app->extend(RedisManager::class, function (RedisManager $manager) {
             $manager->extend('phpredis', function () {
-                return new class extends PhpRedisConnector
-                {
+                return new class extends PhpRedisConnector {
                     public function connect(array $config, array $options)
                     {
                         return new PhpRedisConnection(wei()->redis->getObject());
