@@ -60,12 +60,6 @@ class LoggerMixin {
 }
 
 /**
- * @property    \Wei\Migration $migration 数据库迁移
- */
-class MigrationMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\OptionTrait $optionTrait
  */
 class OptionTraitMixin {
@@ -81,12 +75,6 @@ class PageMixin {
  * @property    Miaoxing\Services\Service\Random $random
  */
 class RandomMixin {
-}
-
-/**
- * @property    \Wei\ServiceTrait $serviceTrait
- */
-class ServiceTraitMixin {
 }
 
 /**
@@ -128,13 +116,6 @@ class UrlMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\V $v A chaining validator
- * @method      Miaoxing\Services\Service\V v($options = []) Create a new validator
- */
-class VMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\View $view
  * @method      string view($name = null, $data = []) Render a PHP template
  */
@@ -157,18 +138,15 @@ class YesNoConstMixin {
  * @mixin IsRecordExistsMixin
  * @mixin LaravelMixin
  * @mixin LoggerMixin
- * @mixin MigrationMixin
  * @mixin OptionTraitMixin
  * @mixin PageMixin
  * @mixin RandomMixin
- * @mixin ServiceTraitMixin
  * @mixin SexConstMixin
  * @mixin ShareMixin
  * @mixin StaticTraitMixin
  * @mixin StatusMixin
  * @mixin TesterMixin
  * @mixin UrlMixin
- * @mixin VMixin
  * @mixin ViewMixin
  * @mixin YesNoConstMixin
  */
@@ -210,9 +188,6 @@ $laravel = wei()->laravel;
 /** @var Miaoxing\Services\Service\Logger $logger */
 $logger = wei()->logger;
 
-/** @var \Wei\Migration $migration */
-$migration = wei()->migration;
-
 /** @var Miaoxing\Services\Service\OptionTrait $optionTrait */
 $optionTrait = wei()->optionTrait;
 
@@ -221,9 +196,6 @@ $page = wei()->page;
 
 /** @var Miaoxing\Services\Service\Random $random */
 $random = wei()->random;
-
-/** @var \Wei\ServiceTrait $serviceTrait */
-$serviceTrait = wei()->serviceTrait;
 
 /** @var Miaoxing\Services\Service\SexConst $sexConst */
 $sexConst = wei()->sexConst;
@@ -242,9 +214,6 @@ $tester = wei()->tester;
 
 /** @var Miaoxing\Services\Service\Url $url */
 $url = wei()->url;
-
-/** @var Miaoxing\Services\Service\V $v */
-$v = wei()->v;
 
 /** @var Miaoxing\Services\Service\View $view */
 $view = wei()->view;
