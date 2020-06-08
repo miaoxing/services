@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Service;
 
-use Miaoxing\Services\ConfigTrait;
+use Miaoxing\Plugin\ConfigTrait;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Services\Service\Asset;
 use Miaoxing\Plugin\Service\Str;
