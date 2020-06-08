@@ -13,7 +13,9 @@
       "Miaoxing\\Services\\": "src"
     }
   },
-  "require": {},
+  "require": {
+    "miaoxing/plugin": "dev-master@dev"
+  },
   "suggest": {
     "miaoxing/queue": "Required to use Laravel queue"
   }
