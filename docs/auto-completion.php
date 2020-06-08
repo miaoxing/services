@@ -102,8 +102,8 @@ class StatusMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Tester $tester 测试
- * @method      Miaoxing\Services\Service\Tester tester($controller = null, $action = null)
+ * @property    \Miaoxing\Plugin\Service\Tester $tester 测试
+ * @method      \Miaoxing\Plugin\Service\Tester tester($controller = null, $action = null)
  */
 class TesterMixin {
 }
@@ -209,7 +209,7 @@ $staticTrait = wei()->staticTrait;
 /** @var Miaoxing\Services\Service\Status $status */
 $status = wei()->status;
 
-/** @var Miaoxing\Services\Service\Tester $tester */
+/** @var \Miaoxing\Plugin\Service\Tester $tester */
 $tester = wei()->tester;
 
 /** @var Miaoxing\Services\Service\Url $url */
