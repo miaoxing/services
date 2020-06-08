@@ -128,12 +128,6 @@ class TesterMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Time $time 时间日期
- */
-class TimeMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\Url $url
  * @method      string url($url = '', $argsOrParams = [], $params = []) Invoke the "to" method
  */
@@ -181,7 +175,6 @@ class YesNoConstMixin {
  * @mixin StaticTraitMixin
  * @mixin StatusMixin
  * @mixin TesterMixin
- * @mixin TimeMixin
  * @mixin UrlMixin
  * @mixin VMixin
  * @mixin ViewMixin
@@ -257,9 +250,6 @@ $status = wei()->status;
 
 /** @var Miaoxing\Services\Service\Tester $tester */
 $tester = wei()->tester;
-
-/** @var Miaoxing\Services\Service\Time $time */
-$time = wei()->time;
 
 /** @var Miaoxing\Services\Service\Url $url */
 $url = wei()->url;
