@@ -102,13 +102,6 @@ class StatusMixin {
 }
 
 /**
- * @property    \Miaoxing\Plugin\Service\Tester $tester 测试
- * @method      \Miaoxing\Plugin\Service\Tester tester($controller = null, $action = null)
- */
-class TesterMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\Url $url
  * @method      string url($url = '', $argsOrParams = [], $params = []) Invoke the "to" method
  */
@@ -145,7 +138,6 @@ class YesNoConstMixin {
  * @mixin ShareMixin
  * @mixin StaticTraitMixin
  * @mixin StatusMixin
- * @mixin TesterMixin
  * @mixin UrlMixin
  * @mixin ViewMixin
  * @mixin YesNoConstMixin
@@ -208,9 +200,6 @@ $staticTrait = wei()->staticTrait;
 
 /** @var Miaoxing\Services\Service\Status $status */
 $status = wei()->status;
-
-/** @var \Miaoxing\Plugin\Service\Tester $tester */
-$tester = wei()->tester;
 
 /** @var Miaoxing\Services\Service\Url $url */
 $url = wei()->url;

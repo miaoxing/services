@@ -75,10 +75,6 @@ class Status
 {
 }
 
-class Tester
-{
-}
-
 class Url
 {
     /**
@@ -176,10 +172,6 @@ class Share
 }
 
 class Status
-{
-}
-
-class Tester
 {
 }
 
