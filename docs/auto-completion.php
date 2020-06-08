@@ -8,12 +8,6 @@ class AssetMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\ClassMap $classMap
- */
-class ClassMapMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\Coll $coll
  */
 class CollMixin {
@@ -168,7 +162,6 @@ class YesNoConstMixin {
 
 /**
  * @mixin AssetMixin
- * @mixin ClassMapMixin
  * @mixin CollMixin
  * @mixin ConventionMixin
  * @mixin CsvExporterMixin
@@ -207,9 +200,6 @@ function wei()
 
 /** @var Miaoxing\Services\Service\Asset $asset */
 $asset = wei()->asset;
-
-/** @var Miaoxing\Services\Service\ClassMap $classMap */
-$classMap = wei()->classMap;
 
 /** @var Miaoxing\Services\Service\Coll $coll */
 $coll = wei()->coll;
