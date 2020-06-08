@@ -102,10 +102,6 @@ class Random
 {
 }
 
-class Request
-{
-}
-
 class SexConst
 {
 }
@@ -283,10 +279,6 @@ class Page
 }
 
 class Random
-{
-}
-
-class Request
 {
 }
 

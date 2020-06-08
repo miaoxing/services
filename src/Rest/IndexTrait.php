@@ -4,7 +4,7 @@ namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
-use Miaoxing\Services\Service\Request;
+use Wei\Request;
 
 /**
  * @property Convention $convention

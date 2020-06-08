@@ -4,7 +4,7 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
-use Miaoxing\Services\Service\Request;
+use Wei\Request;
 
 /**
  * @property Convention $convention
@@ -13,7 +13,7 @@ trait IndexTrait
 {
     public function indexAction(Request $req)
     {
-        if ($req->json() || $req->csv()) {
+        if ($req->acceptJson() || $req->isFormat('csv')) {
             // 1. 构建查询
             if (method_exists($this, 'createModel')) {
                 $models = $this->createModel();

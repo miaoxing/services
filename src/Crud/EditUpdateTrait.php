@@ -4,7 +4,7 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
-use Miaoxing\Services\Service\Request;
+use Wei\Request;
 
 /**
  * @property Convention $convention
@@ -17,7 +17,7 @@ trait EditUpdateTrait
 
         $$model = $this->convention->createModel($this)->findOrInit($req['id']);
 
-        if ($req->json()) {
+        if ($req->acceptJson()) {
             return $$model->toRet();
         } else {
             return get_defined_vars();

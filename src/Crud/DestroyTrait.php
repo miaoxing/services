@@ -4,7 +4,7 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\BaseModelV2;
 use Miaoxing\Services\Service\Convention;
-use Miaoxing\Services\Service\Request;
+use Wei\Request;
 use Wei\RetTrait;
 
 /**

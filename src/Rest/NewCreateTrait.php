@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Rest;
 
-use Miaoxing\Services\Service\Request;
+use Wei\Request;
 
 trait NewCreateTrait
 {

@@ -84,13 +84,6 @@ class RandomMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Request $request
- * @method      string|null request($name, $default = '') Returns a *stringify* or user defined($default) parameter value
- */
-class RequestMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\ServiceTrait $serviceTrait
  */
 class ServiceTraitMixin {
@@ -168,7 +161,6 @@ class YesNoConstMixin {
  * @mixin OptionTraitMixin
  * @mixin PageMixin
  * @mixin RandomMixin
- * @mixin RequestMixin
  * @mixin ServiceTraitMixin
  * @mixin SexConstMixin
  * @mixin ShareMixin
@@ -229,9 +221,6 @@ $page = wei()->page;
 
 /** @var Miaoxing\Services\Service\Random $random */
 $random = wei()->random;
-
-/** @var Miaoxing\Services\Service\Request $request */
-$request = wei()->request;
 
 /** @var Miaoxing\Services\Service\ServiceTrait $serviceTrait */
 $serviceTrait = wei()->serviceTrait;
