@@ -2,39 +2,35 @@
 
 namespace Miaoxing\Services\Service;
 
-class Asset extends \Wei\Asset
+class Asset
 {
 }
 
-class ClassMap extends \Wei\Base
+class Coll
 {
 }
 
-class Coll extends \Miaoxing\Plugin\BaseService
+class Convention
 {
 }
 
-class Convention extends \Miaoxing\Plugin\BaseService
+class CsvExporter
 {
 }
 
-class CsvExporter extends \Miaoxing\Plugin\BaseService
+class Db
 {
 }
 
-class Db extends \Wei\Db
+class Http
 {
 }
 
-class Http extends \Wei\Http
+class IsRecordExists
 {
 }
 
-class IsRecordExists extends \Wei\Validator\RecordExists
-{
-}
-
-class Laravel extends \Miaoxing\Plugin\BaseService
+class Laravel
 {
     /**
      * Bootstrap Laravel application
@@ -55,11 +51,11 @@ class Laravel extends \Miaoxing\Plugin\BaseService
     }
 }
 
-class Logger extends \Wei\Logger
+class Logger
 {
 }
 
-class Migration extends \Miaoxing\Plugin\BaseService
+class Migration
 {
     /**
      * @param OutputInterface $output
@@ -98,35 +94,35 @@ class Migration extends \Miaoxing\Plugin\BaseService
     }
 }
 
-class Page extends \Miaoxing\Plugin\BaseService
+class Page
 {
 }
 
-class Random extends \Miaoxing\Plugin\BaseService
+class Random
 {
 }
 
-class Request extends \Wei\Request
+class Request
 {
 }
 
-class SexConst extends \Miaoxing\Plugin\BaseService
+class SexConst
 {
 }
 
-class Share extends \Miaoxing\Plugin\BaseService
+class Share
 {
 }
 
-class Status extends \Miaoxing\Plugin\BaseService
+class Status
 {
 }
 
-class Tester extends \Miaoxing\Plugin\BaseService
+class Tester
 {
 }
 
-class Time extends \Miaoxing\Plugin\BaseService
+class Time
 {
     /**
      * @return string
@@ -145,11 +141,23 @@ class Time extends \Miaoxing\Plugin\BaseService
     }
 }
 
-class Url extends \Wei\Url
+class Url
 {
+    /**
+     * Generate the URL by specified URL and parameters
+     *
+     * @param string $url
+     * @param array $argsOrParams
+     * @param array $params
+     * @return string
+     * @see Url::to
+     */
+    public static function to($url = '', $argsOrParams = [], $params = [])
+    {
+    }
 }
 
-class V extends \Miaoxing\Plugin\BaseService
+class V
 {
     /**
      * Add a new field
@@ -186,10 +194,214 @@ class V extends \Miaoxing\Plugin\BaseService
     }
 }
 
-class View extends \Wei\View
+class View
 {
 }
 
-class YesNoConst extends \Miaoxing\Plugin\BaseService
+class YesNoConst
 {
+}
+
+namespace Miaoxing\Services\Service;
+
+if (0) {
+class Asset
+{
+}
+
+class Coll
+{
+}
+
+class Convention
+{
+}
+
+class CsvExporter
+{
+}
+
+class Db
+{
+}
+
+class Http
+{
+}
+
+class IsRecordExists
+{
+}
+
+class Laravel
+{
+    /**
+     * Bootstrap Laravel application
+     *
+     * @return $this
+     * @see Laravel::bootstrap
+     */
+    public function bootstrap()
+    {
+    }
+
+    /**
+     * @return Application
+     * @see Laravel::getApp
+     */
+    public function getApp()
+    {
+    }
+}
+
+class Logger
+{
+}
+
+class Migration
+{
+    /**
+     * @param OutputInterface $output
+     * @return $this
+     * @see Migration::setOutput
+     */
+    public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
+    {
+    }
+
+    /**
+     * @see Migration::migrate
+     */
+    public function migrate()
+    {
+    }
+
+    /**
+     * Rollback the last migration or to the specified target migration ID
+     *
+     * @param array $options
+     * @see Migration::rollback
+     */
+    public function rollback($options = [])
+    {
+    }
+
+    /**
+     * @param array $options
+     * @throws \ReflectionException
+     * @throws \Exception
+     * @see Migration::create
+     */
+    public function create($options)
+    {
+    }
+}
+
+class Page
+{
+}
+
+class Random
+{
+}
+
+class Request
+{
+}
+
+class SexConst
+{
+}
+
+class Share
+{
+}
+
+class Status
+{
+}
+
+class Tester
+{
+}
+
+class Time
+{
+    /**
+     * @return string
+     * @see Time::now
+     */
+    public function now()
+    {
+    }
+
+    /**
+     * @return string
+     * @see Time::today
+     */
+    public function today()
+    {
+    }
+}
+
+class Url
+{
+    /**
+     * Generate the URL by specified URL and parameters
+     *
+     * @param string $url
+     * @param array $argsOrParams
+     * @param array $params
+     * @return string
+     * @see Url::to
+     */
+    public function to($url = '', $argsOrParams = [], $params = [])
+    {
+    }
+}
+
+class V
+{
+    /**
+     * Add a new field
+     *
+     * @param string $name
+     * @param string|null $label
+     * @return $this
+     * @see V::key
+     */
+    public function key($name, $label = null)
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see V::when
+     */
+    public function when($value, $callback, callable $default = null)
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see V::unless
+     */
+    public function unless($value, callable $callback, callable $default = null)
+    {
+    }
+}
+
+class View
+{
+}
+
+class YesNoConst
+{
+}
 }
