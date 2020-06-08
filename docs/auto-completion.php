@@ -84,7 +84,7 @@ class RandomMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\ServiceTrait $serviceTrait
+ * @property    \Wei\ServiceTrait $serviceTrait
  */
 class ServiceTraitMixin {
 }
@@ -222,7 +222,7 @@ $page = wei()->page;
 /** @var Miaoxing\Services\Service\Random $random */
 $random = wei()->random;
 
-/** @var Miaoxing\Services\Service\ServiceTrait $serviceTrait */
+/** @var \Wei\ServiceTrait $serviceTrait */
 $serviceTrait = wei()->serviceTrait;
 
 /** @var Miaoxing\Services\Service\SexConst $sexConst */
