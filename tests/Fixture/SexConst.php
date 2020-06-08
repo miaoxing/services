@@ -2,7 +2,7 @@
 
 namespace MiaoxingTest\Services\Fixture;
 
-use Miaoxing\Services\ConstTrait;
+use Miaoxing\Plugin\ConstTrait;
 
 /**
  * 性别常量服务
