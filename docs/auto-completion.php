@@ -60,7 +60,7 @@ class LoggerMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Migration $migration 数据库迁移
+ * @property    \Wei\Migration $migration 数据库迁移
  */
 class MigrationMixin {
 }
@@ -210,7 +210,7 @@ $laravel = wei()->laravel;
 /** @var Miaoxing\Services\Service\Logger $logger */
 $logger = wei()->logger;
 
-/** @var Miaoxing\Services\Service\Migration $migration */
+/** @var \Wei\Migration $migration */
 $migration = wei()->migration;
 
 /** @var Miaoxing\Services\Service\OptionTrait $optionTrait */

@@ -60,14 +60,14 @@ class Migration
     /**
      * @param OutputInterface $output
      * @return $this
-     * @see Migration::setOutput
+     * @see \Wei\Migration::setOutput
      */
     public static function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
     {
     }
 
     /**
-     * @see Migration::migrate
+     * @see \Wei\Migration::migrate
      */
     public static function migrate()
     {
@@ -77,7 +77,7 @@ class Migration
      * Rollback the last migration or to the specified target migration ID
      *
      * @param array $options
-     * @see Migration::rollback
+     * @see \Wei\Migration::rollback
      */
     public static function rollback($options = [])
     {
@@ -87,7 +87,7 @@ class Migration
      * @param array $options
      * @throws \ReflectionException
      * @throws \Exception
-     * @see Migration::create
+     * @see \Wei\Migration::create
      */
     public static function create($options)
     {
@@ -240,14 +240,14 @@ class Migration
     /**
      * @param OutputInterface $output
      * @return $this
-     * @see Migration::setOutput
+     * @see \Wei\Migration::setOutput
      */
     public function setOutput(\Symfony\Component\Console\Output\OutputInterface $output)
     {
     }
 
     /**
-     * @see Migration::migrate
+     * @see \Wei\Migration::migrate
      */
     public function migrate()
     {
@@ -257,7 +257,7 @@ class Migration
      * Rollback the last migration or to the specified target migration ID
      *
      * @param array $options
-     * @see Migration::rollback
+     * @see \Wei\Migration::rollback
      */
     public function rollback($options = [])
     {
@@ -267,7 +267,7 @@ class Migration
      * @param array $options
      * @throws \ReflectionException
      * @throws \Exception
-     * @see Migration::create
+     * @see \Wei\Migration::create
      */
     public function create($options)
     {

@@ -3,7 +3,7 @@
 namespace Miaoxing\Services\Command;
 
 use Miaoxing\Plugin\Command\BaseCommand;
-use Miaoxing\Services\Service\Migration;
+use Wei\Migration;
 
 class MigrationStatus extends BaseCommand
 {
