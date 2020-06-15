@@ -19,9 +19,4 @@ class SexConst
         self::SEX_MALE => '男',
         self::SEX_FEMALE => '女',
     ];
-
-    public function getLabel($id)
-    {
-        return $this->getConstName('sex', $id);
-    }
 }
