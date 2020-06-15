@@ -34,6 +34,5 @@ trait DestroyTrait
 
     protected function afterDestroy(Request $req, Model $model)
     {
-
     }
 }

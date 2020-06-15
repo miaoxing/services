@@ -46,8 +46,9 @@ class ConsoleKernel extends Kernel
         $classes = wei()->classMap->generate($paths, '/Command/*.php', 'Command');
 
         foreach ($classes as $name => $command) {
-            if (is_subclass_of($command, Command::class) &&
-                !(new ReflectionClass($command))->isAbstract()) {
+            if (is_subclass_of($command, Command::class)
+                && !(new ReflectionClass($command))->isAbstract()
+            ) {
                 Artisan::starting(function (Artisan $artisan) use ($command) {
                     $artisan->resolve($command);
                 });

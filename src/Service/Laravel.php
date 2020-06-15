@@ -76,8 +76,10 @@ class Laravel extends BaseService
 
         $app->singleton(\Illuminate\Contracts\Http\Kernel::class, HttpKernel::class);
         $app->singleton(\Illuminate\Contracts\Console\Kernel::class, ConsoleKernel::class);
-        $app->singleton(\Illuminate\Contracts\Debug\ExceptionHandler::class,
-            \Illuminate\Foundation\Exceptions\Handler::class);
+        $app->singleton(
+            \Illuminate\Contracts\Debug\ExceptionHandler::class,
+            \Illuminate\Foundation\Exceptions\Handler::class
+        );
 
         return $app;
     }
