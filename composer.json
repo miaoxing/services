@@ -16,6 +16,21 @@
   "require": {
     "miaoxing/plugin": "dev-master@dev"
   },
+  "require-dev": {
+    "miaoxing/coding-standards": "^4.1.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "miaoxing-plugin"
+    ],
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:miaoxing-plugin"
+      ]
+    }
+  },
   "suggest": {
     "miaoxing/queue": "Required to use Laravel queue"
   }
