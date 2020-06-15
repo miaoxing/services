@@ -19,7 +19,7 @@ class IpRestrict extends BaseMiddleware
         }
 
         $ip = $this->request->getIp();
-        if (!in_array($ip, $this->allowedIps)) {
+        if (!in_array($ip, $this->allowedIps, true)) {
             $this->response->setStatusCode(403);
 
             return $this->err(sprintf('IP %s is not allowed!', $ip));

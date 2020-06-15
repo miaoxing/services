@@ -12,7 +12,7 @@ class Asset extends \Wei\Asset
      *
      * @var bool
      */
-    protected $enableRev = null;
+    protected $enableRev;
 
     /**
      * The URL prefix of revision file
@@ -36,9 +36,9 @@ class Asset extends \Wei\Asset
      *   'assets/article.css' => 'c123d456'
      * )
      *
-     * @var null|array
+     * @var array|null
      */
-    protected $revMap = null;
+    protected $revMap;
 
     /**
      * @var callable
@@ -82,19 +82,6 @@ class Asset extends \Wei\Asset
         if ($version && $this->version) {
             $file = $this->addVersion($file);
         }
-
-        return $file;
-    }
-
-    /**
-     * Convert file name by callback
-     *
-     * @param string $file
-     * @return mixed
-     */
-    protected function locateFile($file)
-    {
-        $this->locateFile && $file = call_user_func($this->locateFile, $file);
 
         return $file;
     }
@@ -204,5 +191,18 @@ class Asset extends \Wei\Asset
     public function thumb($url, $size = 100)
     {
         return $url . '?imageView2/2/w/' . $size . '/h/' . $size . '/q/75';
+    }
+
+    /**
+     * Convert file name by callback
+     *
+     * @param string $file
+     * @return mixed
+     */
+    protected function locateFile($file)
+    {
+        $this->locateFile && $file = call_user_func($this->locateFile, $file);
+
+        return $file;
     }
 }

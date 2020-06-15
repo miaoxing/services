@@ -7,17 +7,17 @@ use Wei\Migration;
 
 class MigrationRun extends BaseCommand
 {
-    protected function configure()
-    {
-        $this->setDescription('Run the migrations')
-            ->setAliases(['migrate']);
-    }
-
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function handle()
     {
         Migration::setOutput($this->output)->migrate();
+    }
+
+    protected function configure()
+    {
+        $this->setDescription('Run the migrations')
+            ->setAliases(['migrate']);
     }
 }

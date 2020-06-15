@@ -3,7 +3,6 @@
 namespace Miaoxing\Services\Middleware;
 
 use Miaoxing\Plugin\BaseController;
-use Miaoxing\Services\Middleware\BaseMiddleware;
 
 /**
  * @mixin \UserMixin

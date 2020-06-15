@@ -7,11 +7,6 @@ use Wei\Migration;
 
 class MigrationStatus extends BaseCommand
 {
-    protected function configure()
-    {
-        $this->setDescription('Output the migration status table');
-    }
-
     /**
      * Execute the console command.
      *
@@ -20,5 +15,10 @@ class MigrationStatus extends BaseCommand
     public function handle()
     {
         Migration::setOutput($this->output)->status();
+    }
+
+    protected function configure()
+    {
+        $this->setDescription('Output the migration status table');
     }
 }

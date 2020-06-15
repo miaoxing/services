@@ -3,7 +3,6 @@
 namespace Miaoxing\Services\Middleware;
 
 use Miaoxing\Plugin\Service\User;
-use Miaoxing\Services\Middleware\BaseMiddleware;
 use Wei\RetTrait;
 
 /**

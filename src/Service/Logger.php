@@ -45,9 +45,9 @@ class Logger extends \Wei\Logger
     ];
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
-    public function __construct(array $options = array())
+    public function __construct(array $options = [])
     {
         parent::__construct($options);
 

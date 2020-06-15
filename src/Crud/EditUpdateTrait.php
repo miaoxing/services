@@ -15,10 +15,10 @@ trait EditUpdateTrait
     {
         $model = $this->convention->getModelName($this);
 
-        $$model = $this->convention->createModel($this)->findOrInit($req['id']);
+        ${$model} = $this->convention->createModel($this)->findOrInit($req['id']);
 
         if ($req->acceptJson()) {
-            return $$model->toRet();
+            return ${$model}->toRet();
         } else {
             return get_defined_vars();
         }

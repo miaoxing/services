@@ -2,8 +2,6 @@
 
 namespace Miaoxing\Services\Middleware;
 
-use Miaoxing\Services\Middleware\BaseMiddleware;
-
 /**
  * 检查来源是否为当前域名或在白名单中
  */
@@ -23,7 +21,7 @@ class CheckReferrer extends BaseMiddleware
     {
         if ($referrer = $this->request->getReferer()) {
             $host = parse_url($referrer, PHP_URL_HOST);
-            if ($host !== $this->request->getHost() && !in_array($host, $this->whitelist)) {
+            if ($host !== $this->request->getHost() && !in_array($host, $this->whitelist, true)) {
                 return $this->response->json([
                     'code' => -2000,
                     'message' => '来源不正确',

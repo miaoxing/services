@@ -9,7 +9,7 @@ use Miaoxing\Plugin\Service\App;
  */
 class Url extends \Wei\Url
 {
-    public function curIndex($action = '', $argsOrParams = array(), $params = array())
+    public function curIndex($action = '', $argsOrParams = [], $params = [])
     {
         return $this->__invoke($this->app->getController() . ($action ? ('/' . $action) : ''), $argsOrParams, $params);
     }

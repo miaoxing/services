@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Services\Middleware;
 
-use Miaoxing\Services\Middleware\BaseMiddleware;
 use Wei\RetTrait;
 
 class BasicAuth extends BaseMiddleware

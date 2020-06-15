@@ -4,7 +4,10 @@ namespace MiaoxingTest\Services\Service;
 
 use Miaoxing\Plugin\Test\BaseTestCase;
 
-class PageTest extends BaseTestCase
+/**
+ * @internal
+ */
+final class PageTest extends BaseTestCase
 {
     public function testTitle()
     {

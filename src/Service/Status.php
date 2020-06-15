@@ -51,7 +51,7 @@ class Status extends \Miaoxing\Plugin\BaseService
      */
     public function req($reqStatus, array $configs, $defaultId = false)
     {
-        $key = array_search($reqStatus, $this->coll->column($configs, 'name', 'id'));
+        $key = array_search($reqStatus, $this->coll->column($configs, 'name', 'id'), true);
         if (false === $key) {
             $key = $defaultId;
         }
@@ -77,7 +77,7 @@ class Status extends \Miaoxing\Plugin\BaseService
         // 1. 触发自身的查询
         $method = lcfirst(str_replace('-', '', ucwords($status, '-')));
         if (method_exists($record, $method)) {
-            $record->$method();
+            $record->{$method}();
         }
 
         // 2. 触发事件查询

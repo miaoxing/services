@@ -2,11 +2,9 @@
 
 namespace Miaoxing\Services\Service;
 
-use Miaoxing\Plugin\ConfigTrait;
 use Miaoxing\Plugin\BaseService;
-use Miaoxing\Services\Service\Asset;
+use Miaoxing\Plugin\ConfigTrait;
 use Miaoxing\Plugin\Service\Str;
-use Miaoxing\Services\Service\View;
 use Wei\Block;
 
 /**

@@ -10,7 +10,7 @@ trait OptionTrait
      * @param array $options The property options
      * @throws \InvalidArgumentException When option "wei" is not an instance of "Wei\Wei"
      */
-    public function __construct(array $options = array())
+    public function __construct(array $options = [])
     {
         $this->setOption($options);
     }
@@ -26,9 +26,9 @@ trait OptionTrait
         }
 
         if (method_exists($this, $method = 'set' . $name)) {
-            return $this->$method($value);
+            return $this->{$method}($value);
         } else {
-            $this->$name = $value;
+            $this->{$name} = $value;
             return $this;
         }
     }

@@ -10,12 +10,12 @@ use Illuminate\Queue\QueueManager;
 use Illuminate\Redis\Connections\PhpRedisConnection;
 use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\RedisManager;
-use Miaoxing\Plugin\BaseService;
 use Illuminate\Support\Facades\Facade;
+use Miaoxing\Plugin\BaseService;
+use Miaoxing\Queue\Service\Queue;
 use Miaoxing\Services\Laravel\ConsoleKernel;
 use Miaoxing\Services\Laravel\ConsoleSupportServiceProvider;
 use Miaoxing\Services\Laravel\HttpKernel;
-use Miaoxing\Queue\Service\Queue;
 use Wei\Db;
 
 /**
@@ -48,7 +48,7 @@ class Laravel extends BaseService
         }
         $this->bootstrapped = true;
 
-        if ('cli' === php_sapi_name()) {
+        if ('cli' === PHP_SAPI) {
             $this->bootstrapConsole();
         } else {
             $this->bootstrapHttp();
@@ -157,7 +157,7 @@ class Laravel extends BaseService
         });
         $app->extend(RedisManager::class, function (RedisManager $manager) {
             $manager->extend('phpredis', function () {
-                return new class extends PhpRedisConnector {
+                return new class() extends PhpRedisConnector {
                     public function connect(array $config, array $options)
                     {
                         return new PhpRedisConnection(wei()->redis->getObject());
