@@ -13,6 +13,11 @@
       "Miaoxing\\Services\\": "src"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Services\\": "tests"
+    }
+  },
   "require": {
     "miaoxing/plugin": "dev-master@dev"
   },
