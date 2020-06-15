@@ -12,7 +12,6 @@ use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\RedisManager;
 use Miaoxing\Plugin\BaseService;
 use Illuminate\Support\Facades\Facade;
-use Miaoxing\Services\Laravel\ArtisanServiceProvider;
 use Miaoxing\Services\Laravel\ConsoleKernel;
 use Miaoxing\Services\Laravel\ConsoleSupportServiceProvider;
 use Miaoxing\Services\Laravel\HttpKernel;
@@ -22,6 +21,7 @@ use Wei\Db;
 /**
  * @property Db db
  * @property Queue queue
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class Laravel extends BaseService
 {
@@ -72,7 +72,7 @@ class Laravel extends BaseService
 
     protected function createApp()
     {
-        $app = new Application($_ENV['APP_BASE_PATH'] ?? realpath('.'));
+        $app = new Application(realpath('.'));
 
         $app->singleton(\Illuminate\Contracts\Http\Kernel::class, HttpKernel::class);
         $app->singleton(\Illuminate\Contracts\Console\Kernel::class, ConsoleKernel::class);
