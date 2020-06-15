@@ -24,7 +24,13 @@ class MigrationCreate extends BaseCommand
     {
         $this->setDescription('Create a new migration class')
             ->addArgument('name', InputArgument::REQUIRED, 'The name of the migration')
-            ->addOption('path', null, InputOption::VALUE_OPTIONAL, 'The path to save the migration file', 'src/Migration')
+            ->addOption(
+                'path',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'The path to save the migration file',
+                'src/Migration'
+            )
             ->addOption('namespace', null, InputOption::VALUE_OPTIONAL, 'The namespace of the migration class');
     }
 }
