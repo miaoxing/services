@@ -21,3 +21,6 @@ phpunit.xml
 /plugins/
 /storage/
 /tests/config-local.php
+
+# wei
+/log/
