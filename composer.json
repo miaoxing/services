@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "miaoxing/plugin": "^0.1.0"
+    "miaoxing/plugin": "^0.1.1"
   },
   "require-dev": {
     "miaoxing/coding-standards": "^5.0.0@beta"
