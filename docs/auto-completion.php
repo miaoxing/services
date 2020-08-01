@@ -84,7 +84,7 @@ class SexConstMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\Share $share
+ * @property    \Wei\Share $share
  */
 class ShareMixin {
 }
@@ -192,7 +192,7 @@ $random = wei()->random;
 /** @var Miaoxing\Services\Service\SexConst $sexConst */
 $sexConst = wei()->sexConst;
 
-/** @var Miaoxing\Services\Service\Share $share */
+/** @var \Wei\Share $share */
 $share = wei()->share;
 
 /** @var Miaoxing\Services\Service\StaticTrait $staticTrait */
