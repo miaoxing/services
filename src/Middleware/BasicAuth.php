@@ -41,7 +41,7 @@ class BasicAuth extends BaseMiddleware
 
     protected function responseNotAuthorized($message = 'Not authorized')
     {
-        $this->response
+        $this->res
             ->setHeader('WWW-Authenticate', 'Basic realm="API Realm"')
             ->setStatusCode(401);
 

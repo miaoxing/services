@@ -52,7 +52,7 @@ class RateLimit extends BaseMiddleware
         $key = 'rate-limit' . $this->getIdentifier() . '-' . (int) (time() / $this->timeWindow);
 
         if (wei()->counter->incr($key) > $this->max) {
-            return $this->response->json([
+            return $this->res->json([
                 'code' => -2003,
                 'message' => $this->responseText ?: '您的操作太频繁，请稍候再试',
             ]);

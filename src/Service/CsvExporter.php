@@ -7,13 +7,13 @@ use Miaoxing\Plugin\BaseService;
 /**
  * Csv格式数据导出服务
  *
- * @property \Wei\Response $response
+ * @property \Wei\Res $res
  */
 class CsvExporter extends BaseService
 {
     public function export($fileName, $data)
     {
-        $res = $this->response;
+        $res = $this->res;
 
         $res->setHeader([
             'Content-Encoding' => 'UTF-8',

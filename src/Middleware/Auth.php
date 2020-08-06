@@ -48,7 +48,7 @@ class Auth extends BaseMiddleware
      *
      * @param string $url
      * @param mixed $ret
-     * @return array|\Wei\Response
+     * @return array|\Wei\Res
      */
     protected function redirectLogin($ret)
     {
@@ -58,6 +58,6 @@ class Auth extends BaseMiddleware
             return $ret;
         }
 
-        return $this->response->redirect($this->url->append($ret['next'], ['next' => $this->req->getUrl()]));
+        return $this->res->redirect($this->url->append($ret['next'], ['next' => $this->req->getUrl()]));
     }
 }

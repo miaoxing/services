@@ -22,7 +22,7 @@ class CheckReferrer extends BaseMiddleware
         if ($referrer = $this->req->getReferer()) {
             $host = parse_url($referrer, PHP_URL_HOST);
             if ($host !== $this->req->getHost() && !in_array($host, $this->whitelist, true)) {
-                return $this->response->json([
+                return $this->res->json([
                     'code' => -2000,
                     'message' => '来源不正确',
                 ]);

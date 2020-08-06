@@ -23,7 +23,7 @@ class RedirectToHttps extends BaseMiddleware
         if ('http' == $this->req->getScheme() && in_array($this->req->getHost(), $this->hosts, true)) {
             $url = 'https' . substr($this->req->getUrl(), 4);
 
-            return $this->response->redirect($url);
+            return $this->res->redirect($url);
         }
 
         return $next();
