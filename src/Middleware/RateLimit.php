@@ -68,6 +68,6 @@ class RateLimit extends BaseMiddleware
      */
     public function getIdentifier()
     {
-        return $this->user->id() ?: $this->request->getServer('REMOTE_ADDR');
+        return $this->user->id() ?: $this->req->getServer('REMOTE_ADDR');
     }
 }

@@ -16,9 +16,9 @@ class CheckRedirectUrl extends BaseMiddleware
      */
     public function __invoke($next)
     {
-        if ($nextUrl = $this->request->getQuery('next')) {
+        if ($nextUrl = $this->req->getQuery('next')) {
             $host = parse_url($nextUrl, PHP_URL_HOST);
-            if ($host && $host !== $this->request->getHost() && !in_array($host, $this->whitelist, true)) {
+            if ($host && $host !== $this->req->getHost() && !in_array($host, $this->whitelist, true)) {
                 return $this->response->json([
                     'code' => -400,
                     'message' => 'Bad Request',

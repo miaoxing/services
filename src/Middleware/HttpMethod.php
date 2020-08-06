@@ -15,7 +15,7 @@ class HttpMethod extends BaseMiddleware
 
         if (isset($this->actions[$action])) {
             $methods = array_map('strtoupper', (array) $this->actions[$action]);
-            if (!in_array($this->request->getMethod(), $methods, true)) {
+            if (!in_array($this->req->getMethod(), $methods, true)) {
                 return $this->response->json([
                     'code' => -405,
                     'message' => '请求方式不被允许',

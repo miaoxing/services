@@ -19,9 +19,9 @@ class CheckReferrer extends BaseMiddleware
      */
     public function __invoke($next)
     {
-        if ($referrer = $this->request->getReferer()) {
+        if ($referrer = $this->req->getReferer()) {
             $host = parse_url($referrer, PHP_URL_HOST);
-            if ($host !== $this->request->getHost() && !in_array($host, $this->whitelist, true)) {
+            if ($host !== $this->req->getHost() && !in_array($host, $this->whitelist, true)) {
                 return $this->response->json([
                     'code' => -2000,
                     'message' => '来源不正确',

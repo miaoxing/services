@@ -16,8 +16,8 @@ class BasicAuth extends BaseMiddleware
             return $this->responseNotAuthorized();
         }
 
-        $username = $this->request->getServer('PHP_AUTH_USER');
-        $password = $this->request->getServer('PHP_AUTH_PW');
+        $username = $this->req->getServer('PHP_AUTH_USER');
+        $password = $this->req->getServer('PHP_AUTH_PW');
 
         // 检查用户名是否有效
         if (!in_array($username, $this->validUsers, true)) {

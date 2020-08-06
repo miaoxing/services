@@ -4,14 +4,14 @@ namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
-use Wei\Request;
+use Wei\Req;
 
 /**
  * @property Convention $convention
  */
 trait IndexTrait
 {
-    public function indexAction(Request $req)
+    public function indexAction(Req $req)
     {
         // 1. 构建查询
         $models = $this->convention->createModel($this);
@@ -37,19 +37,19 @@ trait IndexTrait
     }
 
     /**
-     * @param Request $req
+     * @param Req $req
      * @param Model|Model[] $models
      */
-    protected function beforeIndexFind(Request $req, Model $models)
+    protected function beforeIndexFind(Req $req, Model $models)
     {
         // do nothing.
     }
 
     /**
-     * @param Request $req
+     * @param Req $req
      * @param Model|Model[] $models
      */
-    protected function afterIndexFind(Request $req, Model $models)
+    protected function afterIndexFind(Req $req, Model $models)
     {
         // do nothing.
     }
@@ -63,7 +63,7 @@ trait IndexTrait
         return [];
     }
 
-    protected function buildIndexRet($ret, Request $req, Model $models)
+    protected function buildIndexRet($ret, Req $req, Model $models)
     {
         return $ret;
     }

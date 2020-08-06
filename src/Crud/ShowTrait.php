@@ -4,14 +4,14 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\BaseModelV2;
 use Miaoxing\Services\Service\Convention;
-use Wei\Request;
+use Wei\Req;
 
 /**
  * @property Convention $convention
  */
 trait ShowTrait
 {
-    public function showAction(Request $req)
+    public function showAction(Req $req)
     {
         if (!$req->acceptJson()) {
             return [];
@@ -32,10 +32,10 @@ trait ShowTrait
     }
 
     /**
-     * @param Request $req
+     * @param Req $req
      * @param BaseModelV2 $model
      */
-    protected function beforeShowFind(Request $req, BaseModelV2 $model)
+    protected function beforeShowFind(Req $req, BaseModelV2 $model)
     {
         // do nothing.
     }

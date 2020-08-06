@@ -52,12 +52,12 @@ class Auth extends BaseMiddleware
      */
     protected function redirectLogin($ret)
     {
-        if ($this->request->acceptJson()) {
+        if ($this->req->acceptJson()) {
             $ret['code'] = -1 !== $ret['code'] ? $ret['code'] : 401;
-            $ret['next'] = $this->url->append($ret['next'], ['next' => $this->request->getReferer()]);
+            $ret['next'] = $this->url->append($ret['next'], ['next' => $this->req->getReferer()]);
             return $ret;
         }
 
-        return $this->response->redirect($this->url->append($ret['next'], ['next' => $this->request->getUrl()]));
+        return $this->response->redirect($this->url->append($ret['next'], ['next' => $this->req->getUrl()]));
     }
 }

@@ -56,8 +56,8 @@ class Asset extends \Wei\Asset
             if (!$this->wei->isDebug()) {
                 $this->enableRev = true;
             }
-            if (isset($this->wei->request['rev'])) {
-                $this->enableRev = (bool) $this->wei->request['rev'];
+            if (isset($this->wei->req['rev'])) {
+                $this->enableRev = (bool) $this->wei->req['rev'];
             }
         }
     }

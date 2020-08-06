@@ -3,21 +3,21 @@
 namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
-use Wei\Request;
+use Wei\Req;
 
 /**
  * @mixin \ConventionMixin
  */
 trait EditUpdateTrait
 {
-    public function editAction(Request $req)
+    public function editAction(Req $req)
     {
         $model = $this->convention->createModel($this)->findFromRequest($req);
 
         return $model->toRet();
     }
 
-    public function updateAction(Request $req)
+    public function updateAction(Req $req)
     {
         $ret = $this->beforeUpdateFind($req);
         $this->tie($ret);
@@ -35,12 +35,12 @@ trait EditUpdateTrait
         return $model->toRet();
     }
 
-    protected function beforeUpdateFind(Request $req)
+    protected function beforeUpdateFind(Req $req)
     {
         return suc();
     }
 
-    protected function beforeSave(Request $req, Model $model)
+    protected function beforeSave(Req $req, Model $model)
     {
         return suc();
     }

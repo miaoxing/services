@@ -4,14 +4,14 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Service\Convention;
-use Wei\Request;
+use Wei\Req;
 
 /**
  * @property Convention $convention
  */
 trait EditUpdateTrait
 {
-    public function editAction(Request $req)
+    public function editAction(Req $req)
     {
         $model = $this->convention->getModelName($this);
 
@@ -38,7 +38,7 @@ trait EditUpdateTrait
         return $this->suc();
     }
 
-    protected function beforeSave(Request $req, Model $model)
+    protected function beforeSave(Req $req, Model $model)
     {
         return $this->suc();
     }

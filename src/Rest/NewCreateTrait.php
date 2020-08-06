@@ -2,16 +2,16 @@
 
 namespace Miaoxing\Services\Rest;
 
-use Wei\Request;
+use Wei\Req;
 
 trait NewCreateTrait
 {
-    public function newAction(Request $req)
+    public function newAction(Req $req)
     {
         return $this->editAction($req);
     }
 
-    public function createAction(Request $req)
+    public function createAction(Req $req)
     {
         return $this->updateAction($req);
     }

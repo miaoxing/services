@@ -3,14 +3,14 @@
 namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
-use Wei\Request;
+use Wei\Req;
 
 /**
  * @mixin \ConventionMixin
  */
 trait ShowTrait
 {
-    public function showAction(Request $req)
+    public function showAction(Req $req)
     {
         $model = $this->convention->createModel($this);
 
@@ -23,10 +23,10 @@ trait ShowTrait
     }
 
     /**
-     * @param Request $req
+     * @param Req $req
      * @param Model $model
      */
-    protected function beforeShowFind(Request $req, Model $model)
+    protected function beforeShowFind(Req $req, Model $model)
     {
         // do nothing.
     }

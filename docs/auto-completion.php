@@ -84,12 +84,6 @@ class SexConstMixin {
 }
 
 /**
- * @property    \Wei\Share $share
- */
-class ShareMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\StaticTrait $staticTrait
  */
 class StaticTraitMixin {
@@ -135,7 +129,6 @@ class YesNoConstMixin {
  * @mixin PageMixin
  * @mixin RandomMixin
  * @mixin SexConstMixin
- * @mixin ShareMixin
  * @mixin StaticTraitMixin
  * @mixin StatusMixin
  * @mixin UrlMixin
@@ -191,9 +184,6 @@ $random = wei()->random;
 
 /** @var Miaoxing\Services\Service\SexConst $sexConst */
 $sexConst = wei()->sexConst;
-
-/** @var \Wei\Share $share */
-$share = wei()->share;
 
 /** @var Miaoxing\Services\Service\StaticTrait $staticTrait */
 $staticTrait = wei()->staticTrait;

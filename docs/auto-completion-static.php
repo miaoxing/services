@@ -67,10 +67,6 @@ class SexConst
 {
 }
 
-class Share
-{
-}
-
 class Status
 {
 }
@@ -164,10 +160,6 @@ class Random
 }
 
 class SexConst
-{
-}
-
-class Share
 {
 }
 

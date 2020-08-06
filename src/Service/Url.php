@@ -21,21 +21,21 @@ class Url extends \Wei\Url
 
     public function curEdit($id = null)
     {
-        return $this->curIndex(($id || $this->request['id']) . '/edit');
+        return $this->curIndex(($id || $this->req['id']) . '/edit');
     }
 
     public function curShow($id = null)
     {
-        return $this->curIndex($id ?: $this->request['id']);
+        return $this->curIndex($id ?: $this->req['id']);
     }
 
     public function curDestroy($id = null)
     {
-        return $this->curIndex(($id ?: $this->request['id']) . '/destroy');
+        return $this->curIndex(($id ?: $this->req['id']) . '/destroy');
     }
 
     public function curForm($id = null)
     {
-        return $this->curIndex(($id ?: $this->request['id']) ? 'update' : 'create');
+        return $this->curIndex(($id ?: $this->req['id']) ? 'update' : 'create');
     }
 }

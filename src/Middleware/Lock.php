@@ -34,7 +34,7 @@ class Lock extends BaseMiddleware
      */
     public function __invoke($next)
     {
-        $name = $this->name ?: $this->request->getBaseUrl() . $this->request->getPathInfo();
+        $name = $this->name ?: $this->req->getBaseUrl() . $this->req->getPathInfo();
         $key = 'lock-' . $this->getIdentifier() . '-' . $name;
 
         if (!wei()->lock($key, $this->expire)) {
@@ -52,6 +52,6 @@ class Lock extends BaseMiddleware
      */
     public function getIdentifier()
     {
-        return User::id() ?: $this->request->getServer('REMOTE_ADDR');
+        return User::id() ?: $this->req->getServer('REMOTE_ADDR');
     }
 }

@@ -4,7 +4,7 @@ namespace Miaoxing\Services\Crud;
 
 use Miaoxing\Plugin\BaseModelV2;
 use Miaoxing\Services\Service\Convention;
-use Wei\Request;
+use Wei\Req;
 use Wei\RetTrait;
 
 /**
@@ -28,7 +28,7 @@ trait DestroyTrait
         return $this->suc();
     }
 
-    protected function beforeDestroy(Request $req, BaseModelV2 $model)
+    protected function beforeDestroy(Req $req, BaseModelV2 $model)
     {
         return $this->suc();
     }

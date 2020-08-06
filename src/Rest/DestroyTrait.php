@@ -3,7 +3,7 @@
 namespace Miaoxing\Services\Rest;
 
 use Miaoxing\Plugin\Service\Model;
-use Wei\Request;
+use Wei\Req;
 use Wei\RetTrait;
 
 /**
@@ -27,12 +27,12 @@ trait DestroyTrait
         return $model->toRet();
     }
 
-    protected function beforeDestroy(Request $req, Model $model)
+    protected function beforeDestroy(Req $req, Model $model)
     {
         return suc();
     }
 
-    protected function afterDestroy(Request $req, Model $model)
+    protected function afterDestroy(Req $req, Model $model)
     {
     }
 }

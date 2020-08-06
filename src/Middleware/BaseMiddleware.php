@@ -6,7 +6,7 @@ use Wei\RetTrait;
 
 /**
  * @property \Miaoxing\Plugin\Service\App $app
- * @property \Wei\Request $request
+ * @property \Wei\Req $request
  * @property \Wei\Response $response
  */
 abstract class BaseMiddleware extends \Wei\Base
