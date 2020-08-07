@@ -1,3 +1,18 @@
+## [0.1.3](https://github.com/miaoxing/services/compare/v0.1.2...v0.1.3) (2020-08-07)
+
+
+### Features
+
+* 增加 *Action 类，通过组合的方式简化常用的 CRUD 操作 ([92ef8e8](https://github.com/miaoxing/services/commit/92ef8e88bd8f365bcce7be9716fcd9ddbf3df9a8))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from 0.1.2 to 0.1.3
+
 ## [0.1.2](https://github.com/miaoxing/services/compare/v0.1.1...v0.1.2) (2020-08-06)
 
 
