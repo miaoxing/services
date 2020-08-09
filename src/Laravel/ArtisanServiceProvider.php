@@ -29,7 +29,6 @@ class ArtisanServiceProvider extends \Illuminate\Foundation\Providers\ArtisanSer
         'Optimize' => 'command.optimize',
         'OptimizeClear' => 'command.optimize.clear',
         'PackageDiscover' => 'command.package.discover',
-        'Preset' => 'command.preset',
         'QueueFailed' => 'command.queue.failed',
         'QueueFlush' => 'command.queue.flush',
         'QueueForget' => 'command.queue.forget',
@@ -56,7 +55,9 @@ class ArtisanServiceProvider extends \Illuminate\Foundation\Providers\ArtisanSer
      */
     protected $devCommands = [
 //        'CacheTable' => 'command.cache.table',
+//        'CastMake' => 'command.cast.make',
 //        'ChannelMake' => 'command.channel.make',
+//        'ComponentMake' => 'command.component.make',
 //        'ConsoleMake' => 'command.console.make',
 //        'ControllerMake' => 'command.controller.make',
 //        'EventGenerate' => 'command.event.generate',
@@ -81,6 +82,7 @@ class ArtisanServiceProvider extends \Illuminate\Foundation\Providers\ArtisanSer
 //        'SeederMake' => 'command.seeder.make',
 //        'SessionTable' => 'command.session.table',
         'Serve' => 'command.serve',
+//        'StubPublish' => 'command.stub.publish',
 //        'TestMake' => 'command.test.make',
 //        'VendorPublish' => 'command.vendor.publish',
     ];
