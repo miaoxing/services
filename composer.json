@@ -22,7 +22,7 @@
     "miaoxing/plugin": "^0.1.4"
   },
   "require-dev": {
-    "miaoxing/coding-standards": "^5.0.0@beta"
+    "miaoxing/coding-standards": "^5.3.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
