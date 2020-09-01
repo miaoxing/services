@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "miaoxing/plugin": "^0.2.0"
+    "miaoxing/plugin": "^0.2.1"
   },
   "require-dev": {
     "miaoxing/dev": "^6.1.1"
