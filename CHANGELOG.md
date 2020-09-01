@@ -1,3 +1,23 @@
+# [0.2.0](https://github.com/miaoxing/services/compare/v0.1.7...v0.2.0) (2020-09-01)
+
+
+### Code Refactoring
+
+* 后端控制器改为 page 模式 ([bc8fb49](https://github.com/miaoxing/services/commit/bc8fb497d799b8b0effce5179f4bc5b1c2d895ff))
+
+
+### BREAKING CHANGES
+
+* 后端控制器改为 page 模式
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from 0.1.7 to 0.2.0
+
 ## [0.1.7](https://github.com/miaoxing/services/compare/v0.1.6...v0.1.7) (2020-08-17)
 
 
