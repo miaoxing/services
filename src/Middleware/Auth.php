@@ -29,11 +29,12 @@ class Auth extends BaseMiddleware
         }
 
         $ret = $this->event->until('checkAuth');
-        if (!$ret && !$this->user->isLogin()) {
-            $ret = $this->err([
-                'message' => '您好,请登录',
-                'next' => $this->url('users/login'),
-            ]);
+        if (!$ret) {
+            $loginRet = $this->user->checkLogin();
+            if ($loginRet->isErr()) {
+                $loginRet['next'] = $this->url('users/login');
+                return $loginRet;
+            }
         }
 
         if (!$ret) {
