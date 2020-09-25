@@ -1,3 +1,20 @@
+## [0.2.3](https://github.com/miaoxing/services/compare/v0.2.2...v0.2.3) (2020-09-25)
+
+
+### Features
+
+* 增加 coll 和 item 相关操作的 trait ([3bf4abb](https://github.com/miaoxing/services/commit/3bf4abb88d84c7e96c0251835ebafdbf69e1d3d3))
+* **Convention:** getModelName 支持传入页面匿名类 ([fd7d374](https://github.com/miaoxing/services/commit/fd7d3740210e20e29ce6e7d353dab9d88bf45acf))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from 6.1.1 to 6.1.2
+* **@miaoxing/plugin:** upgrade from 0.2.2 to 0.2.3
+
 ## [0.2.2](https://github.com/miaoxing/services/compare/v0.2.1...v0.2.2) (2020-09-06)
 
 
