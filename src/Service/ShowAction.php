@@ -21,6 +21,8 @@ class ShowAction extends BaseAction
 
         $model->findOrFail($this->req['id']);
 
+        $this->triggerRet('afterFind', [$model, $this->req]);
+
         return $model->toRet([
             'data' => array_merge($model->toArray(), $this->triggerBuildData($model)),
         ]);
@@ -32,6 +34,16 @@ class ShowAction extends BaseAction
      * @svc
      */
     protected function beforeFind(callable $callable)
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @svc
+     */
+    protected function afterFind(callable $callable)
     {
         return $this->on(__FUNCTION__, $callable);
     }

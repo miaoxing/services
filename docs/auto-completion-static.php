@@ -227,6 +227,15 @@ class ShowAction
     /**
      * @param callable $callable
      * @return $this
+     * @see ShowAction::afterFind
+     */
+    public static function afterFind(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
      * @see ShowAction::buildData
      */
     public static function buildData(callable $callable)
@@ -515,6 +524,15 @@ class ShowAction
      * @see ShowAction::beforeFind
      */
     public function beforeFind(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see ShowAction::afterFind
+     */
+    public function afterFind(callable $callable)
     {
     }
 
