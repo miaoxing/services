@@ -32,6 +32,8 @@ class UpdateAction extends BaseAction
             $this->res->setStatusCode(201);
         }
 
+        $this->trigger('afterSave', [$model, $this->req]);
+
         return $model->toRet();
     }
 
@@ -51,6 +53,16 @@ class UpdateAction extends BaseAction
      * @svc
      */
     protected function beforeSave(callable $callable)
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @svc
+     */
+    protected function afterSave(callable $callable)
     {
         return $this->on(__FUNCTION__, $callable);
     }

@@ -43,6 +43,15 @@ class CreateAction
     public static function beforeSave(callable $callable)
     {
     }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see UpdateAction::afterSave
+     */
+    public static function afterSave(callable $callable)
+    {
+    }
 }
 
 class CsvExporter
@@ -276,6 +285,15 @@ class UpdateAction
     public static function beforeSave(callable $callable)
     {
     }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see UpdateAction::afterSave
+     */
+    public static function afterSave(callable $callable)
+    {
+    }
 }
 
 class Url
@@ -344,6 +362,15 @@ class CreateAction
      * @see UpdateAction::beforeSave
      */
     public function beforeSave(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see UpdateAction::afterSave
+     */
+    public function afterSave(callable $callable)
     {
     }
 }
@@ -577,6 +604,15 @@ class UpdateAction
      * @see UpdateAction::beforeSave
      */
     public function beforeSave(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see UpdateAction::afterSave
+     */
+    public function afterSave(callable $callable)
     {
     }
 }
