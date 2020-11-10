@@ -3,9 +3,8 @@
 namespace Miaoxing\Services\Service;
 
 use Wei\Record;
-use Wei\Validator\RecordExists;
 
-class IsRecordExists extends RecordExists
+class IsRecordExists extends \Wei\IsRecordExists
 {
     /**
      * {@inheritdoc}
