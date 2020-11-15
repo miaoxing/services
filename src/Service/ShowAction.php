@@ -3,6 +3,7 @@
 namespace Miaoxing\Services\Service;
 
 use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Services\Action\BaseAction;
 
 class ShowAction extends BaseAction
@@ -22,6 +23,8 @@ class ShowAction extends BaseAction
         $model->findOrFail($this->req['id']);
 
         $this->triggerRet('afterFind', [$model, $this->req]);
+
+        $this->expandModel($controller, $model);
 
         return $model->toRet([
             'data' => array_merge($model->toArray(), $this->triggerBuildData($model)),
@@ -61,5 +64,12 @@ class ShowAction extends BaseAction
     private function triggerBuildData($model)
     {
         return $this->trigger('buildData', [$model]) ?: [];
+    }
+
+    private function expandModel(BaseController $controller, Model $model)
+    {
+        foreach ((array) $controller->getOption('expand') as $expand) {
+            $model->{$expand};
+        }
     }
 }
