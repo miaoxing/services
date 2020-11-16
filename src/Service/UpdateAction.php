@@ -29,10 +29,6 @@ class UpdateAction extends BaseAction
 
         $this->trigger('afterSave', [$model, $this->req]);
 
-        if ($model->wasRecentlyCreated()) {
-            $this->res->setStatusCode(201);
-        }
-
         return $model->toRet();
     }
 
