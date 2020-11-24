@@ -16,25 +16,33 @@ final class ConventionTest extends BaseTestCase
     }
 
     /**
+     * @param string $name
      * @param object $object
      * @dataProvider providerForGetModelNameFromPageObject
      */
-    public function testGetModelNameFromPageObject(object $object)
+    public function testGetModelNameFromPageObject(string $name, object $object)
     {
-        $this->assertSame('service', $this->convention->getModelName($object));
+        $this->assertSame($name, $this->convention->getModelName($object));
     }
 
     public function providerForGetModelNameFromPageObject()
     {
         return [
             [
+                'service',
                 require __DIR__ . '/../Fixture/pages/services/index.php',
             ],
             [
+                'service',
                 require __DIR__ . '/../Fixture/pages/services/[id].php',
             ],
             [
+                'service',
                 require __DIR__ . '/../Fixture/pages/services/[id]/action.php',
+            ],
+            [
+                'serviceItem',
+                require __DIR__ . '/../Fixture/pages/service-items/index.php',
             ],
         ];
     }

@@ -61,6 +61,6 @@ class Convention extends BaseService
         } else {
             $name = basename(dirname(dirname($file)));
         }
-        return $name;
+        return $this->str->camel($name);
     }
 }
