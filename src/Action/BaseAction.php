@@ -43,7 +43,9 @@ abstract class BaseAction extends BaseService
     protected function triggerRet($name, $args)
     {
         $ret = $this->trigger($name, $args);
-        $this->tie($ret);
+        if ($ret) {
+            $this->tie($ret);
+        }
         return $ret;
     }
 }
