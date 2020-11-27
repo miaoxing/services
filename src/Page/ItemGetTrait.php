@@ -5,7 +5,7 @@ namespace Miaoxing\Services\Page;
 use Miaoxing\Services\Service\ShowAction;
 
 /**
- * @property array $expand The relations to return with model
+ * @property string[] $expand The relations to return with model
  */
 trait ItemGetTrait
 {
