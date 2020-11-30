@@ -64,13 +64,6 @@ class IndexActionMixin {
 }
 
 /**
- * @property    Miaoxing\Services\Service\IsRecordExists $isRecordExists
- * @method      bool isRecordExists($input = null, $table = null, $field = 'id') Check if the input is existing table record
- */
-class IsRecordExistsMixin {
-}
-
-/**
  * @property    Miaoxing\Services\Service\Laravel $laravel
  */
 class LaravelMixin {
@@ -168,7 +161,6 @@ class YesNoConstMixin {
  * @mixin EditActionMixin
  * @mixin HttpMixin
  * @mixin IndexActionMixin
- * @mixin IsRecordExistsMixin
  * @mixin LaravelMixin
  * @mixin LoggerMixin
  * @mixin NewActionMixin
@@ -224,9 +216,6 @@ $http = wei()->http;
 
 /** @var Miaoxing\Services\Service\IndexAction $indexAction */
 $indexAction = wei()->indexAction;
-
-/** @var Miaoxing\Services\Service\IsRecordExists $isRecordExists */
-$isRecordExists = wei()->isRecordExists;
 
 /** @var Miaoxing\Services\Service\Laravel $laravel */
 $laravel = wei()->laravel;

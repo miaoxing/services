@@ -158,10 +158,6 @@ class IndexAction
     }
 }
 
-class IsRecordExists
-{
-}
-
 class Laravel
 {
     /**
@@ -477,10 +473,6 @@ class IndexAction
     public function buildRet(callable $callable)
     {
     }
-}
-
-class IsRecordExists
-{
 }
 
 class Laravel
