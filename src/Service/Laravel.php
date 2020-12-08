@@ -12,15 +12,14 @@ use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\RedisManager;
 use Illuminate\Support\Facades\Facade;
 use Miaoxing\Plugin\BaseService;
-use Miaoxing\Queue\Service\Queue;
 use Miaoxing\Services\Laravel\ConsoleKernel;
 use Miaoxing\Services\Laravel\ConsoleSupportServiceProvider;
 use Miaoxing\Services\Laravel\HttpKernel;
-use Wei\Db;
 
 /**
- * @property Db db
- * @property Queue queue
+ * @mixin \DbMixin
+ * @mixin \QueueMixin
+ * @mixin \LoggerMixin
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class Laravel extends BaseService
@@ -113,22 +112,14 @@ class Laravel extends BaseService
     {
         $app = $this->getApp();
 
+        // Logger
+        $app['log'] = $this->logger;
+
         // Database
         /** @var Repository $config */
         $config = $app['config'];
 
         $config->set([
-            'logging' => [
-                'default' => 'daily',
-                'channels' => [
-                    'daily' => [
-                        'driver' => 'daily',
-                        'path' => storage_path('logs/laravel.log'),
-                        'level' => 'debug',
-                        'days' => 14,
-                    ],
-                ],
-            ],
             'cache' => [
                 'default' => 'file',
                 'stores' => [
