@@ -2,8 +2,8 @@
 
 namespace Miaoxing\Services\Service;
 
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\BaseService;
-use Miaoxing\Plugin\Service\Model;
 use Miaoxing\Plugin\Service\Str;
 use ReflectionClass;
 
@@ -32,7 +32,7 @@ class Convention extends BaseService
 
     /**
      * @param object $object
-     * @return Model
+     * @return BaseModel
      */
     public function createModel($object)
     {

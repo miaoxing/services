@@ -3,7 +3,7 @@
 namespace Miaoxing\Services\Service;
 
 use Miaoxing\Plugin\BaseController;
-use Miaoxing\Plugin\Service\Model;
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Services\Action\BaseAction;
 use Wei\Req;
 
@@ -32,7 +32,7 @@ class IndexAction extends BaseAction
 
         // 2. 组装返回数据
         $data = [];
-        /** @var Model $model */
+        /** @var BaseModel $model */
         foreach ($models as $model) {
             $data[] = array_merge($model->toArray(), $this->triggerBuildData($model));
         }
@@ -85,7 +85,7 @@ class IndexAction extends BaseAction
         return $this->trigger('buildData', [$model]) ?: [];
     }
 
-    protected function triggerBuildRet($ret, Model $models, Req $req)
+    protected function triggerBuildRet($ret, BaseModel $models, Req $req)
     {
         return $this->trigger('buildRet', [$ret, $models, $req]) ?: $ret;
     }
