@@ -23,7 +23,7 @@ class IndexAction extends BaseAction
 
         $this->triggerRet('beforeFind', [$models, $this->req]);
 
-        if (!$models->getSqlPart('orderBy')) {
+        if (!$models->getQueryPart('orderBy')) {
             $models->sort();
         }
 

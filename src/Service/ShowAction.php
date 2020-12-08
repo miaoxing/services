@@ -3,7 +3,7 @@
 namespace Miaoxing\Services\Service;
 
 use Miaoxing\Plugin\BaseController;
-use Miaoxing\Plugin\Service\Model;
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Services\Action\BaseAction;
 
 class ShowAction extends BaseAction
@@ -66,7 +66,7 @@ class ShowAction extends BaseAction
         return $this->trigger('buildData', [$model]) ?: [];
     }
 
-    private function expandModel(BaseController $controller, Model $model)
+    private function expandModel(BaseController $controller, BaseModel $model)
     {
         foreach ((array) $controller->getOption('expand') as $expand) {
             $model->{$expand};
