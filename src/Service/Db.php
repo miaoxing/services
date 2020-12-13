@@ -33,17 +33,17 @@ class Db extends \Wei\Db
      *
      * @param string $table The name of database table
      * @param array $attribuets The data for table record
-     * @param bool $isNew Whether it's a new record and have not save to database
+     * @param bool $new Whether it's a new record and have not save to database
      * @return WeiBaseModel
      */
-    public function init($table, $attribuets = [], $isNew = true)
+    public function init($table, $attribuets = [], $new = true)
     {
         $class = $this->getRecordClass($table);
         return new $class([
             'wei' => $this->wei,
             'db' => $this,
             'table' => $table,
-            'isNew' => $isNew,
+            'new' => $new,
             'attributes' => $attribuets,
         ]);
     }
