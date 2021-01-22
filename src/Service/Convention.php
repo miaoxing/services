@@ -9,7 +9,8 @@ use Miaoxing\Plugin\Service\Str;
 use ReflectionClass;
 
 /**
- * @property Str $str
+ * @mixin \StrMixin
+ * @mixin \ClsMixin
  */
 class Convention extends BaseService
 {
@@ -17,15 +18,14 @@ class Convention extends BaseService
      * @param object $object 可传入控制器或服务
      * @return string
      */
-    public function getModelName($object)
+    public function getModelName(object $object)
     {
         $class = get_class($object);
-        // or (new ReflectionClass($instance))->isAnonymous()
-        if ('class@' === substr($class, 0, 6)) {
+        if ((new ReflectionClass($object))->isAnonymous()) {
             $name = $this->getModelNameFromPage($class);
         } else {
-            $name = $this->removeSuffix(get_class($object), 'Controller');
-            $name = lcfirst($this->str->baseName($name));
+            $name = $this->removeSuffix($class, 'Controller');
+            $name = lcfirst($this->cls->baseName($name));
         }
         $name = $this->str->singularize($name);
         return $name;
@@ -33,7 +33,7 @@ class Convention extends BaseService
 
     /**
      * @param object $object
-     * @return BaseModel|ModelTrait
+     * @return BaseModel
      */
     public function createModel($object)
     {
@@ -41,7 +41,7 @@ class Convention extends BaseService
             return $object->createModel();
         }
 
-        return $this->{$this->getModelName($object) . 'Model'}();
+        return $this->wei->get($this->getModelName($object) . 'Model');
     }
 
     protected function removeSuffix($str, $suffix)
