@@ -9,6 +9,41 @@ use Miaoxing\Plugin\Service\App;
  */
 class Url extends \Wei\Url
 {
+    /**
+     * 如果当前请求存在该参数，则将参数传递到生成 URL 中
+     *
+     * @var array
+     * @experimental
+     */
+    protected $passThroughParams = [];
+
+    /**
+     * Generate the URL by specified URL and parameters
+     *
+     * @param string $url
+     * @param array $argsOrParams
+     * @param array $params
+     * @return string
+     * @svc
+     */
+    protected function to($url = '', $argsOrParams = [], $params = [])
+    {
+        if ($this->passThroughParams) {
+            if (false !== strpos($url, '%s')) {
+                $real = &$params;
+            } else {
+                $real = &$argsOrParams;
+            }
+            foreach ($this->passThroughParams as $param) {
+                if (!isset($real[$param]) && $this->req->getQuery($param)) {
+                    $real[$param] = $this->req->getQuery($param);
+                }
+            }
+        }
+
+        return parent::to($url, $argsOrParams, $params);
+    }
+
     public function curIndex($action = '', $argsOrParams = [], $params = [])
     {
         return $this->__invoke($this->app->getController() . ($action ? ('/' . $action) : ''), $argsOrParams, $params);
