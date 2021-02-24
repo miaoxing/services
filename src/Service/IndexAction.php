@@ -18,14 +18,13 @@ class IndexAction extends BaseAction
     {
         // 1. 构建查询
         $models = $this->convention->createModel($controller);
-        $models->setReq($this->req)
-            ->paginate();
+        $models->setReq($this->req);
 
         $this->triggerRet('beforeFind', [$models, $this->req]);
 
-        if (!$models->getQueryPart('orderBy')) {
-            $models->sort();
-        }
+        $this->triggerRet('beforeReqQuery', [$models, $this->req]);
+        $models->reqQuery();
+        $this->triggerRet('afterReqQuery', [$models, $this->req]);
 
         $models->all();
         $this->trigger('afterFind', [$models, $this->req]);
@@ -38,6 +37,26 @@ class IndexAction extends BaseAction
         }
 
         return $this->triggerBuildRet($models->toRet(['data' => $data]), $models, $this->req);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @svc
+     */
+    protected function beforeReqQuery(callable $callable)
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @svc
+     */
+    protected function afterReqQuery(callable $callable)
+    {
+        return $this->on(__FUNCTION__, $callable);
     }
 
     /**
