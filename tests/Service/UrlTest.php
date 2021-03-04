@@ -19,7 +19,7 @@ class UrlTest extends BaseTestCase
     public function testAppId(array $options, string $to, array $argOrParams, array $params, string $result)
     {
         $req = new Req(['wei' => $this->wei, 'fromGlobal' => false] + $options);
-        $url = new Url(['wei' => $this->wei, 'req' => $req]);
+        $url = new Url(['wei' => $this->wei, 'req' => $req, 'passThroughParams' => ['appId']]);
 
         $this->assertSame($result, $url->to($to, $argOrParams, $params));
     }
