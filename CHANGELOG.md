@@ -1,21 +1,19 @@
 # [0.3.0](https://github.com/miaoxing/services/compare/v0.2.4...v0.3.0) (2021-03-05)
 
 
-* feat(IndexAction)!: 默认调用 `reqQuery` 方法执行自动查询，增加 `beforeReqQuery` 和 `afterReqQuery` 方法和事件 ([336b9bf](https://github.com/miaoxing/services/commit/336b9bff4ee59755e9876645c1daf2c71b170a41))
-* refactor(Model)!: `data` 属性改为 `attributes`，相关属性和方法更新 ([2f6247e](https://github.com/miaoxing/services/commit/2f6247ecfab3931e845dc337e715d87d3af73daf))
-* refactor!: `Service/Model` 拆分出 `ModelTrait`, 改名为 `BaseModel` ([dcdd4a1](https://github.com/miaoxing/services/commit/dcdd4a1f84188d50ca33407085aa3de59fcf00d7))
-* refactor!: 移除 `IsRecordExists` 服务，改为使用 `IsModelExists` ([2508673](https://github.com/miaoxing/services/commit/250867313fa646f9b180df5de67f4d607a08a11b))
-
-
 ### Code Refactoring
 
 * **Model:** `isNew` 属性改为 `new` ([6c46f70](https://github.com/miaoxing/services/commit/6c46f7060b11943afff99c414b4085f190f7a45c))
+* **Model:** `data` 属性改为 `attributes`，相关属性和方法更新 ([2f6247e](https://github.com/miaoxing/services/commit/2f6247ecfab3931e845dc337e715d87d3af73daf))
+* `Service/Model` 拆分出 `ModelTrait`, 改名为 `BaseModel` ([dcdd4a1](https://github.com/miaoxing/services/commit/dcdd4a1f84188d50ca33407085aa3de59fcf00d7))
+* 移除 `IsRecordExists` 服务，改为使用 `IsModelExists` ([2508673](https://github.com/miaoxing/services/commit/250867313fa646f9b180df5de67f4d607a08a11b))
 
 
 ### Features
 
 * **Convention:** getModelName 支持页面路径包含中划线 ([19ece2a](https://github.com/miaoxing/services/commit/19ece2a1683ae747be9d2e01fdea5d289c8d9693))
 * **ShowAction:** 允许页面配置   `expand` 参数，返回模型的关联数据 ([be5d142](https://github.com/miaoxing/services/commit/be5d1421d925011261f88438bd3a51ecf465687e))
+* **IndexAction**: 默认调用 `reqQuery` 方法执行自动查询，增加 `beforeReqQuery` 和 `afterReqQuery` 方法和事件 ([336b9bf](https://github.com/miaoxing/services/commit/336b9bff4ee59755e9876645c1daf2c71b170a41))
 * **Url:** 增加 `passThroughParams` 属性，如果当前请求存在指定参数，则将参数传递到生成 URL 中 ([76287fe](https://github.com/miaoxing/services/commit/76287fe406014fc4db7da114207c465709353c18))
 * ShowAction 增加 afterFind 回调 ([4ceb959](https://github.com/miaoxing/services/commit/4ceb95928518223a0f5d2af0873308050363b264))
 * UpdateAction 增加 afterSave 方法 ([5127468](https://github.com/miaoxing/services/commit/51274680a1a150916b919ac68310a95ab8b95889))
