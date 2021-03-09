@@ -1,12 +1,12 @@
 {
   "name": "@miaoxing/services",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "main": "index.js",
   "repository": "git@github.com:miaoxing/services.git",
   "author": "twinh <twinhuang@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "@miaoxing/dev": "^6.3.0"
+    "@miaoxing/dev": "^6.3.1"
   }
 }
