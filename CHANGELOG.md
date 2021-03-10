@@ -1,3 +1,19 @@
+## [0.3.5](https://github.com/miaoxing/services/compare/v0.3.4...v0.3.5) (2021-03-10)
+
+
+### Bug Fixes
+
+* 增加 `laravel/framework` 依赖 ([4f0f70b](https://github.com/miaoxing/services/commit/4f0f70bbd0f960306cb67ea9663b0ec6db154eb1))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from 6.3.1 to 6.3.2
+* **@miaoxing/plugin:** upgrade from 0.4.0 to 0.4.1
+
 ## [0.3.4](https://github.com/miaoxing/services/compare/v0.3.3...v0.3.4) (2021-03-09)
 
 

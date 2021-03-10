@@ -19,11 +19,11 @@
     }
   },
   "require": {
-    "miaoxing/plugin": "^0.4.0",
+    "miaoxing/plugin": "^0.4.1",
     "laravel/framework": "^7.24"
   },
   "require-dev": {
-    "miaoxing/dev": "^6.3.1"
+    "miaoxing/dev": "^6.3.2"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
