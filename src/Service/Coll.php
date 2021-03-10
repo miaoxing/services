@@ -29,7 +29,7 @@ class Coll extends \Miaoxing\Plugin\BaseService
      * @param int $type
      * @return array
      */
-    public function orderBy(array $array, $key = 'sort', $type = SORT_DESC)
+    public function orderBy(array $array, $key = 'sort', $type = \SORT_DESC)
     {
         $array2 = [];
         foreach ($array as $k => $v) {

@@ -4,6 +4,6 @@ namespace Miaoxing\Services\Action;
 
 trait FormTrait
 {
-    use NewCreateTrait;
     use EditUpdateTrait;
+    use NewCreateTrait;
 }

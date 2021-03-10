@@ -56,10 +56,10 @@ class Convention extends BaseService
         $file = (new ReflectionClass($class))->getFileName();
         $basename = basename($file);
         // 如果是资源入口(index.php)或包含变量(如[id].php)，则返回更上一级的目录名称
-        if ($basename === 'index.php' || false !== strpos($basename, '[')) {
+        if ('index.php' === $basename || false !== strpos($basename, '[')) {
             $name = basename(dirname($file));
         } else {
-            $name = basename(dirname(dirname($file)));
+            $name = basename(dirname($file, 2));
         }
         return $this->str->camel($name);
     }

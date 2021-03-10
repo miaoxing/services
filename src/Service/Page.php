@@ -191,7 +191,7 @@ class Page extends BaseService
     public function addAsset($asset)
     {
         $asset = $this->asset($asset);
-        $ext = pathinfo($asset, PATHINFO_EXTENSION);
+        $ext = pathinfo($asset, \PATHINFO_EXTENSION);
         switch ($ext) {
             case 'css':
                 return $this->addCss($asset);

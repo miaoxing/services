@@ -103,7 +103,7 @@ class Logger extends \Wei\Logger
         $options = ['extra' => $params['context'], 'level' => $level];
 
         // 上报时可能已经在错误流程中,所以通过session获取,尽可能减少依赖,减少再次出错的机会
-        if (PHP_SESSION_ACTIVE == session_status() && isset($this->session['user']['id'])) {
+        if (\PHP_SESSION_ACTIVE == session_status() && isset($this->session['user']['id'])) {
             $options['user'] = $this->session['user'];
         }
 

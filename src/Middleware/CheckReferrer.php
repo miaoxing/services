@@ -20,7 +20,7 @@ class CheckReferrer extends BaseMiddleware
     public function __invoke($next)
     {
         if ($referrer = $this->req->getReferer()) {
-            $host = parse_url($referrer, PHP_URL_HOST);
+            $host = parse_url($referrer, \PHP_URL_HOST);
             if ($host !== $this->req->getHost() && !in_array($host, $this->whitelist, true)) {
                 return $this->res->json([
                     'code' => -2000,
