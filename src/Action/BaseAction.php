@@ -15,6 +15,8 @@ abstract class BaseAction extends BaseService
 {
     use HandleRetTrait;
 
+    protected static $createNewInstance = true;
+
     /**
      * @var array
      */
