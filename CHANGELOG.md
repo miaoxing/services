@@ -1,3 +1,10 @@
+## [0.3.7](https://github.com/miaoxing/services/compare/v0.3.6...v0.3.7) (2021-03-17)
+
+
+### Bug Fixes
+
+* 解决重复调用 `*Action` 类出错 ([5338c92](https://github.com/miaoxing/services/commit/5338c92287aabe309a87476c59df4d53a1e04fae))
+
 ## [0.3.6](https://github.com/miaoxing/services/compare/v0.3.5...v0.3.6) (2021-03-12)
 
 
