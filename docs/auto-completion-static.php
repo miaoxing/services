@@ -124,6 +124,24 @@ class IndexAction
     /**
      * @param callable $callable
      * @return $this
+     * @see IndexAction::beforeReqQuery
+     */
+    public static function beforeReqQuery(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see IndexAction::afterReqQuery
+     */
+    public static function afterReqQuery(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
      * @see IndexAction::beforeFind
      */
     public static function beforeFind(callable $callable)
@@ -435,6 +453,24 @@ class IndexAction
      * @see IndexAction::exec
      */
     public function exec(\Miaoxing\Plugin\BaseController $controller)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see IndexAction::beforeReqQuery
+     */
+    public function beforeReqQuery(callable $callable)
+    {
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     * @see IndexAction::afterReqQuery
+     */
+    public function afterReqQuery(callable $callable)
     {
     }
 
