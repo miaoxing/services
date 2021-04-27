@@ -5,6 +5,7 @@ namespace Miaoxing\Services\Action;
 use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\HandleRetTrait;
+use Wei\Req;
 
 /**
  * @mixin \ConventionMixin
@@ -28,6 +29,19 @@ abstract class BaseAction extends BaseService
      * @svc
      */
     abstract protected function exec(BaseController $controller);
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @svc
+     */
+    protected function setReq(Req $req)
+    {
+        $this->req = $req;
+        return $this;
+    }
 
     protected function on(string $name, callable $callable)
     {

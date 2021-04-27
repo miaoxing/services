@@ -52,6 +52,17 @@ class CreateAction
     public static function afterSave(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class CsvExporter
@@ -91,6 +102,17 @@ class DestroyAction
     public static function afterDestroy(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class EditAction
@@ -102,6 +124,17 @@ class EditAction
      * @see EditAction::exec
      */
     public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
     {
     }
 }
@@ -174,6 +207,17 @@ class IndexAction
     public static function buildRet(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class Laravel
@@ -210,6 +254,17 @@ class NewAction
      * @see EditAction::exec
      */
     public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
     {
     }
 }
@@ -264,6 +319,17 @@ class ShowAction
     public static function buildData(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class Status
@@ -306,6 +372,17 @@ class UpdateAction
      * @see UpdateAction::afterSave
      */
     public static function afterSave(callable $callable)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
     {
     }
 }
@@ -387,6 +464,17 @@ class CreateAction
     public function afterSave(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class CsvExporter
@@ -426,6 +514,17 @@ class DestroyAction
     public function afterDestroy(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class EditAction
@@ -437,6 +536,17 @@ class EditAction
      * @see EditAction::exec
      */
     public function exec(\Miaoxing\Plugin\BaseController $controller)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
     {
     }
 }
@@ -509,6 +619,17 @@ class IndexAction
     public function buildRet(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class Laravel
@@ -545,6 +666,17 @@ class NewAction
      * @see EditAction::exec
      */
     public function exec(\Miaoxing\Plugin\BaseController $controller)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
     {
     }
 }
@@ -599,6 +731,17 @@ class ShowAction
     public function buildData(callable $callable)
     {
     }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class Status
@@ -641,6 +784,17 @@ class UpdateAction
      * @see UpdateAction::afterSave
      */
     public function afterSave(callable $callable)
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public function setReq(\Wei\Req $req)
     {
     }
 }
