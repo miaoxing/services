@@ -1,3 +1,19 @@
+## [0.3.9](https://github.com/miaoxing/services/compare/v0.3.8...v0.3.9) (2021-04-27)
+
+
+### Features
+
+* **Action:** 增加 `setReq` 方法 ([dac01a0](https://github.com/miaoxing/services/commit/dac01a033e2878a793ccd1290de37a472d382ba9))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `6.3.4` to `6.4.0`
+* **@miaoxing/plugin:** upgrade from `0.4.3` to `0.4.4`
+
 ## [0.3.8](https://github.com/miaoxing/services/compare/v0.3.7...v0.3.8) (2021-03-22)
 
 
