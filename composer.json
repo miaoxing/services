@@ -1,7 +1,7 @@
 {
   "name": "miaoxing/services",
   "type": "miaoxing-plugin",
-  "description": "",
+  "description": "Miaoxing Extra Services",
   "authors": [
     {
       "name": "twinh",
