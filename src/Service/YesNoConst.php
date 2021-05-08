@@ -12,9 +12,9 @@ class YesNoConst extends BaseService
 {
     use ConstTrait;
 
-    const YES_NO_YES = 1;
+    public const YES_NO_YES = 1;
 
-    const YES_NO_NO = 0;
+    public const YES_NO_NO = 0;
 
     protected $yesNoNames = [
         self::YES_NO_YES => '是',

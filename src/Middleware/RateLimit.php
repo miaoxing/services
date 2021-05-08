@@ -12,17 +12,17 @@ class RateLimit extends BaseMiddleware
     /**
      * 每分钟作为一个时间窗口
      */
-    const MINUTE = 60;
+    public const MINUTE = 60;
 
     /**
      * 每小时作为一个时间窗口
      */
-    const HOUR = 3600;
+    public const HOUR = 3600;
 
     /**
      * 每天作为一个时间窗口
      */
-    const DAY = 86400;
+    public const DAY = 86400;
 
     /**
      * 一个时间窗口的长度
