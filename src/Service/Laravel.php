@@ -148,7 +148,7 @@ class Laravel extends BaseService
         });
         $app->extend(RedisManager::class, function (RedisManager $manager) {
             $manager->extend('phpredis', function () {
-                return new class() extends PhpRedisConnector {
+                return new class () extends PhpRedisConnector {
                     public function connect(array $config, array $options)
                     {
                         return new PhpRedisConnection(wei()->redis->getObject());
