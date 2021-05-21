@@ -1,3 +1,18 @@
+## [0.3.12](https://github.com/miaoxing/services/compare/v0.3.11...v0.3.12) (2021-05-21)
+
+
+### Features
+
+* **IndexAction:** 支持页面配置 `expand` 来加载关联模型 ([85ff55d](https://github.com/miaoxing/services/commit/85ff55daaca66205de57afca55b2d610614aa66b))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.4.6` to `0.4.7`
+
 ## [0.3.11](https://github.com/miaoxing/services/compare/v0.3.10...v0.3.11) (2021-05-12)
 
 
