@@ -113,8 +113,6 @@ class IndexAction extends BaseAction
 
     protected function expandModel(BaseController $controller, BaseModel $models)
     {
-        foreach ((array) $controller->getOption('expand') as $expand) {
-            $models->load($expand);
-        }
+        $models->load($controller->getOption('expand'));
     }
 }

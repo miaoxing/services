@@ -68,8 +68,6 @@ class ShowAction extends BaseAction
 
     private function expandModel(BaseController $controller, BaseModel $model)
     {
-        foreach ((array) $controller->getOption('expand') as $expand) {
-            $model->{$expand};
-        }
+        $model->load($controller->getOption('expand'));
     }
 }
