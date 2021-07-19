@@ -245,6 +245,17 @@ class Logger
 {
 }
 
+class Money
+{
+    /**
+     * @param string|int|float $value
+     * @see Money::of
+     */
+    public static function of($value): self
+    {
+    }
+}
+
 class NewAction
 {
     /**
@@ -655,6 +666,17 @@ class Laravel
 
 class Logger
 {
+}
+
+class Money
+{
+    /**
+     * @param string|int|float $value
+     * @see Money::of
+     */
+    public function of($value): self
+    {
+    }
 }
 
 class NewAction

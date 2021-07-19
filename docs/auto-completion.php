@@ -77,6 +77,12 @@ class LoggerMixin {
 }
 
 /**
+ * @property    Miaoxing\Services\Service\Money $money
+ */
+class MoneyMixin {
+}
+
+/**
  * @property    Miaoxing\Services\Service\NewAction $newAction
  */
 class NewActionMixin {
@@ -163,6 +169,7 @@ class YesNoConstMixin {
  * @mixin IndexActionMixin
  * @mixin LaravelMixin
  * @mixin LoggerMixin
+ * @mixin MoneyMixin
  * @mixin NewActionMixin
  * @mixin OptionTraitMixin
  * @mixin PageMixin
@@ -222,6 +229,9 @@ $laravel = wei()->laravel;
 
 /** @var Miaoxing\Services\Service\Logger $logger */
 $logger = wei()->logger;
+
+/** @var Miaoxing\Services\Service\Money $money */
+$money = wei()->money;
 
 /** @var Miaoxing\Services\Service\NewAction $newAction */
 $newAction = wei()->newAction;
