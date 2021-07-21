@@ -54,6 +54,15 @@ class MoneyTest extends BaseTestCase
         $this->assertSame('-1.23', $money->toString());
     }
 
+    public function testNewInstance()
+    {
+        $money = money('1.2');
+        $money2 = $money->add('1.3');
+        $this->assertNotEquals($money, $money2);
+        $this->assertSame('1.2', $money->toString());
+        $this->assertSame('2.5', $money2->toString());
+    }
+
     /**
      * @param mixed $left
      * @param mixed $right
@@ -240,14 +249,10 @@ class MoneyTest extends BaseTestCase
         $this->assertSame(5.801, $value1->add(4.567)->toNumber());
         $this->assertSame(6, $value2->add(4.567)->toNumber());
 
-        $value1 = money(1.234, ['precision' => 3]);
-        $value2 = money(1.234, ['precision' => 0]);
         $this->assertSame(-3.333, $value1->sub(4.567)->getValue());
-        $this->assertSame(-4.0, (clone $value2)->sub(4.567)->getValue());
+        $this->assertSame(-4.0, $value2->sub(4.567)->getValue());
         $this->assertSame(-4, $value2->sub(4.567)->toNumber());
 
-        $value1 = money(1.234, ['precision' => 3]);
-        $value2 = money(1.234, ['precision' => 0]);
         $this->assertSame(234, $value1->getSubUnits());
         $this->assertSame(0, $value2->getSubUnits());
     }
