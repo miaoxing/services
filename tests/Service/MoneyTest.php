@@ -253,8 +253,8 @@ class MoneyTest extends BaseTestCase
         $this->assertSame(-4.0, $value2->sub(4.567)->getValue());
         $this->assertSame(-4, $value2->sub(4.567)->toNumber());
 
-        $this->assertSame(234, $value1->getSubUnits());
-        $this->assertSame(0, $value2->getSubUnits());
+        $this->assertSame(234, $value1->getCents());
+        $this->assertSame(0, $value2->getCents());
     }
 
     public function testUseSourcePrecision()
@@ -316,5 +316,49 @@ class MoneyTest extends BaseTestCase
         // TODO determine PHP max
         // 92233720368547758.07 * 100 = 9.2233720368548E+18
         // (int)(92233720368547758.07 * 100) = -9223372036854775808
+    }
+
+    /**
+     * @param mixed $money
+     * @param int $int
+     * @dataProvider providerForToInt
+     */
+    public function testToInt($money, int $int)
+    {
+        $value = money($money);
+        $this->assertSame($value->toInt(), $int);
+    }
+
+    public static function providerForToInt(): array
+    {
+        return [
+            [1.23, 1],
+            ['1.23', 1],
+            [2, 2],
+            [30, 30],
+            ['2.23213', 2],
+        ];
+    }
+
+    /**
+     * @param mixed $money
+     * @param int $cents
+     * @dataProvider providerForGetCents
+     */
+    public function testGetCents($money, int $cents)
+    {
+        $value = money($money);
+        $this->assertSame($value->getCents(), $cents);
+    }
+
+    public static function providerForGetCents(): array
+    {
+        return [
+            [1.23, 23],
+            ['1.23', 23],
+            [2, 0],
+            [30, 0],
+            ['2.23213', 23],
+        ];
     }
 }
