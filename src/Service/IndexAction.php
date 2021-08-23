@@ -29,7 +29,7 @@ class IndexAction extends BaseAction
         $models->all();
         $this->trigger('afterFind', [$models, $this->req]);
 
-        $this->expandModel($controller, $models);
+        $this->includeModel($controller, $models);
 
         // 2. 组装返回数据
         $data = [];
@@ -111,8 +111,8 @@ class IndexAction extends BaseAction
         return $this->trigger('buildRet', [$ret, $models, $req]) ?: $ret;
     }
 
-    protected function expandModel(BaseController $controller, BaseModel $models)
+    protected function includeModel(BaseController $controller, BaseModel $models)
     {
-        $models->load($controller->getOption('expand'));
+        $models->load($controller->getOption('include'));
     }
 }

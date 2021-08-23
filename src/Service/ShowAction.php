@@ -24,7 +24,7 @@ class ShowAction extends BaseAction
 
         $this->triggerRet('afterFind', [$model, $this->req]);
 
-        $this->expandModel($controller, $model);
+        $this->includeModel($controller, $model);
 
         return $model->toRet([
             'data' => array_merge($model->toArray(), $this->triggerBuildData($model)),
@@ -66,8 +66,8 @@ class ShowAction extends BaseAction
         return $this->trigger('buildData', [$model]) ?: [];
     }
 
-    private function expandModel(BaseController $controller, BaseModel $model)
+    private function includeModel(BaseController $controller, BaseModel $model)
     {
-        $model->load($controller->getOption('expand'));
+        $model->load($controller->getOption('include'));
     }
 }
