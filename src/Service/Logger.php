@@ -18,7 +18,7 @@ class Logger extends \Wei\Logger
     protected $dir = 'storage/logs';
 
     /**
-     * 引到error.logger服务的最低级别
+     * 引到 errorLogger 服务的最低级别
      *
      * @var string
      */
@@ -52,8 +52,8 @@ class Logger extends \Wei\Logger
         parent::__construct($options);
 
         // 创建默认的错误日志配置
-        if (!$this->wei->getConfig('error.logger')) {
-            $this->wei->setConfig('error.logger', [
+        if (!$this->wei->getConfig('error:logger')) {
+            $this->wei->setConfig('error:logger', [
                 'dir' => $this->dir,
                 'fileFormat' => '\e\r\r\o\r' . $this->fileFormat,
             ]);
@@ -67,7 +67,7 @@ class Logger extends \Wei\Logger
      */
     public function log($level, $message, $context = [], $fromErrorLogger = false)
     {
-        // 将较高级别的日志,引到error.logger服务
+        // 将较高级别的日志,引到 errorLogger 服务
         if ($fromErrorLogger || ($this->levels[$level] ?? 0) < $this->levels[$this->proxyLevel]) {
             return parent::log($level, $message, $context);
         } else {
