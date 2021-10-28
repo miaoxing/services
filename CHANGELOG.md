@@ -1,3 +1,29 @@
+# [0.4.0](https://github.com/miaoxing/services/compare/v0.3.12...v0.4.0) (2021-10-28)
+
+
+### Code Refactoring
+
+* **services:** `expand` 参数改为 `include` ([3184ee6](https://github.com/miaoxing/services/commit/3184ee64c692fccc450606f632088af8b653199e))
+
+
+### Features
+
+* **Money:** 增加 `Money` 服务，用于计算金额 ([a77099a](https://github.com/miaoxing/services/commit/a77099a01a69729d58e49ee6f96a9a4437c762ac))
+
+
+### BREAKING CHANGES
+
+* **services:** `expand` 参数改为 `include`
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+* **@miaoxing/plugin:** upgrade from `0.4.7` to `0.5.0`
+
 ## [0.3.12](https://github.com/miaoxing/services/compare/v0.3.11...v0.3.12) (2021-05-21)
 
 
