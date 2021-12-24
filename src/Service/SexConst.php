@@ -12,11 +12,14 @@ class SexConst extends BaseService
 {
     use ConstTrait;
 
+    public const SEX_UNKNOWN = 0;
+
     public const SEX_MALE = 1;
 
     public const SEX_FEMALE = 2;
 
     protected $sexNames = [
+        self::SEX_UNKNOWN => '未知',
         self::SEX_MALE => '男',
         self::SEX_FEMALE => '女',
     ];
