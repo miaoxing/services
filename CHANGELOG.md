@@ -1,3 +1,19 @@
+## [0.4.1](https://github.com/miaoxing/services/compare/v0.4.0...v0.4.1) (2022-01-12)
+
+
+### Features
+
+* **services:** 性别增加 "未知" ([11d14d8](https://github.com/miaoxing/services/commit/11d14d87e13175e142fe7ecdc6326c83fea6ef86))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+* **@miaoxing/plugin:** upgrade from `0.5.0` to `0.6.0`
+
 # [0.4.0](https://github.com/miaoxing/services/compare/v0.3.12...v0.4.0) (2021-10-28)
 
 
