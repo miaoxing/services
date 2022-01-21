@@ -18,7 +18,7 @@ class Db extends \Wei\Db
         if (isset($this->tableFields[$fullTable])) {
             return $this->tableFields[$fullTable];
         } else {
-            return (array) $this->cache->get(
+            return (array) $this->cache->remember(
                 'tableFields' . $this->dbname . '.' . $table,
                 60,
                 function () use ($table, $withPrefix) {
