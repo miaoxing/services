@@ -2,6 +2,7 @@
 
 namespace Miaoxing\Services\Service;
 
+use Wei\Ret;
 use Wei\RetTrait;
 
 class Http extends \Wei\Http
@@ -12,7 +13,7 @@ class Http extends \Wei\Http
      * 返回 ret 格式的 HTTP 请求结果
      *
      * @param array $data
-     * @return array
+     * @return Ret
      */
     public function toRet(array $data = [])
     {
