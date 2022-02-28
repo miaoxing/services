@@ -1,3 +1,23 @@
+# [0.5.0](https://github.com/miaoxing/services/compare/v0.4.2...v0.5.0) (2022-02-28)
+
+
+### Code Refactoring
+
+* **logger:** 默认日志更改为 JSON 格式，移除上报到 Sentry 功能 ([5c6e072](https://github.com/miaoxing/services/commit/5c6e072271e4af9a894e829c25c28ead6dd922b3))
+
+
+### BREAKING CHANGES
+
+* **logger:** 默认日志更改为 JSON 格式，移除上报到 Sentry 功能
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.7.0` to `0.7.1`
+
 ## [0.4.2](https://github.com/miaoxing/services/compare/v0.4.1...v0.4.2) (2022-02-05)
 
 
