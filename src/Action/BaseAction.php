@@ -2,15 +2,19 @@
 
 namespace Miaoxing\Services\Action;
 
+use ConventionMixin;
 use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\HandleRetTrait;
+use ReqMixin;
+use ResMixin;
 use Wei\Req;
+use Wei\Wei;
 
 /**
- * @mixin \ConventionMixin
- * @mixin \ReqMixin
- * @mixin \ResMixin
+ * @mixin ConventionMixin
+ * @mixin ReqMixin
+ * @mixin ResMixin
  */
 abstract class BaseAction extends BaseService
 {
@@ -29,6 +33,16 @@ abstract class BaseAction extends BaseService
      * @svc
      */
     abstract protected function exec(BaseController $controller);
+
+    /**
+     * Create a new instance
+     *
+     * @return static
+     */
+    public static function new(): self
+    {
+        return Wei::getContainer()->getBy(static::class);
+    }
 
     /**
      * Set the request service
