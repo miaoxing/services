@@ -1,3 +1,18 @@
+## [0.5.2](https://github.com/miaoxing/services/compare/v0.5.1...v0.5.2) (2022-03-31)
+
+
+### Features
+
+* **plugin:** 增加 `*Action::new` 方法用于创建一个新的实例 ([a2547c8](https://github.com/miaoxing/services/commit/a2547c8b549edbbc203845728f6dbc954145851a))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.8.0` to `0.8.1`
+
 ## [0.5.1](https://github.com/miaoxing/services/compare/v0.5.0...v0.5.1) (2022-03-04)
 
 
