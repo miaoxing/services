@@ -71,6 +71,50 @@ class CsvExporter
 
 class Db
 {
+    /**
+     * Execute a function in a transaction
+     *
+     * @param callable $fn
+     * @throws \Exception
+     * @see Db::transactional
+     */
+    public static function transactional(callable $fn)
+    {
+    }
+
+    /**
+     * Create a raw value instance
+     *
+     * @param mixed $value
+     * @return Raw
+     * @see Db::raw
+     */
+    public static function raw($value): \Wei\Db\Raw
+    {
+    }
+}
+
+class DefaultsAction
+{
+    /**
+     * @param BaseController $controller
+     * @return mixed
+     * @see DefaultsAction::exec
+     */
+    public static function exec(\Miaoxing\Plugin\BaseController $controller): \Wei\Ret
+    {
+    }
+
+    /**
+     * Set the request service
+     *
+     * @param Req $req
+     * @return $this
+     * @see BaseAction::setReq
+     */
+    public static function setReq(\Wei\Req $req)
+    {
+    }
 }
 
 class DestroyAction
@@ -247,13 +291,6 @@ class Logger
 
 class Money
 {
-    /**
-     * @param string|int|float $value
-     * @see Money::of
-     */
-    public static function of($value): self
-    {
-    }
 }
 
 class NewAction
@@ -425,423 +462,460 @@ class YesNoConst
 namespace Miaoxing\Services\Service;
 
 if (0) {
-class Asset
-{
-}
-
-class Coll
-{
-}
-
-class Convention
-{
-}
-
-class CreateAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @throws RetException
-     * @see UpdateAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
+    class Asset
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::beforeFind
-     */
-    public function beforeFind(callable $callable)
+    class Coll
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::beforeSave
-     */
-    public function beforeSave(callable $callable)
+    class Convention
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::afterSave
-     */
-    public function afterSave(callable $callable)
+    class CreateAction
+    {
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @throws RetException
+         * @see UpdateAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::beforeFind
+         */
+        public function beforeFind(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::beforeSave
+         */
+        public function beforeSave(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::afterSave
+         */
+        public function afterSave(callable $callable)
+        {
+        }
+
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
+    }
+
+    class CsvExporter
     {
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
+    class Db
     {
-    }
-}
+        /**
+         * Execute a function in a transaction
+         *
+         * @param callable $fn
+         * @throws \Exception
+         * @see Db::transactional
+         */
+        public function transactional(callable $fn)
+        {
+        }
 
-class CsvExporter
-{
-}
-
-class Db
-{
-}
-
-class DestroyAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @throws RetException
-     * @see DestroyAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
-    {
+        /**
+         * Create a raw value instance
+         *
+         * @param mixed $value
+         * @return Raw
+         * @see Db::raw
+         */
+        public function raw($value): \Wei\Db\Raw
+        {
+        }
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see DestroyAction::beforeDestroy
-     */
-    public function beforeDestroy(callable $callable)
+    class DefaultsAction
     {
+        /**
+         * @param BaseController $controller
+         * @return mixed
+         * @see DefaultsAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller): \Wei\Ret
+        {
+        }
+
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see DestroyAction::afterDestroy
-     */
-    public function afterDestroy(callable $callable)
+    class DestroyAction
     {
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @throws RetException
+         * @see DestroyAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see DestroyAction::beforeDestroy
+         */
+        public function beforeDestroy(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see DestroyAction::afterDestroy
+         */
+        public function afterDestroy(callable $callable)
+        {
+        }
+
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
+    class EditAction
     {
-    }
-}
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @throws \Exception
+         * @see EditAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
 
-class EditAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @throws \Exception
-     * @see EditAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
-    {
-    }
-
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
-    {
-    }
-}
-
-class Http
-{
-}
-
-class IndexAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @see IndexAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
-    {
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::beforeReqQuery
-     */
-    public function beforeReqQuery(callable $callable)
-    {
-    }
-
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::afterReqQuery
-     */
-    public function afterReqQuery(callable $callable)
-    {
-    }
-
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::beforeFind
-     */
-    public function beforeFind(callable $callable)
+    class Http
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::afterFind
-     */
-    public function afterFind(callable $callable)
+    class IndexAction
+    {
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @see IndexAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::beforeReqQuery
+         */
+        public function beforeReqQuery(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::afterReqQuery
+         */
+        public function afterReqQuery(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::beforeFind
+         */
+        public function beforeFind(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::afterFind
+         */
+        public function afterFind(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::buildData
+         */
+        public function buildData(callable $callable)
+        {
+        }
+
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see IndexAction::buildRet
+         */
+        public function buildRet(callable $callable)
+        {
+        }
+
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
+    }
+
+    class Laravel
+    {
+        /**
+         * Bootstrap Laravel application
+         *
+         * @return $this
+         * @see Laravel::bootstrap
+         */
+        public function bootstrap()
+        {
+        }
+
+        /**
+         * @return Application
+         * @see Laravel::getApp
+         */
+        public function getApp()
+        {
+        }
+    }
+
+    class Logger
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::buildData
-     */
-    public function buildData(callable $callable)
+    class Money
     {
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see IndexAction::buildRet
-     */
-    public function buildRet(callable $callable)
+    class NewAction
+    {
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @throws \Exception
+         * @see EditAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
+
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
+    }
+
+    class Page
     {
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
-    {
-    }
-}
-
-class Laravel
-{
-    /**
-     * Bootstrap Laravel application
-     *
-     * @return $this
-     * @see Laravel::bootstrap
-     */
-    public function bootstrap()
+    class Random
     {
     }
 
-    /**
-     * @return Application
-     * @see Laravel::getApp
-     */
-    public function getApp()
-    {
-    }
-}
-
-class Logger
-{
-}
-
-class Money
-{
-    /**
-     * @param string|int|float $value
-     * @see Money::of
-     */
-    public function of($value): self
-    {
-    }
-}
-
-class NewAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @throws \Exception
-     * @see EditAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
+    class SexConst
     {
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
+    class ShowAction
     {
-    }
-}
+        /**
+         * @param BaseController $controller
+         * @return array|mixed
+         * @throws \Exception
+         * @see ShowAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
 
-class Page
-{
-}
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see ShowAction::beforeFind
+         */
+        public function beforeFind(callable $callable)
+        {
+        }
 
-class Random
-{
-}
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see ShowAction::afterFind
+         */
+        public function afterFind(callable $callable)
+        {
+        }
 
-class SexConst
-{
-}
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see ShowAction::buildData
+         */
+        public function buildData(callable $callable)
+        {
+        }
 
-class ShowAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array|mixed
-     * @throws \Exception
-     * @see ShowAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
-    {
-    }
-
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see ShowAction::beforeFind
-     */
-    public function beforeFind(callable $callable)
-    {
-    }
-
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see ShowAction::afterFind
-     */
-    public function afterFind(callable $callable)
-    {
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
     }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see ShowAction::buildData
-     */
-    public function buildData(callable $callable)
+    class Status
     {
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
+    class UpdateAction
     {
-    }
-}
+        /**
+         * @param BaseController $controller
+         * @return array
+         * @throws RetException
+         * @see UpdateAction::exec
+         */
+        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        {
+        }
 
-class Status
-{
-}
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::beforeFind
+         */
+        public function beforeFind(callable $callable)
+        {
+        }
 
-class UpdateAction
-{
-    /**
-     * @param BaseController $controller
-     * @return array
-     * @throws RetException
-     * @see UpdateAction::exec
-     */
-    public function exec(\Miaoxing\Plugin\BaseController $controller)
-    {
-    }
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::beforeSave
+         */
+        public function beforeSave(callable $callable)
+        {
+        }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::beforeFind
-     */
-    public function beforeFind(callable $callable)
-    {
-    }
+        /**
+         * @param callable $callable
+         * @return $this
+         * @see UpdateAction::afterSave
+         */
+        public function afterSave(callable $callable)
+        {
+        }
 
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::beforeSave
-     */
-    public function beforeSave(callable $callable)
-    {
-    }
-
-    /**
-     * @param callable $callable
-     * @return $this
-     * @see UpdateAction::afterSave
-     */
-    public function afterSave(callable $callable)
-    {
+        /**
+         * Set the request service
+         *
+         * @param Req $req
+         * @return $this
+         * @see BaseAction::setReq
+         */
+        public function setReq(\Wei\Req $req)
+        {
+        }
     }
 
-    /**
-     * Set the request service
-     *
-     * @param Req $req
-     * @return $this
-     * @see BaseAction::setReq
-     */
-    public function setReq(\Wei\Req $req)
+    class Url
+    {
+        /**
+         * Generate the URL by specified URL and parameters
+         *
+         * @param string $url
+         * @param array $argsOrParams
+         * @param array $params
+         * @return string
+         * @see Url::to
+         */
+        public function to($url = '', $argsOrParams = [], $params = [])
+        {
+        }
+    }
+
+    class View
     {
     }
-}
 
-class Url
-{
-    /**
-     * Generate the URL by specified URL and parameters
-     *
-     * @param string $url
-     * @param array $argsOrParams
-     * @param array $params
-     * @return string
-     * @see Url::to
-     */
-    public function to($url = '', $argsOrParams = [], $params = [])
+    class YesNoConst
     {
     }
-}
-
-class View
-{
-}
-
-class YesNoConst
-{
-}
 }

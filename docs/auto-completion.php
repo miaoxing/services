@@ -4,156 +4,188 @@
  * @property    Miaoxing\Services\Service\Asset $asset
  * @method      mixed asset($file, $version = true)
  */
-class AssetMixin {
+class AssetMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Coll $coll
  */
-class CollMixin {
+class CollMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Convention $convention
  */
-class ConventionMixin {
+class ConventionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\CreateAction $createAction
  */
-class CreateActionMixin {
+class CreateActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\CsvExporter $csvExporter Csv格式数据导出服务
  */
-class CsvExporterMixin {
+class CsvExporterMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Db $db
  * @method      Record db($table = null) Create a new instance of a SQL query builder with specified table name
  */
-class DbMixin {
+class DbMixin
+{
+}
+
+/**
+ * @property    Miaoxing\Services\Service\DefaultsAction $defaultsAction
+ */
+class DefaultsActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\DestroyAction $destroyAction
  */
-class DestroyActionMixin {
+class DestroyActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\EditAction $editAction
  */
-class EditActionMixin {
+class EditActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Http $http
  * @method      Miaoxing\Services\Service\Http http($url = null, $options = []) Create a new HTTP object and execute
  */
-class HttpMixin {
+class HttpMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\IndexAction $indexAction
  */
-class IndexActionMixin {
+class IndexActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Laravel $laravel
  */
-class LaravelMixin {
+class LaravelMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Logger $logger
  * @method      bool logger($level, $message, $context = []) Logs with an arbitrary level
  */
-class LoggerMixin {
+class LoggerMixin
+{
 }
 
 /**
- * @property    Miaoxing\Services\Service\Money $money
+ * @property    Miaoxing\Services\Service\Money $money A service that handles money, following the implement of `currency.js`
  */
-class MoneyMixin {
+class MoneyMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\NewAction $newAction
  */
-class NewActionMixin {
+class NewActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\OptionTrait $optionTrait
  */
-class OptionTraitMixin {
+class OptionTraitMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Page $page
  */
-class PageMixin {
+class PageMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Random $random
  */
-class RandomMixin {
+class RandomMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\SexConst $sexConst 性别常量服务
  */
-class SexConstMixin {
+class SexConstMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\ShowAction $showAction
  */
-class ShowActionMixin {
+class ShowActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\StaticTrait $staticTrait
  */
-class StaticTraitMixin {
+class StaticTraitMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Status $status 状态
  */
-class StatusMixin {
+class StatusMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\UpdateAction $updateAction
  */
-class UpdateActionMixin {
+class UpdateActionMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\Url $url
  * @method      string url($url = '', $argsOrParams = [], $params = []) Invoke the "to" method
  */
-class UrlMixin {
+class UrlMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\View $view
  * @method      string view($name = null, $data = []) Render a PHP template
  */
-class ViewMixin {
+class ViewMixin
+{
 }
 
 /**
  * @property    Miaoxing\Services\Service\YesNoConst $yesNoConst 是否常量服务
  */
-class YesNoConstMixin {
+class YesNoConstMixin
+{
 }
 
 /**
@@ -163,6 +195,7 @@ class YesNoConstMixin {
  * @mixin CreateActionMixin
  * @mixin CsvExporterMixin
  * @mixin DbMixin
+ * @mixin DefaultsActionMixin
  * @mixin DestroyActionMixin
  * @mixin EditActionMixin
  * @mixin HttpMixin
@@ -183,7 +216,8 @@ class YesNoConstMixin {
  * @mixin ViewMixin
  * @mixin YesNoConstMixin
  */
-class AutoCompletion {
+class AutoCompletion
+{
 }
 
 /**
@@ -191,7 +225,7 @@ class AutoCompletion {
  */
 function wei()
 {
-    return new AutoCompletion;
+    return new AutoCompletion();
 }
 
 /** @var Miaoxing\Services\Service\Asset $asset */
@@ -211,6 +245,9 @@ $csvExporter = wei()->csvExporter;
 
 /** @var Miaoxing\Services\Service\Db $db */
 $db = wei()->db;
+
+/** @var Miaoxing\Services\Service\DefaultsAction $defaultsAction */
+$defaultsAction = wei()->defaultsAction;
 
 /** @var Miaoxing\Services\Service\DestroyAction $destroyAction */
 $destroyAction = wei()->destroyAction;
