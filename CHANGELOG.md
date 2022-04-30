@@ -1,3 +1,19 @@
+## [0.5.3](https://github.com/miaoxing/services/compare/v0.5.2...v0.5.3) (2022-04-30)
+
+
+### Features
+
+* **service:** 增加 `DefaultsAction`，用于返回模型默认值 ([60739dd](https://github.com/miaoxing/services/commit/60739dd44ff64abad3f265570c8e264c02ea0392))
+* **services:** 增加 `DefaultsTrait` ([de3e745](https://github.com/miaoxing/services/commit/de3e74575c1b1163b30d8860e469d29a44536934))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.8.1` to `0.8.2`
+
 ## [0.5.2](https://github.com/miaoxing/services/compare/v0.5.1...v0.5.2) (2022-03-31)
 
 
