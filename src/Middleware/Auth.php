@@ -32,7 +32,7 @@ class Auth extends BaseMiddleware
         if (!$ret) {
             $loginRet = $this->user->checkLogin();
             if ($loginRet->isErr()) {
-                $loginRet['next'] = $this->url('users/login');
+                $loginRet['next'] = 'users/login';
                 return $loginRet;
             }
         }
@@ -55,7 +55,6 @@ class Auth extends BaseMiddleware
     {
         if ($this->req->acceptJson()) {
             $ret['code'] = -1 !== $ret['code'] ? $ret['code'] : 401;
-            $ret['next'] = $this->url->append($ret['next'], ['next' => $this->req->getReferer()]);
             return $ret;
         }
 
