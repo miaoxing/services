@@ -1,3 +1,20 @@
+## [0.5.5](https://github.com/miaoxing/services/compare/v0.5.4...v0.5.5) (2022-07-01)
+
+
+### Features
+
+* URL 地址改为只返回路径，以便前台生成完整地址 ([c718565](https://github.com/miaoxing/services/commit/c718565ef835c5268bd46dc21049c449afa7a5af))
+* **services:** 增加 `migration:redo` 命令 ([12af8a2](https://github.com/miaoxing/services/commit/12af8a224266e60f220d3e4eae87f440ec1ba873))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.1.1` to `8.1.2`
+* **@miaoxing/plugin:** upgrade from `0.8.3` to `0.8.4`
+
 ## [0.5.4](https://github.com/miaoxing/services/compare/v0.5.3...v0.5.4) (2022-06-01)
 
 
