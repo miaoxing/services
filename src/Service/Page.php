@@ -4,13 +4,11 @@ namespace Miaoxing\Services\Service;
 
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\ConfigTrait;
-use Miaoxing\Plugin\Service\Str;
 use Wei\Block;
 
 /**
  * @property-read Block $block
  * @property-read View $view
- * @property-read Str $str
  * @property-read Asset $asset
  * @method string asset(string $file)
  * @property bool $showTitleInHeader
