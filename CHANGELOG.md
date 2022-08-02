@@ -1,3 +1,24 @@
+# [0.6.0](https://github.com/miaoxing/services/compare/v0.5.6...v0.6.0) (2022-08-02)
+
+
+### Code Refactoring
+
+* **Cls:** 移动 `Cls` 到 `wei` 中 ([40fa4ff](https://github.com/miaoxing/services/commit/40fa4ff5af6138c92bbdf4655009220cc0091560))
+
+
+### BREAKING CHANGES
+
+* **Cls:** 移动 `Cls` 到 `wei` 中
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.1.2` to `8.1.3`
+* **@miaoxing/plugin:** upgrade from `0.8.5` to `0.9.0`
+
 ## [0.5.6](https://github.com/miaoxing/services/compare/v0.5.5...v0.5.6) (2022-07-02)
 
 
