@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Services\Middleware;
 
-use Miaoxing\Plugin\BaseController;
+use Wei\BaseController;
 
 /**
  * @mixin \UserMixin
