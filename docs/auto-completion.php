@@ -30,13 +30,6 @@ class CreateActionMixin
 }
 
 /**
- * @property    Miaoxing\Services\Service\CsvExporter $csvExporter Csv格式数据导出服务
- */
-class CsvExporterMixin
-{
-}
-
-/**
  * @property    Miaoxing\Services\Service\Db $db
  * @method      Record db($table = null) Create a new instance of a SQL query builder with specified table name
  */
@@ -193,7 +186,6 @@ class YesNoConstMixin
  * @mixin CollMixin
  * @mixin ConventionMixin
  * @mixin CreateActionMixin
- * @mixin CsvExporterMixin
  * @mixin DbMixin
  * @mixin DefaultsActionMixin
  * @mixin DestroyActionMixin
@@ -239,9 +231,6 @@ $convention = wei()->convention;
 
 /** @var Miaoxing\Services\Service\CreateAction $createAction */
 $createAction = wei()->createAction;
-
-/** @var Miaoxing\Services\Service\CsvExporter $csvExporter */
-$csvExporter = wei()->csvExporter;
 
 /** @var Miaoxing\Services\Service\Db $db */
 $db = wei()->db;
