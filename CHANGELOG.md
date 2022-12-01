@@ -1,3 +1,18 @@
+## [0.6.4](https://github.com/miaoxing/services/compare/v0.6.3...v0.6.4) (2022-12-01)
+
+
+### Features
+
+* **services:** `IndexAction` 服务支持导出 Excel ([cce7a89](https://github.com/miaoxing/services/commit/cce7a8902f4347419020a7a305d5ae3d2afd0634))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.9.3` to `0.9.4`
+
 ## [0.6.3](https://github.com/miaoxing/services/compare/v0.6.2...v0.6.3) (2022-11-01)
 
 
