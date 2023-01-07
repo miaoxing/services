@@ -5,6 +5,7 @@ namespace Miaoxing\Services\Command;
 use Miaoxing\Plugin\Command\BaseCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Wei\Migration;
+use Wei\Str;
 
 class MigrationRedo extends BaseCommand
 {
@@ -20,6 +21,12 @@ class MigrationRedo extends BaseCommand
         $migration->rollback();
 
         $migration->migrate();
+
+        /** @experimental */
+        $classes = call_user_func([$migration, 'getMigrationClasses']);
+        $last = end($classes);
+        $pluginId = Str::dash(explode('\\', $last)[1]);
+        $this->runCommand('g:metadata', ['plugin-id' => $pluginId]);
     }
 
     protected function configure()
