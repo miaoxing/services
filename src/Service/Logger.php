@@ -58,7 +58,10 @@ class Logger extends \Wei\Logger
     protected function formatLog($level, $message, $context = [])
     {
         // Format message and content
-        $params = $this->formatParams($message, $context);
+        if (!is_array($context)) {
+            $context = ['context' => $context];
+        }
+        $params = $this->formatParams($message, $context + $this->context);
 
         $params = array_merge([
             'level' => strtoupper($level),
