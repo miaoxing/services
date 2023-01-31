@@ -1,3 +1,23 @@
+## [0.6.6](https://github.com/miaoxing/services/compare/v0.6.5...v0.6.6) (2023-01-31)
+
+
+### Bug Fixes
+
+* **services:** `Logger` 缺少记录 `context` ([55f40f8](https://github.com/miaoxing/services/commit/55f40f8a42c55941786ead6e8400fd71a87f7883))
+
+
+### Features
+
+* **services, experimental:** `migration:redo` 后，最后一个插件执行 `g:metadata` ([fc5fd9d](https://github.com/miaoxing/services/commit/fc5fd9d0c066f91e60efc4da16d744ed77a0a6aa))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.10.0` to `0.10.1`
+
 ## [0.6.5](https://github.com/miaoxing/services/compare/v0.6.4...v0.6.5) (2023-01-01)
 
 
