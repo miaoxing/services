@@ -21,6 +21,9 @@ class Auth extends BaseMiddleware
         if (false === $controller->getOption('controllerAuth')) {
             return $next();
         }
+        if (false === $controller->getOption('requireAuth')) {
+            return $next();
+        }
 
         // deprecated 改用 only 和 except 选项
         // 检查操作是否需要登录
