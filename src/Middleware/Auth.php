@@ -16,11 +16,13 @@ class Auth extends BaseMiddleware
      */
     public function __invoke($next, BaseController $controller = null)
     {
+        // deprecated
         // 检查控制器是否需要登录
         if (false === $controller->getOption('controllerAuth')) {
             return $next();
         }
 
+        // deprecated 改用 only 和 except 选项
         // 检查操作是否需要登录
         $action = $this->app->getAction();
         $auths = $controller->getOption('actionAuths');
