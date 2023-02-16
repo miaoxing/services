@@ -2,16 +2,18 @@
 
 namespace Miaoxing\Services\Service;
 
+use Exception;
 use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Services\Action\BaseAction;
+use Wei\Ret;
 
 class ShowAction extends BaseAction
 {
     /**
      * @param BaseController $controller
-     * @return array|mixed
-     * @throws \Exception
+     * @return Ret
+     * @throws Exception
      * @svc
      */
     protected function exec(BaseController $controller)

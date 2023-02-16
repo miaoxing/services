@@ -2,16 +2,17 @@
 
 namespace Miaoxing\Services\Service;
 
+use Exception;
 use Miaoxing\Plugin\BaseController;
-use Miaoxing\Plugin\RetException;
 use Miaoxing\Services\Action\BaseAction;
+use Wei\Ret;
 
 class DestroyAction extends BaseAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws RetException
+     * @return Ret
+     * @throws Exception
      * @svc
      */
     protected function exec(BaseController $controller)
