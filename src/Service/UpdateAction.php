@@ -20,17 +20,25 @@ class UpdateAction extends BaseAction
         $model = $this->convention->createModel($controller);
 
         $this->triggerRet('beforeFind', [$model, $this->req]);
+        $model->findFromReq($this->req);
+        $this->triggerRet('afterFind', [$model, $this->req]);
 
-        $model->findFromReq($this->req)
-            ->fromArray($this->req);
+        $model->fromArray($this->req);
 
         $this->triggerRet('beforeSave', [$model, $this->req]);
-
         $model->save();
-
         $this->trigger('afterSave', [$model, $this->req]);
 
         return $model->toRet();
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     */
+    public function afterFind(callable $callable): self
+    {
+        return $this->on(__FUNCTION__, $callable);
     }
 
     /**
