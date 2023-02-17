@@ -23,7 +23,9 @@ class UpdateAction extends BaseAction
         $model->findFromReq($this->req);
         $this->triggerRet('afterFind', [$model, $this->req]);
 
-        $model->fromArray($this->req);
+        $ret = $this->triggerRet('validate', [$model, $this->req]);
+        $data = $ret['data'] ?? $this->req;
+        $model->fromArray($data);
 
         $this->triggerRet('beforeSave', [$model, $this->req]);
         $model->save();
@@ -37,6 +39,15 @@ class UpdateAction extends BaseAction
      * @return $this
      */
     public function afterFind(callable $callable): self
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     */
+    public function validate(callable $callable): self
     {
         return $this->on(__FUNCTION__, $callable);
     }
