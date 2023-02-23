@@ -21,6 +21,14 @@ class DestroyAction extends BaseAction
 
         $this->triggerRet('beforeDestroy', [$model, $this->req]);
 
+        // @experimental
+        if (method_exists($model, 'checkDestroy')) {
+            $ret = $model->checkDestroy();
+            if ($ret->isErr()) {
+                return $ret;
+            }
+        }
+
         $model->destroy();
 
         $this->trigger('afterDestroy', [$model, $this->req]);
