@@ -2,7 +2,7 @@
 
 namespace MiaoxingTest\Services\Service;
 
-use Miaoxing\Plugin\Service\User;
+use Miaoxing\Plugin\Service\UserModel;
 use Miaoxing\Plugin\Test\BaseTestCase;
 
 /**
@@ -12,7 +12,7 @@ final class ConventionTest extends BaseTestCase
 {
     public function testGetModelFromService()
     {
-        $this->assertSame('user', $this->convention->getModelName(User::cur()));
+        $this->assertSame('userModel', $this->convention->getModelName(UserModel::new()));
     }
 
     /**
