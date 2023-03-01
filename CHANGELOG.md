@@ -1,3 +1,22 @@
+## [0.6.7](https://github.com/miaoxing/services/compare/v0.6.6...v0.6.7) (2023-03-01)
+
+
+### Features
+
+* **services:** `Create/UpdateAction` 增加 `validate` 方法用于校验数据，并将返回 `data` 值作为保存的数据 ([9289fb7](https://github.com/miaoxing/services/commit/9289fb75df7a74df0ea8dafb2219bfdc6a264e0e))
+* **services:** `UpdateAction` 增加 `afterFind` 方法 ([1b85c71](https://github.com/miaoxing/services/commit/1b85c71a109f1cf0f5e5331a41bf7af663d54ec3))
+* **services:** 允许控制器配置 `requireAuth` 来跳过校验 ([633b151](https://github.com/miaoxing/services/commit/633b1510c4eb4393439a23a8f677211f55d89f87))
+* **services, deprecated:** `Auth` middleware 废弃读取 `controllerAuth` 和 `actionAuths` ([9726c35](https://github.com/miaoxing/services/commit/9726c35c6a16491e7b6b5e6b6f952203db95b942))
+* **services, experimental:** `DestroyAction` 删除前调用模型的 `checkDestroy` 方法 ([c25730e](https://github.com/miaoxing/services/commit/c25730e79d178e8b69f8e846f21d54da6a6ad881))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.10.1` to `0.11.0`
+
 ## [0.6.6](https://github.com/miaoxing/services/compare/v0.6.5...v0.6.6) (2023-01-31)
 
 
