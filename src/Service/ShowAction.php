@@ -3,9 +3,9 @@
 namespace Miaoxing\Services\Service;
 
 use Exception;
-use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Services\Action\BaseAction;
+use Wei\BaseController;
 use Wei\Ret;
 
 class ShowAction extends BaseAction

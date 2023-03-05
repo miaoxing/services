@@ -3,8 +3,8 @@
 namespace Miaoxing\Services\Service;
 
 use Exception;
-use Miaoxing\Plugin\BaseController;
 use Miaoxing\Services\Action\BaseAction;
+use Wei\BaseController;
 use Wei\Ret;
 
 class EditAction extends BaseAction

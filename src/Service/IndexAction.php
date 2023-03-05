@@ -2,13 +2,13 @@
 
 namespace Miaoxing\Services\Service;
 
-use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Services\Action\BaseAction;
 use PhpOffice\PhpSpreadsheet\Cell\DataType;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Wei\BaseController;
 use Wei\Req;
 
 class IndexAction extends BaseAction

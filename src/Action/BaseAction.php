@@ -3,11 +3,11 @@
 namespace Miaoxing\Services\Action;
 
 use ConventionMixin;
-use Miaoxing\Plugin\BaseController;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\HandleRetTrait;
 use ReqMixin;
 use ResMixin;
+use Wei\BaseController;
 use Wei\Req;
 use Wei\Wei;
 
