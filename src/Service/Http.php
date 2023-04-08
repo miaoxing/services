@@ -18,7 +18,9 @@ class Http extends \Wei\Http
     public function toRet(array $data = [])
     {
         if ($this->isSuccess()) {
-            return $this->suc($data + (array) $this->getResponse());
+            $response = $this->getResponse();
+            $extra = is_array($response) ? $response : ['data' => $response];
+            return $this->suc($data + $extra);
         }
 
         $e = $this->getErrorException();
