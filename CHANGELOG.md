@@ -1,3 +1,28 @@
+# [0.7.0](https://github.com/miaoxing/services/compare/v0.6.7...v0.7.0) (2023-04-15)
+
+
+### Code Refactoring
+
+* **services:** `*Action` 服务`BaseController` 类型更改 ([546d063](https://github.com/miaoxing/services/commit/546d063ea6808374b3f4c350e30deac2a46763f3))
+
+
+### Features
+
+* **Http:** `toRet` 方法支持返回值不是数组 ([c638286](https://github.com/miaoxing/services/commit/c638286e6463bb1bbd849b03dca3b6d87264d467))
+
+
+### BREAKING CHANGES
+
+* **services:** `*Action` 服务`BaseController` 类型更改
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.11.0` to `0.11.1`
+
 ## [0.6.7](https://github.com/miaoxing/services/compare/v0.6.6...v0.6.7) (2023-03-01)
 
 
