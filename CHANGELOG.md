@@ -1,3 +1,20 @@
+## [0.7.2](https://github.com/miaoxing/services/compare/v0.7.1...v0.7.2) (2023-05-31)
+
+
+### Features
+
+* **services:** `DefaultsAction` 支持通过调用 `createModel` 方法获取模型 ([5a6407d](https://github.com/miaoxing/services/commit/5a6407de10a85fac08c2e4c91d6e5519e87c2713))
+* **services:** `MigrationRollback` 增加支持 `only` 选项 ([d50af5f](https://github.com/miaoxing/services/commit/d50af5fa0d54c05661cf4c1972876d2b371e1b25))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.2.0` to `8.2.1`
+* **@miaoxing/plugin:** upgrade from `0.11.2` to `0.12.0`
+
 ## [0.7.1](https://github.com/miaoxing/services/compare/v0.7.0...v0.7.1) (2023-04-30)
 
 
