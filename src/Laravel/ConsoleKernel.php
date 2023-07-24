@@ -5,6 +5,7 @@ namespace Miaoxing\Services\Laravel;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel;
+use Miaoxing\Plugin\Service\Config;
 use ReflectionClass;
 use Symfony\Component\Console\Command\Command;
 
@@ -26,6 +27,7 @@ class ConsoleKernel extends Kernel
      */
     protected function schedule(Schedule $schedule)
     {
+        Config::preloadGlobal();
         wei()->event->trigger('schedule', [$schedule]);
     }
 
