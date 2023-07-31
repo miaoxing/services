@@ -1,3 +1,20 @@
+## [0.7.4](https://github.com/miaoxing/services/compare/v0.7.3...v0.7.4) (2023-07-31)
+
+
+### Features
+
+* **services:** 允许通过 `schedule` 缓存查看计划任务运行信息 ([4ea0744](https://github.com/miaoxing/services/commit/4ea0744cc0fc411371303c3ab717627936605521))
+* **services:** 运行计划任务前，加载全局配置 ([6f85fef](https://github.com/miaoxing/services/commit/6f85fefd6f580fdd41caaafb74ebafdc30e301a4))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.2.1` to `8.2.2`
+* **@miaoxing/plugin:** upgrade from `0.12.1` to `0.12.2`
+
 ## [0.7.3](https://github.com/miaoxing/services/compare/v0.7.2...v0.7.3) (2023-06-30)
 
 

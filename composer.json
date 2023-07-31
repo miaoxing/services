@@ -19,12 +19,12 @@
     }
   },
   "require": {
-    "miaoxing/plugin": "^0.12.1",
+    "miaoxing/plugin": "^0.12.2",
     "laravel/framework": "^7.24",
     "phpoffice/phpspreadsheet": "^1.19"
   },
   "require-dev": {
-    "miaoxing/dev": "^8.2.1"
+    "miaoxing/dev": "^8.2.2"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
