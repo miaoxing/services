@@ -18,7 +18,9 @@ class MigrationRedo extends BaseCommand
     {
         $migration = Migration::setOutput($this->output);
 
-        $migration->rollback();
+        $migration->rollback([
+            'target' => $this->getArgument('target'),
+        ]);
 
         $migration->migrate();
 
