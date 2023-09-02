@@ -9,6 +9,7 @@ use ReqMixin;
 use ResMixin;
 use Wei\BaseController;
 use Wei\Req;
+use Wei\Ret;
 use Wei\Wei;
 
 /**
@@ -73,8 +74,8 @@ abstract class BaseAction extends BaseService
     protected function triggerRet($name, $args)
     {
         $ret = $this->trigger($name, $args);
-        if ($ret) {
-            $this->tie($ret);
+        if ($ret instanceof Ret) {
+            $ret->assert();
         }
         return $ret;
     }
