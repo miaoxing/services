@@ -1,3 +1,24 @@
+## [0.7.5](https://github.com/miaoxing/services/compare/v0.7.4...v0.7.5) (2023-09-02)
+
+
+### Bug Fixes
+
+* **service:** `mig:redo` 命令 `target` 参数未生效 ([6cb9808](https://github.com/miaoxing/services/commit/6cb9808c99eb476bed218c58f537a65202f49bce))
+
+
+### Features
+
+* **deprecated:** 废弃 `Miaoxing\Services\Service\Http`，改用 `Wei\Http` ([4b90f22](https://github.com/miaoxing/services/commit/4b90f227d56831d90c966890a127288529a87d8a))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.2.2` to `8.2.3`
+* **@miaoxing/plugin:** upgrade from `0.12.2` to `0.13.0`
+
 ## [0.7.4](https://github.com/miaoxing/services/compare/v0.7.3...v0.7.4) (2023-07-31)
 
 
