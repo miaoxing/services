@@ -115,7 +115,7 @@ class Money extends BaseService implements \JsonSerializable
     public function toNumber()
     {
         $value = $this->getValue();
-        return (int) $value == $value ? (int) $value : $value;
+        return (int)$value == $value ? (int)$value : $value;
     }
 
     /**
@@ -123,7 +123,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     public function toInt(): int
     {
-        return (int) $this->getValue();
+        return (int)$this->getValue();
     }
 
     /**
@@ -139,7 +139,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     public function __toString(): string
     {
-        return (string) $this->getValue();
+        return (string)$this->getValue();
     }
 
     /**
@@ -156,6 +156,19 @@ class Money extends BaseService implements \JsonSerializable
     public function getCents(): int
     {
         return $this->intValue % $this->precisionValue;
+    }
+
+    /**
+     * Convert value to become negative
+     *
+     * @return $this
+     */
+    public function negative(): self
+    {
+        if ($this->intValue > 0) {
+            $this->intValue = -$this->intValue;
+        }
+        return $this;
     }
 
     protected function parse($value, $options = [], $round = true)
@@ -182,7 +195,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     protected function parseValue($value)
     {
-        return $value instanceof static ? $value->getValue() : (float) $value;
+        return $value instanceof static ? $value->getValue() : (float)$value;
     }
 
     /**
