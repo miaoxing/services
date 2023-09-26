@@ -72,7 +72,7 @@ class MoneyTest extends BaseTestCase
     public function testAdd($left, $right, string $result)
     {
         $money = money($left)->add($right);
-        $this->assertSame($result, (string)$money);
+        $this->assertSame($result, (string) $money);
     }
 
     public static function providerForAdd(): array
@@ -95,7 +95,7 @@ class MoneyTest extends BaseTestCase
     public function testSub($left, $right, string $result)
     {
         $money = money($left)->sub($right);
-        $this->assertSame($result, (string)$money);
+        $this->assertSame($result, (string) $money);
     }
 
     public static function providerForSub(): array
@@ -118,7 +118,7 @@ class MoneyTest extends BaseTestCase
     public function testMul($left, $right, string $result)
     {
         $money = money($left)->mul($right);
-        $this->assertSame($result, (string)$money);
+        $this->assertSame($result, (string) $money);
     }
 
     public static function providerForMul(): array
@@ -143,7 +143,7 @@ class MoneyTest extends BaseTestCase
     public function testDiv($left, $right, string $result)
     {
         $money = money($left)->div($right);
-        $this->assertSame($result, (string)$money);
+        $this->assertSame($result, (string) $money);
     }
 
     public static function providerForDiv(): array
@@ -177,15 +177,15 @@ class MoneyTest extends BaseTestCase
         $value = money(1.23)->mul(2);
         $floatingValue = money(.1)->mul(.2);
 
-        $this->assertSame(2.46, (float)(string)$value);
-        $this->assertSame(.02, (float)(string)$floatingValue);
+        $this->assertSame(2.46, (float) (string) $value);
+        $this->assertSame(.02, (float) (string) $floatingValue);
         $this->assertNotEquals('0.02', json_encode(.1 * .2), 'not equal 0.020000000000000004');
     }
 
     public function testDivFloat()
     {
         $value = money(9.87)->div(2);
-        $this->assertSame(4.94, (float)(string)$value);
+        $this->assertSame(4.94, (float) (string) $value);
     }
 
     public function testRoundHalfUp()
@@ -225,13 +225,13 @@ class MoneyTest extends BaseTestCase
     public function testMulWithPrecision()
     {
         $value = money(1.369, ['precision' => 3])->mul(3);
-        $this->assertSame(4.107, (float)(string)$value);
+        $this->assertSame(4.107, (float) (string) $value);
     }
 
     public function testDivWithPrecision()
     {
         $value = money(4.107, ['precision' => 3])->div(3);
-        $this->assertSame(1.369, (float)(string)$value);
+        $this->assertSame(1.369, (float) (string) $value);
     }
 
     public function testDifferentPrecision()
@@ -371,5 +371,38 @@ class MoneyTest extends BaseTestCase
         $money = money(-1.22);
         $money->negative();
         $this->assertSame(-1.22, $money->getValue());
+    }
+
+    public function testIsZero()
+    {
+        $money = money(0);
+        $this->assertTrue($money->isZero());
+
+        $money = money(0.01);
+        $this->assertFalse($money->isZero());
+    }
+
+    public function testIsPositive()
+    {
+        $money = money(0.01);
+        $this->assertTrue($money->isPositive());
+
+        $money = money(0);
+        $this->assertFalse($money->isPositive());
+
+        $money = money(-0.1);
+        $this->assertFalse($money->isPositive());
+    }
+
+    public function testIsNegative()
+    {
+        $money = money(0.01);
+        $this->assertFalse($money->isNegative());
+
+        $money = money(0);
+        $this->assertFalse($money->isNegative());
+
+        $money = money(-0.1);
+        $this->assertTrue($money->isNegative());
     }
 }

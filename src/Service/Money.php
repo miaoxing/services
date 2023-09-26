@@ -115,7 +115,7 @@ class Money extends BaseService implements \JsonSerializable
     public function toNumber()
     {
         $value = $this->getValue();
-        return (int)$value == $value ? (int)$value : $value;
+        return (int) $value == $value ? (int) $value : $value;
     }
 
     /**
@@ -123,7 +123,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     public function toInt(): int
     {
-        return (int)$this->getValue();
+        return (int) $this->getValue();
     }
 
     /**
@@ -139,7 +139,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     public function __toString(): string
     {
-        return (string)$this->getValue();
+        return (string) $this->getValue();
     }
 
     /**
@@ -171,6 +171,36 @@ class Money extends BaseService implements \JsonSerializable
         return $this;
     }
 
+    /**
+     * Check if the value is zero
+     *
+     * @return bool
+     */
+    public function isZero(): bool
+    {
+        return 0.0 === (float) $this->intValue;
+    }
+
+    /**
+     * Check if the value is greater than zero
+     *
+     * @return bool
+     */
+    public function isPositive(): bool
+    {
+        return $this->intValue > 0;
+    }
+
+    /**
+     * Check if the value is lesser than zero
+     *
+     * @return bool
+     */
+    public function isNegative(): bool
+    {
+        return $this->intValue < 0;
+    }
+
     protected function parse($value, $options = [], $round = true)
     {
         $value = $this->parseValue($value);
@@ -195,7 +225,7 @@ class Money extends BaseService implements \JsonSerializable
      */
     protected function parseValue($value)
     {
-        return $value instanceof static ? $value->getValue() : (float)$value;
+        return $value instanceof static ? $value->getValue() : (float) $value;
     }
 
     /**
