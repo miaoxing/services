@@ -18,11 +18,11 @@ class CreateAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws RetException
+     * @return Ret
+     * @throws Exception
      * @see UpdateAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -105,10 +105,10 @@ class DefaultsAction
 {
     /**
      * @param BaseController $controller
-     * @return mixed
+     * @return Ret
      * @see DefaultsAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller): \Wei\Ret
+    public static function exec(\Wei\BaseController $controller): \Wei\Ret
     {
     }
 
@@ -128,11 +128,11 @@ class DestroyAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws RetException
+     * @return Ret
+     * @throws Exception
      * @see DestroyAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -170,11 +170,11 @@ class EditAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws \Exception
+     * @return Ret
+     * @throws Exception
      * @see EditAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -192,16 +192,39 @@ class EditAction
 
 class Http
 {
+    /**
+     * Create a new HTTP object and execute
+     *
+     * @param array|string $url A options array or the request URL
+     * @param array $options A options array if the first parameter is string
+     * @return $this A new HTTP object
+     * @see Http::request
+     */
+    public static function request($url = null, array $options = []): self
+    {
+    }
+
+    /**
+     * Create a new HTTP object and execute, return a Ret object
+     *
+     * @param array|string $url A options array or the request URL
+     * @param array $options A options array if the first parameter is string
+     * @return Ret
+     * @see Http::requestRet
+     */
+    public static function requestRet($url = null, array $options = []): \Wei\Ret
+    {
+    }
 }
 
 class IndexAction
 {
     /**
      * @param BaseController $controller
-     * @return array
+     * @return mixed
      * @see IndexAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -304,11 +327,11 @@ class NewAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws \Exception
+     * @return Ret
+     * @throws Exception
      * @see EditAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -340,11 +363,11 @@ class ShowAction
 {
     /**
      * @param BaseController $controller
-     * @return array|mixed
-     * @throws \Exception
+     * @return Ret
+     * @throws Exception
      * @see ShowAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -395,11 +418,11 @@ class UpdateAction
 {
     /**
      * @param BaseController $controller
-     * @return array
-     * @throws RetException
+     * @return Ret
+     * @throws Exception
      * @see UpdateAction::exec
      */
-    public static function exec(\Miaoxing\Plugin\BaseController $controller)
+    public static function exec(\Wei\BaseController $controller)
     {
     }
 
@@ -485,11 +508,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array
-         * @throws RetException
+         * @return Ret
+         * @throws Exception
          * @see UpdateAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -572,10 +595,10 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return mixed
+         * @return Ret
          * @see DefaultsAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller): \Wei\Ret
+        public function exec(\Wei\BaseController $controller): \Wei\Ret
         {
         }
 
@@ -595,11 +618,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array
-         * @throws RetException
+         * @return Ret
+         * @throws Exception
          * @see DestroyAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -637,11 +660,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array
-         * @throws \Exception
+         * @return Ret
+         * @throws Exception
          * @see EditAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -659,16 +682,39 @@ if (0) {
 
     class Http
     {
+        /**
+         * Create a new HTTP object and execute
+         *
+         * @param array|string $url A options array or the request URL
+         * @param array $options A options array if the first parameter is string
+         * @return $this A new HTTP object
+         * @see Http::request
+         */
+        public function request($url = null, array $options = []): self
+        {
+        }
+
+        /**
+         * Create a new HTTP object and execute, return a Ret object
+         *
+         * @param array|string $url A options array or the request URL
+         * @param array $options A options array if the first parameter is string
+         * @return Ret
+         * @see Http::requestRet
+         */
+        public function requestRet($url = null, array $options = []): \Wei\Ret
+        {
+        }
     }
 
     class IndexAction
     {
         /**
          * @param BaseController $controller
-         * @return array
+         * @return mixed
          * @see IndexAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -771,11 +817,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array
-         * @throws \Exception
+         * @return Ret
+         * @throws Exception
          * @see EditAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -807,11 +853,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array|mixed
-         * @throws \Exception
+         * @return Ret
+         * @throws Exception
          * @see ShowAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
@@ -862,11 +908,11 @@ if (0) {
     {
         /**
          * @param BaseController $controller
-         * @return array
-         * @throws RetException
+         * @return Ret
+         * @throws Exception
          * @see UpdateAction::exec
          */
-        public function exec(\Miaoxing\Plugin\BaseController $controller)
+        public function exec(\Wei\BaseController $controller)
         {
         }
 
