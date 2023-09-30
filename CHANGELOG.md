@@ -1,3 +1,30 @@
+# [0.8.0](https://github.com/miaoxing/services/compare/v0.7.5...v0.8.0) (2023-09-30)
+
+
+### Code Refactoring
+
+* **services:** 删除 `CsvExporter` 服务 ([44b92fd](https://github.com/miaoxing/services/commit/44b92fd7484c1b6a04e312f425521e1c70c5c3bd))
+
+
+### Features
+
+* **plugin:** `Money` 增加 `isZero`，`isPositive` 和 `isNegative` 方法 ([129bdb5](https://github.com/miaoxing/services/commit/129bdb5c7acb3f6ab51aac8548b17b2e9d5ddcf7))
+* **plugin:** 允许 `Money` 转换为负数 ([07fb601](https://github.com/miaoxing/services/commit/07fb6014de5c1ee07e03687d180d66e3d109ebb9))
+* **plugin, deprecated:** `Plugin` 废弃 `ignoredServices` 属性，改为使用 `[@ignored](https://github.com/ignored)` 注释 ([494b18f](https://github.com/miaoxing/services/commit/494b18f7e4e5953b2d1ff1cf55e2d1f2fe16f8f3))
+
+
+### BREAKING CHANGES
+
+* **services:** 删除 `CsvExporter` 服务
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.13.0` to `0.13.1`
+
 ## [0.7.5](https://github.com/miaoxing/services/compare/v0.7.4...v0.7.5) (2023-09-02)
 
 
