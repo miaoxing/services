@@ -49,7 +49,10 @@ class IndexAction extends BaseAction
         $this->triggerRet('beforeFind', [$models, $this->req]);
 
         $this->triggerRet('beforeReqQuery', [$models, $this->req]);
-        $models->reqQuery();
+
+        $include = $controller->getOption('include');
+        $models->setReqRelations($include ?: [])->reqQuery();
+
         $this->isExport() && $models->limit($this->maxLimit);
         $this->triggerRet('afterReqQuery', [$models, $this->req]);
 
