@@ -20,6 +20,7 @@ use Miaoxing\Services\Laravel\HttpKernel;
  * @mixin \DbMixin
  * @mixin \QueueMixin
  * @mixin \LoggerMixin
+ * @mixin \ConfigMixin
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class Laravel extends BaseService
@@ -99,6 +100,8 @@ class Laravel extends BaseService
 
     protected function bootstrapConsole()
     {
+        $this->config->preloadGlobal();
+
         $app = $this->getApp();
 
         $app->register(ConsoleSupportServiceProvider::class);
