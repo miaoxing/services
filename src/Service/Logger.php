@@ -66,7 +66,7 @@ class Logger extends \Wei\Logger
         $params = array_merge([
             'level' => strtoupper($level),
             'message' => $params['message'],
-            'time' => date($this->dateFormat, microtime(true)),
+            'time' => date($this->dateFormat, time()),
             'channel' => $this->namespace,
         ], $params);
 
