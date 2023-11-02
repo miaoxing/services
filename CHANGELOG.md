@@ -1,3 +1,19 @@
+## [0.8.1](https://github.com/miaoxing/services/compare/v0.8.0...v0.8.1) (2023-11-02)
+
+
+### Features
+
+* **services:** `IndexAction` 允许查询 `include` 配置的关联数据 ([ada7e00](https://github.com/miaoxing/services/commit/ada7e003c48280a2fac3f57796532126aa8b8178))
+* **services:** 运行命令行时，预加载全局配置 ([3dcb96b](https://github.com/miaoxing/services/commit/3dcb96bf2cef95c8ba8558e5cf3a62b7356debd3))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.13.1` to `0.13.2`
+
 # [0.8.0](https://github.com/miaoxing/services/compare/v0.7.5...v0.8.0) (2023-09-30)
 
 
