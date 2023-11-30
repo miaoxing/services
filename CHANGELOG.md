@@ -1,3 +1,19 @@
+## [0.8.2](https://github.com/miaoxing/services/compare/v0.8.1...v0.8.2) (2023-11-30)
+
+
+### Bug Fixes
+
+* **Logger:** PHP 8.1 Deprecated:  Implicit conversion from float to int loses precision ([d112d5f](https://github.com/miaoxing/services/commit/d112d5faa6f8f797d9d39f9660a4d49b44a7fe84))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.2.3` to `8.2.4`
+* **@miaoxing/plugin:** upgrade from `0.13.2` to `0.14.0`
+
 ## [0.8.1](https://github.com/miaoxing/services/compare/v0.8.0...v0.8.1) (2023-11-02)
 
 
