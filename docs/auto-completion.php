@@ -4,6 +4,7 @@
  * @property    Miaoxing\Services\Service\Asset $asset
  * @method      mixed asset($file, $version = true)
  */
+ #[\AllowDynamicProperties]
 class AssetMixin
 {
 }
@@ -11,6 +12,7 @@ class AssetMixin
 /**
  * @property    Miaoxing\Services\Service\Asset $asset
  */
+ #[\AllowDynamicProperties]
 class AssetPropMixin
 {
 }
@@ -18,6 +20,7 @@ class AssetPropMixin
 /**
  * @property    Miaoxing\Services\Service\Coll $coll
  */
+ #[\AllowDynamicProperties]
 class CollMixin
 {
 }
@@ -25,6 +28,7 @@ class CollMixin
 /**
  * @property    Miaoxing\Services\Service\Coll $coll
  */
+ #[\AllowDynamicProperties]
 class CollPropMixin
 {
 }
@@ -32,6 +36,7 @@ class CollPropMixin
 /**
  * @property    Miaoxing\Services\Service\Convention $convention
  */
+ #[\AllowDynamicProperties]
 class ConventionMixin
 {
 }
@@ -39,6 +44,7 @@ class ConventionMixin
 /**
  * @property    Miaoxing\Services\Service\Convention $convention
  */
+ #[\AllowDynamicProperties]
 class ConventionPropMixin
 {
 }
@@ -46,6 +52,7 @@ class ConventionPropMixin
 /**
  * @property    Miaoxing\Services\Service\CreateAction $createAction
  */
+ #[\AllowDynamicProperties]
 class CreateActionMixin
 {
 }
@@ -53,6 +60,7 @@ class CreateActionMixin
 /**
  * @property    Miaoxing\Services\Service\CreateAction $createAction
  */
+ #[\AllowDynamicProperties]
 class CreateActionPropMixin
 {
 }
@@ -61,6 +69,7 @@ class CreateActionPropMixin
  * @property    Miaoxing\Services\Service\Db $db
  * @method      Record db($table = null) Create a new instance of a SQL query builder with specified table name
  */
+ #[\AllowDynamicProperties]
 class DbMixin
 {
 }
@@ -68,6 +77,7 @@ class DbMixin
 /**
  * @property    Miaoxing\Services\Service\Db $db
  */
+ #[\AllowDynamicProperties]
 class DbPropMixin
 {
 }
@@ -75,6 +85,7 @@ class DbPropMixin
 /**
  * @property    Miaoxing\Services\Service\DefaultsAction $defaultsAction
  */
+ #[\AllowDynamicProperties]
 class DefaultsActionMixin
 {
 }
@@ -82,6 +93,7 @@ class DefaultsActionMixin
 /**
  * @property    Miaoxing\Services\Service\DefaultsAction $defaultsAction
  */
+ #[\AllowDynamicProperties]
 class DefaultsActionPropMixin
 {
 }
@@ -89,6 +101,7 @@ class DefaultsActionPropMixin
 /**
  * @property    Miaoxing\Services\Service\DestroyAction $destroyAction
  */
+ #[\AllowDynamicProperties]
 class DestroyActionMixin
 {
 }
@@ -96,6 +109,7 @@ class DestroyActionMixin
 /**
  * @property    Miaoxing\Services\Service\DestroyAction $destroyAction
  */
+ #[\AllowDynamicProperties]
 class DestroyActionPropMixin
 {
 }
@@ -103,6 +117,7 @@ class DestroyActionPropMixin
 /**
  * @property    Miaoxing\Services\Service\EditAction $editAction
  */
+ #[\AllowDynamicProperties]
 class EditActionMixin
 {
 }
@@ -110,14 +125,16 @@ class EditActionMixin
 /**
  * @property    Miaoxing\Services\Service\EditAction $editAction
  */
+ #[\AllowDynamicProperties]
 class EditActionPropMixin
 {
 }
 
 /**
  * @property    Miaoxing\Services\Service\Http $http
- * @method      Miaoxing\Services\Service\Http http($url = null, $options = []) Create a new HTTP object and execute
+ * @method      Miaoxing\Services\Service\Http http($url = null, $options = []) Execute the request
  */
+ #[\AllowDynamicProperties]
 class HttpMixin
 {
 }
@@ -125,6 +142,7 @@ class HttpMixin
 /**
  * @property    Miaoxing\Services\Service\Http $http
  */
+ #[\AllowDynamicProperties]
 class HttpPropMixin
 {
 }
@@ -132,6 +150,7 @@ class HttpPropMixin
 /**
  * @property    Miaoxing\Services\Service\IndexAction $indexAction
  */
+ #[\AllowDynamicProperties]
 class IndexActionMixin
 {
 }
@@ -139,6 +158,7 @@ class IndexActionMixin
 /**
  * @property    Miaoxing\Services\Service\IndexAction $indexAction
  */
+ #[\AllowDynamicProperties]
 class IndexActionPropMixin
 {
 }
@@ -146,6 +166,7 @@ class IndexActionPropMixin
 /**
  * @property    Miaoxing\Services\Service\Laravel $laravel
  */
+ #[\AllowDynamicProperties]
 class LaravelMixin
 {
 }
@@ -153,6 +174,7 @@ class LaravelMixin
 /**
  * @property    Miaoxing\Services\Service\Laravel $laravel
  */
+ #[\AllowDynamicProperties]
 class LaravelPropMixin
 {
 }
@@ -161,6 +183,7 @@ class LaravelPropMixin
  * @property    Miaoxing\Services\Service\Logger $logger
  * @method      bool logger($level, $message, $context = []) Logs with an arbitrary level
  */
+ #[\AllowDynamicProperties]
 class LoggerMixin
 {
 }
@@ -168,6 +191,7 @@ class LoggerMixin
 /**
  * @property    Miaoxing\Services\Service\Logger $logger
  */
+ #[\AllowDynamicProperties]
 class LoggerPropMixin
 {
 }
@@ -175,6 +199,7 @@ class LoggerPropMixin
 /**
  * @property    Miaoxing\Services\Service\Money $money A service that handles money, following the implement of `currency.js`
  */
+ #[\AllowDynamicProperties]
 class MoneyMixin
 {
 }
@@ -182,6 +207,7 @@ class MoneyMixin
 /**
  * @property    Miaoxing\Services\Service\Money $money A service that handles money, following the implement of `currency.js`
  */
+ #[\AllowDynamicProperties]
 class MoneyPropMixin
 {
 }
@@ -189,6 +215,7 @@ class MoneyPropMixin
 /**
  * @property    Miaoxing\Services\Service\NewAction $newAction
  */
+ #[\AllowDynamicProperties]
 class NewActionMixin
 {
 }
@@ -196,6 +223,7 @@ class NewActionMixin
 /**
  * @property    Miaoxing\Services\Service\NewAction $newAction
  */
+ #[\AllowDynamicProperties]
 class NewActionPropMixin
 {
 }
@@ -203,6 +231,7 @@ class NewActionPropMixin
 /**
  * @property    Miaoxing\Services\Service\OptionTrait $optionTrait
  */
+ #[\AllowDynamicProperties]
 class OptionTraitMixin
 {
 }
@@ -210,6 +239,7 @@ class OptionTraitMixin
 /**
  * @property    Miaoxing\Services\Service\OptionTrait $optionTrait
  */
+ #[\AllowDynamicProperties]
 class OptionTraitPropMixin
 {
 }
@@ -217,6 +247,7 @@ class OptionTraitPropMixin
 /**
  * @property    Miaoxing\Services\Service\Page $page
  */
+ #[\AllowDynamicProperties]
 class PageMixin
 {
 }
@@ -224,6 +255,7 @@ class PageMixin
 /**
  * @property    Miaoxing\Services\Service\Page $page
  */
+ #[\AllowDynamicProperties]
 class PagePropMixin
 {
 }
@@ -231,6 +263,7 @@ class PagePropMixin
 /**
  * @property    Miaoxing\Services\Service\Random $random
  */
+ #[\AllowDynamicProperties]
 class RandomMixin
 {
 }
@@ -238,6 +271,7 @@ class RandomMixin
 /**
  * @property    Miaoxing\Services\Service\Random $random
  */
+ #[\AllowDynamicProperties]
 class RandomPropMixin
 {
 }
@@ -245,6 +279,7 @@ class RandomPropMixin
 /**
  * @property    Miaoxing\Services\Service\SexConst $sexConst 性别常量服务
  */
+ #[\AllowDynamicProperties]
 class SexConstMixin
 {
 }
@@ -252,6 +287,7 @@ class SexConstMixin
 /**
  * @property    Miaoxing\Services\Service\SexConst $sexConst 性别常量服务
  */
+ #[\AllowDynamicProperties]
 class SexConstPropMixin
 {
 }
@@ -259,6 +295,7 @@ class SexConstPropMixin
 /**
  * @property    Miaoxing\Services\Service\ShowAction $showAction
  */
+ #[\AllowDynamicProperties]
 class ShowActionMixin
 {
 }
@@ -266,6 +303,7 @@ class ShowActionMixin
 /**
  * @property    Miaoxing\Services\Service\ShowAction $showAction
  */
+ #[\AllowDynamicProperties]
 class ShowActionPropMixin
 {
 }
@@ -273,6 +311,7 @@ class ShowActionPropMixin
 /**
  * @property    Miaoxing\Services\Service\StaticTrait $staticTrait
  */
+ #[\AllowDynamicProperties]
 class StaticTraitMixin
 {
 }
@@ -280,6 +319,7 @@ class StaticTraitMixin
 /**
  * @property    Miaoxing\Services\Service\StaticTrait $staticTrait
  */
+ #[\AllowDynamicProperties]
 class StaticTraitPropMixin
 {
 }
@@ -287,6 +327,7 @@ class StaticTraitPropMixin
 /**
  * @property    Miaoxing\Services\Service\Status $status 状态
  */
+ #[\AllowDynamicProperties]
 class StatusMixin
 {
 }
@@ -294,6 +335,7 @@ class StatusMixin
 /**
  * @property    Miaoxing\Services\Service\Status $status 状态
  */
+ #[\AllowDynamicProperties]
 class StatusPropMixin
 {
 }
@@ -301,6 +343,7 @@ class StatusPropMixin
 /**
  * @property    Miaoxing\Services\Service\UpdateAction $updateAction
  */
+ #[\AllowDynamicProperties]
 class UpdateActionMixin
 {
 }
@@ -308,6 +351,7 @@ class UpdateActionMixin
 /**
  * @property    Miaoxing\Services\Service\UpdateAction $updateAction
  */
+ #[\AllowDynamicProperties]
 class UpdateActionPropMixin
 {
 }
@@ -316,6 +360,7 @@ class UpdateActionPropMixin
  * @property    Miaoxing\Services\Service\Url $url
  * @method      string url($url = '', $argsOrParams = [], $params = []) Invoke the "to" method
  */
+ #[\AllowDynamicProperties]
 class UrlMixin
 {
 }
@@ -323,6 +368,7 @@ class UrlMixin
 /**
  * @property    Miaoxing\Services\Service\Url $url
  */
+ #[\AllowDynamicProperties]
 class UrlPropMixin
 {
 }
@@ -331,6 +377,7 @@ class UrlPropMixin
  * @property    Miaoxing\Services\Service\View $view
  * @method      string view($name = null, $data = []) Render a PHP template
  */
+ #[\AllowDynamicProperties]
 class ViewMixin
 {
 }
@@ -338,6 +385,7 @@ class ViewMixin
 /**
  * @property    Miaoxing\Services\Service\View $view
  */
+ #[\AllowDynamicProperties]
 class ViewPropMixin
 {
 }
@@ -345,6 +393,7 @@ class ViewPropMixin
 /**
  * @property    Miaoxing\Services\Service\YesNoConst $yesNoConst 是否常量服务
  */
+ #[\AllowDynamicProperties]
 class YesNoConstMixin
 {
 }
@@ -352,6 +401,7 @@ class YesNoConstMixin
 /**
  * @property    Miaoxing\Services\Service\YesNoConst $yesNoConst 是否常量服务
  */
+ #[\AllowDynamicProperties]
 class YesNoConstPropMixin
 {
 }
@@ -383,14 +433,15 @@ class YesNoConstPropMixin
  * @mixin ViewMixin
  * @mixin YesNoConstMixin
  */
+ #[\AllowDynamicProperties]
 class AutoCompletion
 {
 }
 
 /**
- * @return AutoCompletion
+ * @return AutoCompletion|Wei\Wei
  */
 function wei()
 {
-    return new AutoCompletion();
+    return new AutoCompletion(func_get_args());
 }
