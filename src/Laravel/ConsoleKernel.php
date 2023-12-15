@@ -6,7 +6,6 @@ use Illuminate\Console\Application as Artisan;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel;
 use Miaoxing\Plugin\Service\Config;
-use ReflectionClass;
 use Symfony\Component\Console\Command\Command;
 
 class ConsoleKernel extends Kernel
@@ -49,9 +48,9 @@ class ConsoleKernel extends Kernel
         foreach ($classes as $name => $command) {
             if (
                 is_subclass_of($command, Command::class)
-                && !(new ReflectionClass($command))->isAbstract()
+                && !(new \ReflectionClass($command))->isAbstract()
             ) {
-                Artisan::starting(function (Artisan $artisan) use ($command) {
+                Artisan::starting(static function (Artisan $artisan) use ($command) {
                     $artisan->resolve($command);
                 });
             }

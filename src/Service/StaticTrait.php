@@ -2,8 +2,6 @@
 
 namespace Miaoxing\Services\Service;
 
-use ReflectionException;
-
 /**
  * @mixin \WeiMixin
  */
@@ -15,7 +13,7 @@ trait StaticTrait
      * @param string $method
      * @param array $args
      * @return mixed
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function __call($method, $args)
     {
@@ -28,7 +26,7 @@ trait StaticTrait
      * @param string $method
      * @param array $args
      * @return mixed
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public static function __callStatic(string $method, array $args)
     {

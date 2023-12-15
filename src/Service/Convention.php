@@ -5,7 +5,6 @@ namespace Miaoxing\Services\Service;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\BaseService;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
-use ReflectionClass;
 
 /**
  * @mixin \StrMixin
@@ -20,7 +19,7 @@ class Convention extends BaseService
     public function getModelName(object $object)
     {
         $class = get_class($object);
-        if ((new ReflectionClass($object))->isAnonymous()) {
+        if ((new \ReflectionClass($object))->isAnonymous()) {
             $name = $this->getModelNameFromPage($class);
         } else {
             $name = $this->removeSuffix($class, 'Controller');
@@ -53,7 +52,7 @@ class Convention extends BaseService
 
     protected function getModelNameFromPage(string $class): string
     {
-        $file = (new ReflectionClass($class))->getFileName();
+        $file = (new \ReflectionClass($class))->getFileName();
         $basename = basename($file);
         // 如果是资源入口(index.php)或包含变量(如[id].php)，则返回更上一级的目录名称
         if ('index.php' === $basename || false !== strpos($basename, '[')) {

@@ -9,10 +9,10 @@ class IndexActionTest extends BaseTestCase
 {
     public function testCreateNewInstance()
     {
-        $index = IndexAction::afterFind(function () {
+        $index = IndexAction::afterFind(static function () {
         });
 
-        $index2 = IndexAction::afterFind(function () {
+        $index2 = IndexAction::afterFind(static function () {
         });
 
         $this->assertNotSame($index, $index2);

@@ -16,7 +16,7 @@ class HttpKernel extends Kernel
         \Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables::class,
         \Illuminate\Foundation\Bootstrap\LoadConfiguration::class,
         // 由 \Wei\Error 在入口处理
-        //\Illuminate\Foundation\Bootstrap\HandleExceptions::class,
+        // \Illuminate\Foundation\Bootstrap\HandleExceptions::class,
         \Illuminate\Foundation\Bootstrap\RegisterFacades::class,
         \Illuminate\Foundation\Bootstrap\RegisterProviders::class,
         \Illuminate\Foundation\Bootstrap\BootProviders::class,

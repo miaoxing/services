@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Services\Service;
 
-use Exception;
 use Miaoxing\Services\Action\BaseAction;
 use Wei\BaseController;
 use Wei\Ret;
@@ -12,7 +11,7 @@ class EditAction extends BaseAction
     /**
      * @param BaseController $controller
      * @return Ret
-     * @throws Exception
+     * @throws \Exception
      * @svc
      */
     protected function exec(BaseController $controller)
