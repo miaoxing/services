@@ -24,7 +24,7 @@ class UrlTest extends BaseTestCase
         $this->assertSame($result, $url->to($to, $argOrParams, $params));
     }
 
-    public function providerForAppId(): array
+    public static function providerForAppId(): array
     {
         return [
             // defaultUrlRewrite=true
