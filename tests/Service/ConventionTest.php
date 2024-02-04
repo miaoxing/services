@@ -25,7 +25,7 @@ final class ConventionTest extends BaseTestCase
         $this->assertSame($name, $this->convention->getModelName($object));
     }
 
-    public function providerForGetModelNameFromPageObject()
+    public static function providerForGetModelNameFromPageObject()
     {
         return [
             [

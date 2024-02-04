@@ -14,7 +14,7 @@ class Auth extends BaseMiddleware
     /**
      * {@inheritdoc}
      */
-    public function __invoke($next, BaseController $controller = null)
+    public function __invoke($next, ?BaseController $controller = null)
     {
         // deprecated
         // 检查控制器是否需要登录
