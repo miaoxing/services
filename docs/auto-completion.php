@@ -131,23 +131,6 @@ class EditActionPropMixin
 }
 
 /**
- * @property    Miaoxing\Services\Service\Http $http
- * @method      Miaoxing\Services\Service\Http http($url = null, $options = []) Execute the request
- */
- #[\AllowDynamicProperties]
-class HttpMixin
-{
-}
-
-/**
- * @property    Miaoxing\Services\Service\Http $http
- */
- #[\AllowDynamicProperties]
-class HttpPropMixin
-{
-}
-
-/**
  * @property    Miaoxing\Services\Service\IndexAction $indexAction
  */
  #[\AllowDynamicProperties]
@@ -193,22 +176,6 @@ class LoggerMixin
  */
  #[\AllowDynamicProperties]
 class LoggerPropMixin
-{
-}
-
-/**
- * @property    Miaoxing\Services\Service\Money $money A service that handles money, following the implement of `currency.js`
- */
- #[\AllowDynamicProperties]
-class MoneyMixin
-{
-}
-
-/**
- * @property    Miaoxing\Services\Service\Money $money A service that handles money, following the implement of `currency.js`
- */
- #[\AllowDynamicProperties]
-class MoneyPropMixin
 {
 }
 
@@ -415,11 +382,9 @@ class YesNoConstPropMixin
  * @mixin DefaultsActionMixin
  * @mixin DestroyActionMixin
  * @mixin EditActionMixin
- * @mixin HttpMixin
  * @mixin IndexActionMixin
  * @mixin LaravelMixin
  * @mixin LoggerMixin
- * @mixin MoneyMixin
  * @mixin NewActionMixin
  * @mixin OptionTraitMixin
  * @mixin PageMixin
