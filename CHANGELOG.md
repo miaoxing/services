@@ -1,3 +1,18 @@
+## [0.8.5](https://github.com/miaoxing/services/compare/v0.8.4...v0.8.5) (2024-02-20)
+
+
+### Features
+
+* **services, deprecated:** 废弃 `Money` 类，改为使用 `Wei\Money` ([c5965f7](https://github.com/miaoxing/services/commit/c5965f76ec6de17d4a2667349f0214958152646c))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.14.2` to `0.14.3`
+
 ## [0.8.4](https://github.com/miaoxing/services/compare/v0.8.3...v0.8.4) (2024-01-08)
 
 
