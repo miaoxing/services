@@ -6,7 +6,6 @@ use Illuminate\Config\Repository;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\MySqlConnection;
 use Illuminate\Foundation\Application;
-use Illuminate\Queue\QueueManager;
 use Illuminate\Redis\Connections\PhpRedisConnection;
 use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\RedisManager;
@@ -159,11 +158,6 @@ class Laravel extends BaseService
                 };
             });
             return $manager;
-        });
-
-        // Queue
-        $app->afterResolving(QueueManager::class, function () {
-            $this->queue->setConfig();
         });
     }
 }
