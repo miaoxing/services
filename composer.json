@@ -20,7 +20,6 @@
   },
   "require": {
     "miaoxing/plugin": "^0.14.4",
-    "laravel/framework": "^7.24",
     "phpoffice/phpspreadsheet": "^1.19"
   },
   "require-dev": {
@@ -41,8 +40,5 @@
       "miaoxing/plugin": "miaoxing/plugin as 0.14.x-dev",
       "wei/wei": "twinh/wei as 0.17.x-dev"
     }
-  },
-  "suggest": {
-    "miaoxing/queue": "Required to use Laravel queue"
   }
 }

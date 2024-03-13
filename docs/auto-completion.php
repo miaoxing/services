@@ -147,22 +147,6 @@ class IndexActionPropMixin
 }
 
 /**
- * @property    Miaoxing\Services\Service\Laravel $laravel
- */
- #[\AllowDynamicProperties]
-class LaravelMixin
-{
-}
-
-/**
- * @property    Miaoxing\Services\Service\Laravel $laravel
- */
- #[\AllowDynamicProperties]
-class LaravelPropMixin
-{
-}
-
-/**
  * @property    Miaoxing\Services\Service\Logger $logger
  * @method      bool logger($level, $message, $context = []) Logs with an arbitrary level
  */
@@ -383,7 +367,6 @@ class YesNoConstPropMixin
  * @mixin DestroyActionMixin
  * @mixin EditActionMixin
  * @mixin IndexActionMixin
- * @mixin LaravelMixin
  * @mixin LoggerMixin
  * @mixin NewActionMixin
  * @mixin OptionTraitMixin

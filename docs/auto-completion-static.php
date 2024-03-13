@@ -190,104 +190,6 @@ class EditAction
     }
 }
 
-class Http
-{
-    /**
-     * Set URL of the current request
-     *
-     * @param string $url
-     * @return $this
-     * @see Http::url
-     */
-    public static function url(string $url): self
-    {
-    }
-
-    /**
-     * Create a new HTTP object and execute
-     *
-     * @param array|string|null $url A options array or the request URL
-     * @param array $options A options array if the first parameter is string
-     * @return $this A new HTTP object
-     * @see Http::request
-     */
-    public static function request($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Execute a GET method request
-     *
-     * @param string|array|null $url
-     * @param array $options
-     * @return $this
-     * @see Http::get
-     */
-    public static function get($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Execute a POST method request
-     *
-     * @param string|array|null $url
-     * @param array $options
-     * @return $this
-     * @see Http::post
-     */
-    public static function post($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Execute a PUT method request
-     *
-     * @param string|array|null $url
-     * @param array $options
-     * @return $this
-     * @see Http::put
-     */
-    public static function put($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Execute a DELETE method request
-     *
-     * @param string|array|null $url
-     * @param array $options
-     * @return $this
-     * @see Http::delete
-     */
-    public static function delete($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Execute a PATCH method request
-     *
-     * @param string|array|null $url
-     * @param array $options
-     * @return $this
-     * @see Http::patch
-     */
-    public static function patch($url = null, array $options = []): self
-    {
-    }
-
-    /**
-     * Create a new HTTP object and execute, return a Ret object
-     *
-     * @param array|string $url A options array or the request URL
-     * @param array $options A options array if the first parameter is string
-     * @return Ret
-     * @see Http::requestRet
-     */
-    public static function requestRet($url = null, array $options = []): \Wei\Ret
-    {
-    }
-}
-
 class IndexAction
 {
     /**
@@ -361,27 +263,6 @@ class IndexAction
      * @see BaseAction::setReq
      */
     public static function setReq(\Wei\Req $req)
-    {
-    }
-}
-
-class Laravel
-{
-    /**
-     * Bootstrap Laravel application
-     *
-     * @return $this
-     * @see Laravel::bootstrap
-     */
-    public static function bootstrap()
-    {
-    }
-
-    /**
-     * @return Application
-     * @see Laravel::getApp
-     */
-    public static function getApp()
     {
     }
 }
