@@ -1,3 +1,24 @@
+# [0.9.0](https://github.com/miaoxing/services/compare/v0.8.6...v0.9.0) (2024-03-31)
+
+
+### Code Refactoring
+
+* 移除 `laravel` ([1816cb3](https://github.com/miaoxing/services/commit/1816cb3914ecf68ae95e275bbd7b401870c9e281))
+
+
+### BREAKING CHANGES
+
+* 移除 `laravel`
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.1.0` to `9.1.1`
+* **@miaoxing/plugin:** upgrade from `0.14.4` to `0.14.5`
+
 ## [0.8.6](https://github.com/miaoxing/services/compare/v0.8.5...v0.8.6) (2024-02-29)
 
 

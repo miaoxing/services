@@ -19,11 +19,11 @@
     }
   },
   "require": {
-    "miaoxing/plugin": "^0.14.4",
+    "miaoxing/plugin": "^0.14.5",
     "phpoffice/phpspreadsheet": "^1.19"
   },
   "require-dev": {
-    "miaoxing/dev": "^9.1.0"
+    "miaoxing/dev": "^9.1.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
