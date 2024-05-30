@@ -1,3 +1,13 @@
+## [0.9.2](https://github.com/miaoxing/services/compare/v0.9.1...v0.9.2) (2024-05-30)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.14.6` to `0.14.7`
+
 ## [0.9.1](https://github.com/miaoxing/services/compare/v0.9.0...v0.9.1) (2024-05-01)
 
 
