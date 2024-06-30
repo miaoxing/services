@@ -1,3 +1,18 @@
+## [0.9.3](https://github.com/miaoxing/services/compare/v0.9.2...v0.9.3) (2024-06-30)
+
+
+### Features
+
+* **services:** 增加 `Cors` 中间件 ([836e478](https://github.com/miaoxing/services/commit/836e4788c4af85e48155da3a73cf42a8080db96d))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/plugin:** upgrade from `0.14.7` to `0.15.0`
+
 ## [0.9.2](https://github.com/miaoxing/services/compare/v0.9.1...v0.9.2) (2024-05-30)
 
 
