@@ -2,5 +2,5 @@
 
 use Miaoxing\Plugin\BasePage;
 
-return new class () extends BasePage {
+return new class extends BasePage {
 };

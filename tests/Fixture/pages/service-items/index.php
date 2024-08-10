@@ -1,4 +1,4 @@
 <?php
 
-return new class () extends Miaoxing\Plugin\BaseController {
+return new class extends Miaoxing\Plugin\BaseController {
 };
