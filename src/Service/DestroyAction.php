@@ -9,6 +9,24 @@ use Wei\Ret;
 class DestroyAction extends BaseAction
 {
     /**
+     * @param callable $callable
+     * @return $this
+     */
+    public function beforeFind(callable $callable): self
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
+     * @param callable $callable
+     * @return $this
+     */
+    public function afterFind(callable $callable): self
+    {
+        return $this->on(__FUNCTION__, $callable);
+    }
+
+    /**
      * @param BaseController $controller
      * @return Ret
      * @throws \Exception
@@ -16,7 +34,11 @@ class DestroyAction extends BaseAction
      */
     protected function exec(BaseController $controller)
     {
-        $model = $this->convention->createModel($controller)->findOrFail($this->req['id']);
+        $model = $this->convention->createModel($controller);
+
+        $this->triggerRet('beforeFind', [$model, $this->req]);
+        $model->findOrFail($this->req['id']);
+        $this->triggerRet('afterFind', [$model, $this->req]);
 
         $this->triggerRet('beforeDestroy', [$model, $this->req]);
 
