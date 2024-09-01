@@ -1,3 +1,20 @@
+## [0.9.6](https://github.com/miaoxing/services/compare/v0.9.5...v0.9.6) (2024-09-01)
+
+
+### Features
+
+* 插件增加 wei 命令行入口 ([fba3b00](https://github.com/miaoxing/services/commit/fba3b002ffb6e15a2c40c40512020e653f39e6eb))
+* **services:** `DestroyAction` 添加 `beforeFind` 和 `afterFind` 事件 ([8374612](https://github.com/miaoxing/services/commit/8374612f57d6a78df8fd840dc69ea09e6cdf07a8))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@miaoxing/plugin:** upgrade from `0.15.2` to `0.16.0`
+
 ## [0.9.5](https://github.com/miaoxing/services/compare/v0.9.4...v0.9.5) (2024-08-03)
 
 
