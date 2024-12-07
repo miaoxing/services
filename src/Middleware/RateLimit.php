@@ -2,10 +2,13 @@
 
 namespace Miaoxing\Services\Middleware;
 
+use Miaoxing\Plugin\Service\Ret;
+
 /**
  * 限制用户在一段请求时间内(如每分钟,每小时,每天)最多的请求次数
  *
- * @mixin \UserMixin
+ * @mixin \UserPropMixin
+ * @mixin \CounterPropMixin
  */
 class RateLimit extends BaseMiddleware
 {
@@ -40,9 +43,17 @@ class RateLimit extends BaseMiddleware
 
     /**
      * 超出请求次数返回的提示信息
+     *
      * @var string
      */
     protected $responseText;
+
+    /**
+     * 操作返回错误时才增加计数器
+     *
+     * @var bool
+     */
+    protected $incrOnErr = false;
 
     /**
      * {@inheritdoc}
@@ -51,11 +62,25 @@ class RateLimit extends BaseMiddleware
     {
         $key = 'rate-limit' . $this->getIdentifier() . '-' . (int) (time() / $this->timeWindow);
 
-        if (wei()->counter->incr($key) > $this->max) {
-            return $this->res->json([
-                'code' => -2003,
-                'message' => $this->responseText ?: '您的操作太频繁，请稍候再试',
-            ]);
+        if ($this->incrOnErr) {
+            // 先检查是否超过
+            if ($this->counter->get($key) >= $this->max) {
+                return $this->buildErr();
+            }
+
+            // 不超过才运行
+            $ret = $next();
+
+            // 运行错误才计数
+            if ($ret instanceof Ret && $ret->isErr()) {
+                $this->counter->incr($key);
+            }
+            return $ret;
+        }
+
+        // 先计数，超过则返回错误，不执行操作
+        if ($this->counter->incr($key) > $this->max) {
+            return $this->buildErr();
         }
 
         return $next();
@@ -68,6 +93,11 @@ class RateLimit extends BaseMiddleware
      */
     public function getIdentifier()
     {
-        return $this->user->id() ?: $this->req->getServer('REMOTE_ADDR');
+        return $this->user->id() ?: $this->req->getIp();
+    }
+
+    protected function buildErr(): Ret
+    {
+        return err($this->responseText ?: '您的操作太频繁，请稍候再试', -2003);
     }
 }
