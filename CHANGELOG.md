@@ -1,3 +1,19 @@
+## [0.9.10](https://github.com/miaoxing/services/compare/v0.9.9...v0.9.10) (2024-12-30)
+
+
+### Features
+
+* **services:** `RateLimit` 支持操作返回错误时才增加计数器 ([33b6b5f](https://github.com/miaoxing/services/commit/33b6b5f4ae6fd206c1147898011d4b1907a5469e))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+* **@miaoxing/plugin:** upgrade from `0.17.1` to `0.17.2`
+
 ## [0.9.9](https://github.com/miaoxing/services/compare/v0.9.8...v0.9.9) (2024-11-30)
 
 
